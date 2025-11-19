@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - limsDashbord</title>
     <link href="~/web/lib/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.0/dist/ionicons.min.css">
-
-    @* <link href="~/web/lib/ionicons/css/ionicons.min.css" rel="stylesheet"> *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/3.0.0/css/ionicons.min.css" integrity="sha512-1MnDtyeTdty8j5fL/qDGB0Q2akuH88v1wA9QO9CRZlKUBY10Ch++Yle1XUjNE2vleqvhIPb9MxLrktY+qLyDng==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="~/web/lib/typicons.font/typicons.css" rel="stylesheet">
     <link href="~/web/lib/morris.js/morris.css" rel="stylesheet">
     <link href="~/web/lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
     <link href="~/web/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+    <link href="~/web/lib/spectrum-colorpicker/spectrum.css" rel="stylesheet">
 
+    <link href="~/web/lib/amazeui-datetimepicker/css/amazeui.datetimepicker.css" rel="stylesheet">
+    <link href="~/web/lib/jquery-simple-datetimepicker/jquery.simple-dtpicker.css" rel="stylesheet">
+
+    <link href="~/web/lib/pickerjs/picker.min.css" rel="stylesheet">
+    <link href="~/web/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="~/web/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
     <!-- azia CSS -->
     <link rel="stylesheet" href="~/web/css/azia.css">
 
@@ -23,7 +28,7 @@
             <a href="index.html" class="az-logo">az<span>i</span>a</a>
         </div><!-- az-sidebar-header -->
         <div class="az-sidebar-loggedin">
-            <div class="az-img-user online"><img src="../img/faces/face1.jpg" alt=""></div>
+            <div class="az-img-user online"><img src="~/web/img/faces/face1.jpg" alt=""></div>
             <div class="media-body">
                 <h6>Aziana Pechon</h6>
                 <span>Premium Member</span>
@@ -32,12 +37,11 @@
         <div class="az-sidebar-body">
             <ul class="nav">
                 <li class="nav-label">Main Menu</li>
-                <li class="nav-item active show">
-                    <a href="index.html" class="nav-link with-sub"><i class="typcn typcn-clipboard"></i>Dashboard</a>
+                <li class="nav-item ">
+                    <a asp-action="index" asp-controller="home" class="nav-link with-sub"><i class="typcn typcn-clipboard"></i>Dashboard</a>
                     <ul class="nav-sub">
                         <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link">Dashboard</a></li>
-                       
-                    </ul>
+                        </ul>
                 </li><!-- nav-item -->
                 <li class="nav-item">
                     <a href="#" class="nav-link with-sub"><i class="typcn typcn-document"></i>Lab Management</a>
@@ -102,46 +106,141 @@
                     </ul>
                 </li><!-- nav-item -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link with-sub"><i class="typcn typcn-chart-bar-outline"></i>Charts</a>
+                    <a href="#" class="nav-link with-sub"><i class="typcn typcn-chart-bar-outline"></i>Inventory</a>
                     <ul class="nav-sub">
-                        <li class="nav-sub-item"><a href="chart-morris.html" class="nav-sub-link">Morris Charts</a></li>
-                        <li class="nav-sub-item"><a href="chart-flot.html" class="nav-sub-link">Flot Charts</a></li>
-                        <li class="nav-sub-item"><a href="chart-chartjs.html" class="nav-sub-link">ChartJS</a></li>
-                        <li class="nav-sub-item"><a href="chart-sparkline.html" class="nav-sub-link">Sparkline</a></li>
-                        <li class="nav-sub-item"><a href="chart-peity.html" class="nav-sub-link">Peity</a></li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Inventory" asp-action="Products" class="nav-sub-link">Products</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Inventory" asp-action="Requisitions" class="nav-sub-link">Requisitions</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Inventory" asp-action="Warehouses" class="nav-sub-link">Warehouses</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Inventory" asp-action="ProductSettings" class="nav-sub-link">Product Settings</a>
+                        </li>
                     </ul>
                 </li><!-- nav-item -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link with-sub"><i class="typcn typcn-map"></i>Maps</a>
+                    <a href="#" class="nav-link with-sub"><i class="typcn typcn-map"></i>Purchases</a>
                     <ul class="nav-sub">
-                        <li class="nav-sub-item"><a href="map-google.html" class="nav-sub-link">Google Maps</a></li>
-                        <li class="nav-sub-item"><a href="map-leaflet.html" class="nav-sub-link">Leaflet</a></li>
-                        <li class="nav-sub-item"><a href="map-vector.html" class="nav-sub-link">Vector Maps</a></li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Purchases" asp-action="PurchaseInvoices" class="nav-sub-link">Purchase Invoices</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Purchases" asp-action="Suppliers" class="nav-sub-link">Suppliers</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Purchases" asp-action="SupplierPayments" class="nav-sub-link">Supplier Payments</a>
+                        </li>
                     </ul>
                 </li><!-- nav-item -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link with-sub"><i class="typcn typcn-tabs-outline"></i>Tables</a>
+                    <a href="#" class="nav-link with-sub"><i class="typcn typcn-tabs-outline"></i>Finance</a>
                     <ul class="nav-sub">
-                        <li class="nav-sub-item"><a href="table-basic.html" class="nav-sub-link">Basic Tables</a></li>
-                        <li class="nav-sub-item"><a href="table-data.html" class="nav-sub-link">Data Tables</a></li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Finance" asp-action="Expenses" class="nav-sub-link">Expenses</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Finance" asp-action="Incomes" class="nav-sub-link">Incomes</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Finance" asp-action="TreasuriesBankAccounts" class="nav-sub-link">Treasuries - Bank Accounts</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Finance" asp-action="Finance Settings" class="nav-sub-link">Finance Settings</a>
+                        </li>
                     </ul>
                 </li><!-- nav-item -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link with-sub"><i class="typcn typcn-archive"></i>Utilities</a>
+                    <a href="#" class="nav-link with-sub"><i class="typcn typcn-archive"></i>General Ledger</a>
                     <ul class="nav-sub">
-                        <li class="nav-sub-item"><a href="util-background.html" class="nav-sub-link">Background</a></li>
-                        <li class="nav-sub-item"><a href="util-border.html" class="nav-sub-link">Border</a></li>
-                        <li class="nav-sub-item"><a href="util-display.html" class="nav-sub-link">Display</a></li>
-                        <li class="nav-sub-item"><a href="util-flex.html" class="nav-sub-link">Flex</a></li>
-                        <li class="nav-sub-item"><a href="util-height.html" class="nav-sub-link">Height</a></li>
-                        <li class="nav-sub-item"><a href="util-margin.html" class="nav-sub-link">Margin</a></li>
-                        <li class="nav-sub-item"><a href="util-padding.html" class="nav-sub-link">Padding</a></li>
-                        <li class="nav-sub-item"><a href="util-position.html" class="nav-sub-link">Position</a></li>
-                        <li class="nav-sub-item"><a href="util-typography.html" class="nav-sub-link">Typography</a></li>
-                        <li class="nav-sub-item"><a href="util-width.html" class="nav-sub-link">Width</a></li>
-                        <li class="nav-sub-item"><a href="util-extras.html" class="nav-sub-link">Extras</a></li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralLedger" asp-action="JournalEntries" class="nav-sub-link">Journal Entries</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralLedger" asp-action="AddJournalEntry" class="nav-sub-link">Add Journal Entry</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralLedger" asp-action="ChartofAccounts" class="nav-sub-link">Chart of Accounts</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralLedger" asp-action="Assets" class="nav-sub-link">Assets</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralLedger" asp-action="GeneralLedgerSettings" class="nav-sub-link">General Ledger Settings</a>
+                        </li>
                     </ul>
                 </li><!-- nav-item -->
+                <!-- nav-item -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link with-sub"><i class="typcn typcn-document"></i>Reports</a>
+                    <ul class="nav-sub">
+                        <li class="nav-sub-item">
+                            <a asp-controller="Reports" asp-action="SalesReports" class="nav-sub-link">Sales Reports</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Reports" asp-action="PurchaseReports" class="nav-sub-link">Purchase Reports</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Reports" asp-action="GeneralLedgerReports" class="nav-sub-link">General Ledger Reports</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Reports" asp-action="CustomerReports" class="nav-sub-link">Customer Reports</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Reports" asp-action="InventoryReports" class="nav-sub-link">Inventory Reports</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="Reports" asp-action="AccountActivityLog" class="nav-sub-link">Account Activity Log</a>
+                        </li>
+                    </ul>
+                    <!-- nav-item -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link with-sub"><i class="typcn typcn-book"></i>Users Settings</a>
+                    <ul class="nav-sub">
+                        <li class="nav-sub-item">
+                            <a asp-controller="UsersSettings" asp-action="Users" class="nav-sub-link">Users</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="UsersSettings" asp-action="GroupsRoles" class="nav-sub-link">Groups/Roles</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- nav-item -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link with-sub"><i class="typcn typcn-edit"></i>General Settings</a>
+                    <ul class="nav-sub">
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralSettings" asp-action="AdminData" class="nav-sub-link">Admin Data</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralSettings" asp-action="Resources" class="nav-sub-link">Resources</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralSettings" asp-action="NotificationProvider" class="nav-sub-link">Notification Provider</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralSettings" asp-action="Sliders" class="nav-sub-link">Sliders</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralSettings" asp-action="SiteSettings" class="nav-sub-link">Site Settings</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralSettings" asp-action="LookupTypes" class="nav-sub-link">Lookup Types</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralSettings" asp-action="CustomForms" class="nav-sub-link">CustomForms</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralSettings" asp-action="WorkFlows" class="nav-sub-link">WorkFlows</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a asp-controller="GeneralSettings" asp-action="Countries" class="nav-sub-link">Countries</a>
+                        </li>
+                    </ul>
+                </li>
             </ul><!-- nav -->
         </div><!-- az-sidebar-body -->
     </div><!-- az-sidebar -->
@@ -153,7 +252,7 @@
                     <a href="#" id="azSidebarToggle" class="az-header-menu-icon"><span></span></a>
                 </div><!-- az-header-left -->
                 <div class="az-header-center">
-                    <input type="search" class="form-control" placeholder="Search for anything...">
+                    <input type="search" class="form-control" placeholder="Search for anything~/web.">
                     <button class="btn"><i class="fas fa-search"></i></button>
                 </div><!-- az-header-center -->
                 <div class="az-header-right">
@@ -170,28 +269,28 @@
                             <p class="az-notification-text">You have 2 unread notification</p>
                             <div class="az-notification-list">
                                 <div class="media new">
-                                    <div class="az-img-user"><img src="../img/faces/face2.jpg" alt=""></div>
+                                    <div class="az-img-user"><img src="~/web/img/faces/face2.jpg" alt=""></div>
                                     <div class="media-body">
                                         <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
                                         <span>Mar 15 12:32pm</span>
                                     </div><!-- media-body -->
                                 </div><!-- media -->
                                 <div class="media new">
-                                    <div class="az-img-user online"><img src="../img/faces/face3.jpg" alt=""></div>
+                                    <div class="az-img-user online"><img src="~/web/img/faces/face3.jpg" alt=""></div>
                                     <div class="media-body">
                                         <p><strong>Joyce Chua</strong> just created a new blog post</p>
                                         <span>Mar 13 04:16am</span>
                                     </div><!-- media-body -->
                                 </div><!-- media -->
                                 <div class="media">
-                                    <div class="az-img-user"><img src="../img/faces/face4.jpg" alt=""></div>
+                                    <div class="az-img-user"><img src="~/web/img/faces/face4.jpg" alt=""></div>
                                     <div class="media-body">
                                         <p><strong>Althea Cabardo</strong> just created a new blog post</p>
                                         <span>Mar 13 02:56am</span>
                                     </div><!-- media-body -->
                                 </div><!-- media -->
                                 <div class="media">
-                                    <div class="az-img-user"><img src="../img/faces/face5.jpg" alt=""></div>
+                                    <div class="az-img-user"><img src="~/web/img/faces/face5.jpg" alt=""></div>
                                     <div class="media-body">
                                         <p><strong>Adrian Monino</strong> added new comment on your photo</p>
                                         <span>Mar 12 10:40pm</span>
@@ -202,14 +301,14 @@
                         </div><!-- dropdown-menu -->
                     </div><!-- az-header-notification -->
                     <div class="dropdown az-profile-menu">
-                        <a href="#" class="az-img-user"><img src="../img/faces/face1.jpg" alt=""></a>
+                        <a href="#" class="az-img-user"><img src="~/web/img/faces/face1.jpg" alt=""></a>
                         <div class="dropdown-menu">
                             <div class="az-dropdown-header d-sm-none">
                                 <a href="#" class="az-header-arrow"><i class="icon ion-md-arrow-back"></i></a>
                             </div>
                             <div class="az-header-profile">
                                 <div class="az-img-user">
-                                    <img src="../img/faces/face1.jpg" alt="">
+                                    <img src="~/web/img/faces/face1.jpg" alt="">
                                 </div><!-- az-img-user -->
                                 <h6>Aziana Pechon</h6>
                                 <span>Premium Member</span>
@@ -234,22 +333,66 @@
     </div><!-- az-content -->
     <script src="~/web/lib/jquery/jquery.min.js"></script>
     <script src="~/web/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="~/web/lib/ionicons/ionicons.js"></script>
+    @* <script src="~/web/lib/ionicons/ionicons.js"></script> *@
     <script src="~/web/lib/jquery-sparkline/jquery.sparkline.min.js"></script>
     <script src="~/web/lib/raphael/raphael.min.js"></script>
     <script src="~/web/lib/morris.js/morris.min.js"></script>
     <script src="~/web/lib/jqvmap/jquery.vmap.min.js"></script>
     <script src="~/web/lib/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <script src="~/web/lib/jquery-ui/ui/widgets/datepicker.js"></script>
+    <script src="~/web/lib/pickerjs/picker.min.js"></script>
 
+    <script src="~/web/lib/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js"></script>
+    <script src="~/web/lib/jquery-simple-datetimepicker/jquery.simple-dtpicker.js"></script>
     <script src="~/web/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="~/web/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/web/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="~/web/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/web/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
     <script src="~/web/js/azia.js"></script>
    
    
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script>
+        
            $(function(){
           'use strict'
-
+            $('.fc-datepicker').datepicker({
+          showOtherMonths: true,
+          selectOtherMonths: true
+        });
+         $('#example2').DataTable({
+         
+          language: {
+            searchPlaceholder: 'Search...',
+            sSearch: '',
+            lengthMenu: '_MENU_ items/page',
+          }
+        });
+        $('#example3').DataTable({
+         
+          language: {
+            searchPlaceholder: 'Search...',
+            sSearch: '',
+            lengthMenu: '_MENU_ items/page',
+          }
+        });
+        $('#example4').DataTable({
+         
+          language: {
+            searchPlaceholder: 'Search...',
+            sSearch: '',
+            lengthMenu: '_MENU_ items/page',
+          }
+        });
+        $('#example5').DataTable({
+          
+           language: {
+             searchPlaceholder: 'Search...',
+             sSearch: '',
+             lengthMenu: '_MENU_ items/page',
+           }
+         });
           $('.az-sidebar .with-sub').on('click', function(e){
             e.preventDefault();
             $(this).parent().toggleClass('show');
