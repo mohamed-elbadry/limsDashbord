@@ -4,17 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - limsDashbord</title>
-    <link href="~/web/lib/fontawesome-free/css/all.min.css" rel="stylesheet">
+    @* <link href="~/web/lib/fontawesome-free/css/all.min.css" rel="stylesheet"> *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/3.0.0/css/ionicons.min.css" integrity="sha512-1MnDtyeTdty8j5fL/qDGB0Q2akuH88v1wA9QO9CRZlKUBY10Ch++Yle1XUjNE2vleqvhIPb9MxLrktY+qLyDng==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="~/web/lib/typicons.font/typicons.css" rel="stylesheet">
     <link href="~/web/lib/morris.js/morris.css" rel="stylesheet">
     <link href="~/web/lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
     <link href="~/web/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
     <link href="~/web/lib/spectrum-colorpicker/spectrum.css" rel="stylesheet">
-
     <link href="~/web/lib/amazeui-datetimepicker/css/amazeui.datetimepicker.css" rel="stylesheet">
     <link href="~/web/lib/jquery-simple-datetimepicker/jquery.simple-dtpicker.css" rel="stylesheet">
-
     <link href="~/web/lib/pickerjs/picker.min.css" rel="stylesheet">
     <link href="~/web/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="~/web/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
@@ -357,10 +356,11 @@
         
            $(function(){
           'use strict'
-            $('.fc-datepicker').datepicker({
-          showOtherMonths: true,
-          selectOtherMonths: true
+                $('.fc-datepicker').datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: true
         });
+
          $('#example2').DataTable({
          
           language: {
