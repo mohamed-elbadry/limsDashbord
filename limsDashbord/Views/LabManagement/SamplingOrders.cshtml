@@ -1,5 +1,77 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2 class="m-0 p-0">
+                        Sampling Orders
+                    </h2>
+                    <div class="d-flex gap-1">
+                        <p>Home</p>
+                        <p>/</p>
+                        <p>
+                            Lab Management
+                        </p>
+                        <p>/</p>
+                        <p>
+                            Sampling Orders
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex gap-2">
+                   
+                    <a asp-controller="LabManagement" asp-action="NewSamplingOrder" class="nav-link active btn btn-primary btn-block text-white rounded-2"> <i class="fas fa-plus px-1"></i> New Sampling Order</a>
+                    
+                    <button class="btn btn-gray-700 btn-block rounded-2">
+                        <i class="fa fas fa-bolt"></i>
+                        Reload
+                    </button>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card my-3">
+                    <div class="p-3">
+                        <div class="table-responsive">
+                            <table id="example2" class="text-center table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Code</th>
+                                        <th>Customer</th>
+                                        <th>Sales Order Code</th>
+                                        <th>Project/Location</th>
+                                        <th>Technicians</th>
+                                        <th>Created On</th>
+                                        <th>Details Summary</th>
+                                        <th>Containers</th>
+                                        <th>Is Batch</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>WO-221</td>
+                                        <td>Cairo Water Company</td>
+                                        <td>SO-7843</td>
+                                        <td>Project Alpha / Main Reservoir</td>
+                                        <td>Ahmed Ali, Mahmoud Saleh</td>
+                                        <td>2025-11-25</td>
+                                        <td>Water sampling: pH, TDS, Turbidity</td>
+                                        <td>4 Containers</td>
+                                        <td>No</td>
+                                        <td>Urgent testing required within 24 hours</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

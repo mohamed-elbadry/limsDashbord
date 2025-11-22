@@ -2,7 +2,7 @@
     <div class="card py-3">
         <div class="p-3">
             <div class="d-flex justify-content-between align-items-center">
-               <div class="d-flex flex-column">
+                <div class="d-flex flex-column">
                     <h2 class="m-0 p-0">
                         Work Orders
                     </h2>
@@ -17,7 +17,7 @@
                             Work Orders
                         </p>
                     </div>
-               </div>
+                </div>
                 <div class="d-flex gap-2">
                     <button class="btn btn-primary btn-block rounded-2" data-bs-toggle="modal" data-bs-target="#newSampleModal">
                         <i class="fas fa-plus px-1"></i>
@@ -155,10 +155,10 @@
                         </div>
                     </div>
 
-                   
-                        <li class="nav-sub-item btn btn-secondary rounded-2">
+
+                    <li class="nav-sub-item btn btn-secondary rounded-2">
                         <a asp-controller="LabManagement" asp-action="AddWOBatch" class="nav-sub-link text-black"> <i class="fas fa-plus px-1"></i> AddWorkOrderBatch</a>
-                        </li>
+                    </li>
 
 
                     <button class="btn btn-gray-700 btn-block rounded-2">
@@ -180,6 +180,17 @@
             </div>
             <div class="col-12">
                 <div class="card my-3">
+                    <div class="row p-3">
+                        <div class="col-lg-4 col-12">
+                            <p class="mg-b-10">
+                                Name
+                            </p>
+                            <input class="form-control" placeholder="Name" type="text">
+                        </div>
+                        <div class="col-lg-8 col-12 d-flex align-items-end">
+                            <button class="btn btn-info btn-block rounded-2"><i class="fas fa-search"></i> Search</button>
+                       </div>
+                    </div>
                     <div class="p-3">
                         <div class="table-responsive">
                             <table id="example2" class="text-center table table-bordered table-hover">
@@ -234,7 +245,7 @@
 </div>
 
 @section Scripts {
-     <script>
+    <script>
                    $('#newSampleModal').on('shown.bs.modal', function () {
         // Fix select2 with modal
         $('.select2').select2({
@@ -254,6 +265,6 @@
          // Fix input mask
          });
 
-         
-     </script>
+
+    </script>
 }

@@ -35,7 +35,7 @@
                                             <p class="mg-b-10">
                                                 Code <sapn class="text-danger">*</sapn>
                                             </p>
-                                            
+
                                             <div class="col-12 py-2">
                                                 <p class="mg-b-10">
                                                     Code <sapn class="text-danger">*</sapn>
@@ -48,7 +48,7 @@
                                                 </p>
                                                 <input class="form-control" placeholder="Name" type="text">
                                             </div>
-                                           
+
                                             <div class="row py-2">
                                                 <div class="col-12">
                                                     <label for="notes">Notes <sapn class="text-danger">*</sapn></label>
@@ -58,9 +58,9 @@
                                         </div>
                                         <div class="col-lg-6 col-12">
                                             <div class="card p-2">
-                                               <div class="card-header bg-transparent">
+                                                <div class="card-header bg-transparent">
                                                     Container Config
-                                               </div>
+                                                </div>
                                                 <hr />
                                                 <div class="col-12 py-2">
                                                     <p class="mg-b-10">
@@ -114,20 +114,20 @@
                             Advanced Filter
                         </a>
                     </li>
-                   
+
                 </div>
             </div>
             <div class="py-5">
                 <div class="card bd-0">
                     <div class="card-header bg-gray-400 bd-b-0-f pd-b-0">
                         <nav class="nav nav-tabs">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#tabCont1">Test Types</a>
+                            <a class="nav-link " data-bs-toggle="tab" href="#tabCont1">Test Types</a>
                             @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont2">Parameters</a> *@
-                            <a asp-controller="LabManagement" asp-action="Parameters" class="nav-link">Parameters</a>
+                            <a asp-controller="LabManagement" asp-action="Parameters" class="nav-link active">Parameters</a>
                         </nav>
                     </div><!-- card-header -->
                     <div class="card-body bd bd-t-0 tab-content">
-                        <div id="tabCont1" class="tab-pane active show">
+                        @* <div id="tabCont1" class="tab-pane active show"> *@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card my-3">
@@ -219,7 +219,7 @@
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div><!-- card-body -->
                 </div><!-- card -->
             </div>
@@ -227,10 +227,10 @@
 
         </div>
     </div>
-</div>
 
-      @section Scripts {
-     <script>
+
+@section Scripts {
+    <script>
 
                $('#newSampleModal').on('shown.bs.modal', function () {
             // Fix select2 with modal
@@ -257,9 +257,9 @@
 
              });
 
-            
-            
-            
-            
+
+
+
+
     </script>
-    }
+}

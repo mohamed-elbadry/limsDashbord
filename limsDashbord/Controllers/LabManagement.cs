@@ -33,5 +33,34 @@ namespace limsDashbord.Controllers
         {
             return View();
         }
+        public IActionResult AddWOBatch()
+        {
+            return View();
+        }
+        public IActionResult AdvancedFilter
+()
+        {
+            return View();
+        }
+        public IActionResult sampletypes
+()
+        {
+            return View();
+        }
+        public IActionResult SampleTypeMatrices
+()
+        {
+            return View();
+        }
+        public IActionResult NewSamplingOrder
+()
+        {
+            return View();
+        }
+        public IActionResult Parameters
+()
+        {
+            return View();
+        }
     }
 }

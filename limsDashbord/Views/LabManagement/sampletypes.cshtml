@@ -1,0 +1,326 @@
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2 class="m-0 p-0">
+                        Samples
+                    </h2>
+                    <div class="d-flex gap-1">
+                        <p>Home</p>
+                        <p>/</p>
+                        <p>
+                            Lab Management
+                        </p>
+                        <p>/</p>
+                        <p>
+                            Samples
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-primary btn-block rounded-2" data-bs-toggle="modal" data-bs-target="#newSampleModal">
+                        <i class="fas fa-plus px-1"></i>
+                        AddNewSampleType
+                    </button>
+
+                    <div class="modal fade" id="newSampleModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content modal-content-demo">
+                                <div class="modal-header">
+                                    <h6 class="modal-title">
+                                        Add New Sample
+                                    </h6>
+
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row py-2">
+                                        <div class="col-12">
+                                            <p class="mg-b-10">
+                                                Code <sapn class="text-danger">*</sapn>
+                                            </p>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                </div>
+                                                <input class="form-control" placeholder="SMPT-2025-0002" type="text">
+                                            </div>
+                                            <p class="mg-b-10 py-2">
+                                                Name <sapn class="text-danger">*</sapn>
+                                            </p>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                </div>
+                                                <input class="form-control" placeholder="Name" type="text">
+                                            </div>
+                                            <div class="py-2">
+                                                <label for="notes">Description <sapn class="text-danger">*</sapn></label>
+                                                <textarea id="notes" rows="3" class="form-control" placeholder="Textarea" style="height: 90px;"></textarea>
+                                            </div>
+                                           
+                                           
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-start">
+                                    <button type="button" class="btn btn-indigo"><i class="fa fa-save"></i> Save</button>
+                                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button class="btn btn-gray-700 btn-block rounded-2">
+                        <i class="fa fas fa-bolt"></i>
+                        Reload
+                    </button>
+                    <li class="nav-sub-item btn btn-success btn-block rounded-2">
+                        <a asp-controller="LabManagement" asp-action="AdvancedFilter" class="nav-sub-link text-black">
+                            <i class="fa fas fa-filter"></i>
+                            Advanced Filter
+                        </a>
+                    </li>
+                </div>
+            </div>
+
+            <div class="py-5">
+                <div class="card bd-0">
+                    <div class="card-header bg-gray-400 bd-b-0-f pd-b-0">
+                        <nav class="nav nav-tabs">
+                            <a asp-controller="LabManagement" asp-action="Samples" class="nav-link">Samples</a>
+                            @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont1">Samples</a> *@
+                            <a class="nav-link" data-bs-toggle="tab" href="#tabCont2">Qc Samples</a>
+                            @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont3">Samples Types</a> *@
+
+                            <a asp-controller="LabManagement" asp-action="sampletypes" class="nav-link active">Sample Types</a>
+                            <a asp-controller="LabManagement" asp-action="SampleTypeMatrices" class="nav-link">Sample Type Matrices</a>
+                           
+                        </nav>
+                    </div><!-- card-header -->
+                    <div class="card-body bd bd-t-0 tab-content">
+                        <div id="tabCont1" class="tab-pane active">
+
+                            <div class="row">
+                                <div class="col-lg-10 col-12">
+                                    <div class="row">
+                                       
+                                    </div>
+                                </div>
+                               
+                                <div class="col-12">
+                                    <div class="card my-3">
+                                        <div class="p-3">
+                                            <div class="table-responsive">
+                                                <table id="example2" class="text-center table table-bordered table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Code</th>
+                                                            <th>Type</th>
+                                                            <th>Number of Samples</th>
+                                                            <th>Number of Tests</th>
+                                                            <th>Created By</th>
+                                                            <th>Created On</th>
+                                                            <th>Notes</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>ST-115</td>
+                                                            <td>Water Analysis</td>
+                                                            <td>12</td>
+                                                            <td>5</td>
+                                                            <td>Ahmed Ali</td>
+                                                            <td>2025-01-10</td>
+                                                            <td><span class="badge bg-danger">Pending</span> - Waiting for approval</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- tab-pane -->
+                        <div id="tabCont2" class="tab-pane">
+                            <div class="col-12">
+                                <div class="card my-3">
+                                    <div class="p-3">
+                                        <div class="table-responsive">
+                                            <table id="example2" class="text-center table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Code</th>
+                                                        <th>Name</th>
+                                                        <th>Type</th>
+                                                        <th>Add By</th>
+                                                        <th>Received Date</th>
+                                                        <th>Notes</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>WO-115</td>
+                                                        <td>Maintenance Request</td>
+                                                        <td>Technical</td>
+                                                        <td>Ahmed Ali</td>
+                                                        <td>2025-11-10</td>
+                                                        <td><span class="badge badge-danger">Pending</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tabCont3" class="tab-pane">
+                            <div class="col-12">
+                                <div class="card my-3">
+                                    <div class="p-3">
+                                        <div class="table-responsive">
+                                            <table id="example2" class="text-center table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Code</th>
+                                                        <th>Type</th>
+                                                        <th>Number of Samples</th>
+                                                        <th>Number of Tests</th>
+                                                        <th>Created By</th>
+                                                        <th>Created On</th>
+                                                        <th>Notes</th>
+                                                        <th>Status</th>
+                                                        <th>Sup Work Orders Count</th>
+                                                        <th>Received By</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>WO-115</td>
+                                                        <td>Maintenance Request</td>
+                                                        <td>15</td>
+                                                        <td>10</td>
+                                                        <td>Ahmed Ali</td>
+                                                        <td>2025-11-10</td>
+                                                        <td>Initial request created</td>
+                                                        <td><span class="badge badge-danger">Pending</span></td>
+                                                        <td>3</td>
+                                                        <td>Mohamed</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>WO-116</td>
+                                                        <td>Website Update</td>
+                                                        <td>20</td>
+                                                        <td>18</td>
+                                                        <td>Mahmoud Saad</td>
+                                                        <td>2025-11-12</td>
+                                                        <td>Design updates ongoing</td>
+                                                        <td><span class="badge badge-warning">In Progress</span></td>
+                                                        <td>5</td>
+                                                        <td>Omar</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>WO-117</td>
+                                                        <td>Mobile App Fix</td>
+                                                        <td>10</td>
+                                                        <td>8</td>
+                                                        <td>Adel Hassan</td>
+                                                        <td>2025-11-15</td>
+                                                        <td>Bug fixes applied</td>
+                                                        <td><span class="badge badge-success">Completed</span></td>
+                                                        <td>2</td>
+                                                        <td>Khaled</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>WO-118</td>
+                                                        <td>Database Migration</td>
+                                                        <td>5</td>
+                                                        <td>5</td>
+                                                        <td>Ahmed Alaa</td>
+                                                        <td>2025-11-18</td>
+                                                        <td>Migration completed successfully</td>
+                                                        <td><span class="badge badge-success">Completed</span></td>
+                                                        <td>1</td>
+                                                        <td>Fatma</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>WO-119</td>
+                                                        <td>Network Upgrade</td>
+                                                        <td>12</td>
+                                                        <td>10</td>
+                                                        <td>Ali Orabi</td>
+                                                        <td>2025-11-20</td>
+                                                        <td>Equipment installed</td>
+                                                        <td><span class="badge badge-warning">In Progress</span></td>
+                                                        <td>4</td>
+                                                        <td>Hassan</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tabCont4" class="tab-pane">
+                            <div class="table-responsive">
+                                <table id="example2" class="text-center table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Code</th>
+                                            <th>Name</th>
+                                            <th>ParentMatrix</th>
+                                            <th>Sample Type</th>
+                                            <th>Created By</th>
+                                            <th>Created On</th>
+                                            <th>Notes</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>WO-202</td>
+                                            <td>Water Quality Test</td>
+                                            <td>Water</td>
+                                            <td>Physical & Chemical</td>
+                                            <td>Mohamed Ali</td>
+                                            <td>2025-11-20</td>
+                                            <td>Sample collected from main reservoir</td>
+                                            <td><span class="badge badge-warning">In Progress</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div><!-- card-body -->
+                </div><!-- card -->
+            </div>
+
+        </div>
+    </div>
+</div>
+

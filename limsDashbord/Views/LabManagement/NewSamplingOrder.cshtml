@@ -1,0 +1,129 @@
+﻿<div class="card-header py-3">
+    <div class="card border-0 py-3">
+        <div class="p-3">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Create New Sample Order
+                    </h2>
+                    <ul class="nav-sub d-flex align-items-center gap-2">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="nav-sub-item"><a asp-action="LabManagement" asp-controller="SamplingOrders" class="nav-sub-link text-black">SamplingOrders</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">Add</li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">Edit</li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="p-3">
+    <div class="card py-3">
+        <div class="card-header">
+            <h3>
+                Basic Data
+            </h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <p class="mg-b-10">
+                        Code <span class="text-danger">*</span>
+                    </p>
+                    <input class="form-control" placeholder="SO-2025-0001" type="text">
+                </div>
+                <div class="col">
+                    <p class="mg-b-10">
+                        Description
+                    </p>
+                    <input class="form-control" placeholder="" type="text">
+                </div>
+                <div class="col">
+                    <p class="mg-b-10">
+                        Customers<span class="text-danger">*</span>
+                    </p>
+                    <select class="form-control select2">
+                        <option label="Ahmed"></option>
+                        <option>Mahmoud</option>
+                        <option>Adel</option>
+                        <option>Ali</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <p class="mg-b-10">
+                        Project<span class="text-danger">*</span>
+                    </p>
+                    <select class="form-control select2">
+                        <option label="Ahmed"></option>
+                        <option>Mahmoud</option>
+                        <option>Adel</option>
+                        <option>Ali</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <p class="mg-b-10">
+                        Sales Order <span class="text-danger">*</span>
+                    </p>
+                    <select class="form-control select2">
+                        <option label="Ahmed"></option>
+                        <option>Mahmoud</option>
+                        <option>Adel</option>
+                        <option>Ali</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="p-3">
+    <div class="card py-3">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3>
+                   Samples
+                </h3>
+                <button class="btn btn-info btn-block rounded-2"><i class="fas fa-plus"></i> Add</button>
+            </div>
+            
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="p-3">
+                    <div class="table-responsive">
+                        <table id="example2" class="text-center table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Technicians</th>
+                                    <th>Sample Type / Quantity</th>
+                                    <th>Containers</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Mohamed Hassan</td>
+                                    <td>Water Sample — 3 Liters</td>
+                                    <td>3 × Sterile Bottles</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+       
+    </div>
+
+    <div class="card-footer d-flex justify-content-start py-3 gap-2">
+        <button type="button" class="btn btn-indigo rounded-2">Save</button>
+        <button type="button" class="btn btn-outline-light rounded-2" data-bs-dismiss="modal">Close</button>
+    </div>
+</div>
+
+
