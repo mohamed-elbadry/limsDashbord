@@ -62,5 +62,15 @@ namespace limsDashbord.Controllers
         {
             return View();
         }
+        public IActionResult Qcsample
+()
+        {
+            return View();
+        }
+        public IActionResult MaintenanceRequests
+()
+        {
+            return View();
+        }
     }
 }

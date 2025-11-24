@@ -1,0 +1,327 @@
+﻿<div class="card-header py-3">
+    <div class="card border-0 py-3">
+        <div class="p-3">
+            <div class="d-flex flex-column">
+                <h2>
+                    Create New Request
+                </h2>
+                <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                    <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">Sales</li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">Create New Request</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="p-3">
+    <div class="card py-3">
+        <div class="card-header">
+            <h3>
+                Basic Data
+            </h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p class="mg-b-10">
+                        Request Code <span class="text-danger">*</span>
+                    </p>
+                    <input class="form-control" placeholder="SlsReq-2025-0001" type="text">
+                </div>
+                <div class="col-lg-4">
+                    <p class="mg-b-10">
+                        Description <span class="text-danger">*</span>
+                    </p>
+                    <input class="form-control" placeholder="" type="text">
+                </div>
+                <div class="col d-flex align-items-center">
+                    <div class="flex-grow-1">
+                        <p class="mg-b-10">
+                            Customers <span class="text-danger">*</span>
+                        </p>
+                       <div class="d-flex">
+                            <select class="form-control select2">
+                                <option label="Ahmed"></option>
+                                <option>Mahmoud</option>
+                                <option>Adel</option>
+                                <option>Ali</option>
+                            </select>
+                            <button class="btn btn-az-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                                <i class="fas fa-plus px-1"></i>
+                            </button>
+                            <!--Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-xl" role="document">
+                                    <div class="modal-content modal-content-demo">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title">
+                                                AddCustomer
+                                            </h6>`
+
+                                        </div>
+                                        <div class="modal-body">
+                                            <label class="py-3">Client Type <sapn class="text-danger">*</sapn></label>
+                                            <div class="row py-2">
+                                               <div class="col-lg-4">
+                                                   
+                                                    <label class="rdiobox">
+                                                        <input name="rdio" type="radio">
+                                                        <span>Individual</span>
+                                                    </label>
+                                               </div>
+                                                <div class="col-lg-8">
+                                                    <label class="rdiobox">
+                                                        <input name="rdio" type="radio">
+                                                        <span>
+                                                            Commercial
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row py-2">
+                                                <div class="col-12 py-2">
+                                                    <p class="mg-b-10">
+                                                        Code <sapn class="text-danger">*</sapn>
+                                                    </p>
+                                                    <input class="form-control" placeholder="Cstmr-2025-0001" type="text">
+                                                </div>
+                                                <div class="col-12 py-2">
+                                                    <p class="mg-b-10">
+                                                        Full Name <sapn class="text-danger">*</sapn>
+                                                    </p>
+                                                    <input class="form-control" placeholder="Full Name" type="text">
+                                                </div>
+                                                <div class="col-lg-8 col-12 py-2">
+                                                    <p class="mg-b-10">
+                                                        Mobile <sapn class="text-danger">*</sapn>
+                                                    </p>
+                                                    <input class="form-control" placeholder="0512345678" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="row py-2">
+                                                <div class="col-lg-4 col-12">
+                                                   
+                                                        <p class="mg-b-10">
+                                                            Customers
+                                                        </p>
+                                                        <select class="form-control select2">
+                                                            <option label="Ahmed"></option>
+                                                            <option>Mahmoud</option>
+                                                            <option>Adel</option>
+                                                            <option>Ali</option>
+                                                        </select>
+                                                    </div>
+                                                <div class="col-lg-4 col-12">
+                                                    <p class="mg-b-10">
+                                                        City <sapn class="text-danger">*</sapn>
+                                                    </p>
+                                                    <input class="form-control" placeholder="" type="text">
+                                                </div>
+                                                </div>
+                                            
+                                        </div>
+                                        <div class="modal-footer d-flex justify-content-start">
+                                            <button type="button" class="btn btn-indigo"> Save</button>
+                                            <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Modal -->
+                       </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="col">
+                    <p class="mg-b-10">
+                        Project<span class="text-danger">*</span>
+                    </p>
+                    <div class="d-flex">
+                        <select class="form-control select2">
+                            <option label="Ahmed"></option>
+                            <option>Mahmoud</option>
+                            <option>Adel</option>
+                            <option>Ali</option>
+                        </select>
+                        <button class="btn btn-az-primary" data-bs-toggle="modal" data-bs-target="#secondSampleModal">
+                            <i class="fas fa-plus px-1"></i>
+                        </button>
+                </div>
+                 <!--modal-->
+                    <div class="modal fade" id="secondSampleModal" tabindex="-1">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">
+                                        AddProject
+                                    </h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row py-2">
+                                        <div class="col-lg-6 col-12 py-2">
+                                            <p class="mg-b-10">
+                                                Code <sapn class="text-danger">*</sapn>
+                                            </p>
+                                            <input class="form-control" placeholder="PRJ-2025-0001" type="text">
+                                        </div>
+                                        <div class="col-lg-6 col-12 py-2">
+                                            <p class="mg-b-10">
+                                                Name <sapn class="text-danger">*</sapn>
+                                            </p>
+                                            <input class="form-control" placeholder="Name" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row py-2">
+                                        <div class="col-lg-6 col-12">
+                                            <p class="mg-b-10">
+                                                Customer  <sapn class="text-danger">*</sapn>
+                                            </p>
+                                            <select class="form-control select2">
+                                                <option label="Bootstrap"></option>
+                                                <option>Ahmed ali</option>
+                                                <option>Adel Mahmoud</option>
+                                                <option>Mohamed alaa</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer d-flex justify-content-start">
+                                    <button type="button" class="btn btn-indigo">Save</button>
+                                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--modal-->
+               
+            </div>
+                <div class="col">
+                    <p class="mg-b-10">Received Date <sapn class="text-danger">*</sapn></p>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="MM/DD/YYYY" id="dp1763637359790">
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="py-3">
+    <div class="card py-3">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3>
+                    Items
+                </h3>
+                @* <button class="btn btn-info btn-block rounded-2"><i class="fas fa-plus"></i> Add</button> *@
+            </div>
+
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="p-3">
+                    <div class="table-responsive">
+                            <table id="example2" class="text-center table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Number of Samples</th>
+                                        <th>Sample Type / Quantity</th>
+                                        <th>Test Types</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <input class="form-control" placeholder="SlsReq-2025-0001" type="number">
+                                        </td>
+                                        <td>
+                                            <select class="form-control select2">
+                                                <option label="Ahmed"></option>
+                                                <option>Mahmoud</option>
+                                                <option>Adel</option>
+                                                <option>Ali</option>
+                                            </select>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">Delete</button>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+
+                    </div>
+
+                </div>
+                    <div class="col-12">
+                        <li class="nav-sub-item btn btn-primary btn-block rounded-2">
+                            <a class="nav-sub-link text-white" href="#">
+                                <i class="fas fa-plus px-1"></i>
+                                Add New Item
+                            </a>
+                        </li>
+                    </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="card-footer d-flex justify-content-start py-3 gap-2">
+        <button type="button" class="btn btn-indigo rounded-2">Save</button>
+        <button type="button" class="btn btn-outline-light rounded-2" data-bs-dismiss="modal">Close</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+               $('#myModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#myModal')
+            });
+
+            // Fix input mask
+            $('#dateMask').mask('99/99/9999');
+        });
+
+         $('#secondSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#secondSampleModal')
+            });
+
+             // Fix input mask
+
+
+             });
+
+
+
+
+
+    </script>
+}

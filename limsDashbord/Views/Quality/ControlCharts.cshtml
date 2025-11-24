@@ -1,5 +1,164 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Control Charts
+                    </h2>
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Quality
+                        </li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">Control Charts</li>
+                    </ul>
+
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-primary btn-block rounded-2" data-bs-toggle="modal" data-bs-target="#newSampleModal">
+                        <i class="fas fa-plus px-1"></i>
+                        Add New Control Chart
+                    </button>
+
+                    <div class="modal fade" id="newSampleModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content modal-content-demo">
+                                <div class="modal-header">
+                                    <h6 class="modal-title">
+                                        Add New Control Chart
+                                    </h6>`
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row py-2">
+                                        <div class=" col-12">
+                                            <p class="mg-b-10">
+                                                Code <sapn class="text-danger">*</sapn>
+                                            </p>
+                                            <input class="form-control" placeholder="EQP-2025-0002" type="text">
+                                        </div>
+
+                                       
+                                        <div class="col-12 py-2">
+                                            <p class="mg-b-10">
+                                                Test Type
+                                            </p>
+                                            <select class="form-control select2">
+                                                <option label="Ahmed"></option>
+                                                <option>Mahmoud</option>
+                                                <option>Adel</option>
+                                                <option>Ali</option>
+                                            </select>
+                                        </div>
+
+                                       
+
+
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer justify-content-start">
+                                    <button type="button" class="btn btn-indigo"><i class="fas fa-save"></i> Save</button>
+                                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal"><i class="fas fa-ban"></i> Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-gray-700 btn-block rounded-2">
+                        <i class="fa fas fa-bolt"></i>
+                        Reload
+                    </button>
+                    <li class="nav-sub-item btn btn-success btn-block rounded-2">
+                        <a asp-controller="LabManagement" asp-action="AdvancedFilter" class="nav-sub-link text-black">
+                            <i class="fa fas fa-filter"></i>
+                            Advanced Filter
+                        </a>
+                    </li>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card my-3">
+                    <div class="p-3">
+                        <div class="table-responsive">
+                            <table id="example2" class="text-center table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Code</th>
+                                        <th>Test Type</th>
+                                        <th>Results</th>
+                                        <th>Attachments</th>
+                                        <th>Created By</th>
+                                        <th>Created On</th>
+                                        <th>&nbsp;</th>
+                                        <th>&nbsp;</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>WO-221</td>
+                                        <td>Chemical Analysis</td>
+                                        <td>Total Hardness: 250 mg/L</td>
+                                        <td>Report.pdf</td>
+                                        <td>Ahmed Ali</td>
+                                        <td>2025-11-25</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+               $('#newSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#newSampleModal')
+            });
+
+            // Fix input mask
+            $('#dateMask').mask('99/99/9999');
+        });
+
+         $('#secondSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#secondSampleModal')
+            });
+
+             // Fix input mask
+
+
+             });
+
+
+
+
+
+    </script>
 }
+
+

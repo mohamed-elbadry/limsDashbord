@@ -6,7 +6,7 @@
                     <h2>
                         Test Types
                     </h2>
-                    <ul class="nav-sub d-flex align-items-center gap-2">
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
                         <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
                         <li class="text-black">/</li>
                         <li class="text-black">Lab Management</li>
@@ -32,10 +32,6 @@
                                 <div class="modal-body">
                                     <div class="row py-2">
                                         <div class="col-lg-6 col-12">
-                                            <p class="mg-b-10">
-                                                Code <sapn class="text-danger">*</sapn>
-                                            </p>
-                                            
                                             <div class="col-12 py-2">
                                                 <p class="mg-b-10">
                                                     Code <sapn class="text-danger">*</sapn>
@@ -108,12 +104,10 @@
                         Reload
                     </button>
 
-                    <li class="nav-sub-item btn btn-success btn-block rounded-2">
-                        <a asp-controller="LabManagement" asp-action="AdvancedFilter" class="nav-sub-link text-black">
-                            <i class="fa fas fa-filter"></i>
-                            Advanced Filter
-                        </a>
-                    </li>
+                    <button id="advancedFilterBtn" class="btn btn-success btn-block rounded-2 text-white">
+                        <i class="fa fas fa-filter"></i>
+                        Advanced Filter
+                    </button>
                    
                 </div>
             </div>
@@ -131,6 +125,17 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card my-3">
+                                        <div id="filterRow" class="row p-3 d-none">
+                                            <div class="col-lg-4 col-12">
+                                                <p class="mg-b-10">Code</p>
+                                                <input class="form-control" placeholder="Code" type="text">
+                                            </div>
+                                            <div class="col-lg-8 col-12 d-flex align-items-end">
+                                                <button class="btn btn-info btn-block rounded-2">
+                                                    <i class="fas fa-search"></i> Search
+                                                </button>
+                                            </div>
+                                        </div>
                                         <div class="p-3">
                                             <div class="table-responsive">
                                                 <table id="example2" class="text-center table table-bordered table-hover">
@@ -172,6 +177,7 @@
                         <div id="tabCont2" class="tab-pane">
                             <div class="col-12">
                                 <div class="card my-3">
+                                    
                                     <div class="p-3">
                                         <div class="table-responsive">
                                             <table id="example2" class="text-center table table-bordered table-hover">
@@ -257,7 +263,12 @@
 
              });
 
-            
+             const btn = document.getElementById('advancedFilterBtn');
+        const filterRow = document.getElementById('filterRow');
+
+        btn.addEventListener('click', function () {
+            filterRow.classList.toggle('d-none');
+        });
             
             
             

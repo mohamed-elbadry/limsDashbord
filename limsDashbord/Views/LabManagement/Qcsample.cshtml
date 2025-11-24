@@ -13,12 +13,12 @@
                             Lab Management
                         </li>
                         <li class="text-black">/</li>
-                        <li class="text-black">
-                            Samples
-                        </li>
+                        <li class="text-black">Samples</li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">List QC Samples</li>
                     </ul>
                 </div>
-                <div class="d-flex gap-2">
+                @* <div class="d-flex gap-2">
                     <button class="btn btn-primary btn-block rounded-2" data-bs-toggle="modal" data-bs-target="#newSampleModal">
                         <i class="fas fa-plus px-1"></i>
                         Receive New Sample
@@ -31,7 +31,7 @@
                                     <h6 class="modal-title">
                                         Receive New Sample
                                     </h6>`
-                                    
+
                                 </div>
                                 <div class="modal-body">
                                     <div class="row py-2">
@@ -42,24 +42,24 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="SMP-2025-0001">
+                                                <input id="dateMask" type="text" class="form-control" placeholder="MM/DD/YYYY">
                                             </div>
                                             <div class="py-2">
                                                 <label for="notes">Description <sapn class="text-danger">*</sapn></label>
                                                 <textarea id="notes" rows="3" class="form-control" placeholder="Textarea" style="height: 50px;"></textarea>
                                             </div>
-                                          <div class="row">
-                                              <div class="col-lg-6 col-12">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-12">
                                                     <p class="mg-b-10">
                                                         Client <sapn class="text-danger">*</sapn>
                                                     </p>
                                                     <select class="form-control select2">
                                                         <option label="Ahmed"></option>
                                                         <option>Mahmoud</option>
-                                                        <option >Adel</option>
+                                                        <option>Adel</option>
                                                         <option>Ali</option>
                                                     </select>
-                                              </div>
+                                                </div>
                                                 <div class="col-lg-6 col-12">
                                                     <p class="mg-b-10">Sales Order <sapn class="text-danger">*</sapn></p>
                                                     <select class="form-control select2">
@@ -69,7 +69,7 @@
                                                         <option>Order 4</option>
                                                     </select>
                                                 </div>
-                                          </div>
+                                            </div>
                                             <div class="row py-2">
                                                 <div class="col-lg-6 col-12">
                                                     <p class="mg-b-10">
@@ -80,7 +80,7 @@
                                                         <option>Html</option>
                                                         <option>Css</option>
                                                         <option>Js</option>
-                                                       
+
                                                     </select>
                                                 </div>
                                                 <div class="col-lg-6 col-12">
@@ -95,21 +95,27 @@
                                             </div>
                                             <div class="row py-2">
                                                 <div class="col-lg-6 col-12">
-                                                    <p class="mg-b-10">
-                                                        Received Date
-                                                        <sapn class="text-danger">*</sapn>
-                                                    </p>
-                                                        <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
-                                                        <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                                                    <p class="mg-b-10">Received Date <sapn class="text-danger">*</sapn></p>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text">
+                                                                <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+                                                            </div>
+                                                        </div>
+                                                        <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="MM/DD/YYYY" id="dp1763637359790">
+                                                    </div>
                                                 </div>
 
                                                 <div class="col-lg-6 col-12">
-                                                    <p class="mg-b-10">
-                                                        Date Of Sampling
-                                                        <sapn class="text-danger">*</sapn>
-                                                    </p>
-                                                    <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
-                                                    <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                                                    <p class="mg-b-10">Date Of Sampling <sapn class="text-danger">*</sapn></p>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text">
+                                                                <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+                                                            </div>
+                                                        </div>
+                                                        <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="MM/DD/YYYY" id="dp1763637359791">
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="row py-2">
@@ -203,29 +209,29 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer d-flex justify-content-start">
-                                    <button type="button" class="btn btn-indigo"><i class="fa fa-save"></i> Save </button>
-                                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-indigo"><i class="fa fa-save"></i> Save changes</button>
+                                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
 
-                  
 
-                    <button class="btn btn-secondary text-white rounded-2" data-bs-toggle="modal" data-bs-target="#secondSampleModal">
+
+                    <button class="btn btn-secondary  rounded-2" data-bs-toggle="modal" data-bs-target="#secondSampleModal">
                         <i class="fas fa-plus px-1"></i> ReceiveMultiSample
                     </button>
-                   
-                        <div class="modal fade" id="secondSampleModal" tabindex="-1">
+
+                    <div class="modal fade" id="secondSampleModal" tabindex="-1">
                         <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
+                            <div class="modal-content">
+                                <div class="modal-header">
                                     <h5 class="modal-title">
                                         ReceiveMultiSample
                                     </h5>
-                                    </div>
-                                    <div class="modal-body">
+                                </div>
+                                <div class="modal-body">
                                     <div class="row py-2">
                                         <div class="col-lg-6 col-12">
                                             <p class="mg-b-10">
@@ -293,22 +299,32 @@
                                         <div class="col-lg-4 col-12">
                                             <p class="mg-b-10">
                                                 Received Date
-                                                <sapn class="text-danger">*</sapn>
                                             </p>
-                                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
-                                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+                                                    </div>
+                                                </div>
+                                                <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="MM/DD/YYYY" id="dp1763641628615">
+                                            </div>
                                         </div>
                                         <div class="col-lg-4 col-12">
                                             <p class="mg-b-10">
-                                                Received Date
-                                                <sapn class="text-danger">*</sapn>
+                                                Date Of Sampling
                                             </p>
-                                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
-                                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+                                                    </div>
+                                                </div>
+                                                <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="MM/DD/YYYY" id="dp1763641628616">
+                                            </div>
                                         </div>
                                         <div class="col-12 py-3">
                                             <p class="mg-b-10">
-                                                Date Of Sampling
+                                                ReceiveBy
                                             </p>
                                             <select class="form-control select2">
                                                 <option label="Bootstrap"></option>
@@ -325,13 +341,13 @@
                                             <textarea id="notes" rows="3" class="form-control" placeholder="Notes" style="height: 80px;"></textarea>
                                         </div>
                                     </div>
-                                   <div class="row">
-                                        <div class="d-flex gap-1 py-3 bg-indigo text-center rounded-2">
-                                            <p class="text-white m-0 p-0">Client</p>
-                                            <p class="text-white m-0 p-0">/</p>
-                                            <p class="text-white m-0 p-0">Project</p>
-                                            <p class="text-white m-0 p-0">/</p>
-                                            <p class="text-white m-0 p-0">Site</p>
+                                    <div class="row">
+                                        <div class="d-flex gap-1 py-3">
+                                            <p>Client</p>
+                                            <p>/</p>
+                                            <p>Project</p>
+                                            <p>/</p>
+                                            <p>Site</p>
                                         </div>
                                         <div class="col-lg-4 col-12 py-2">
                                             <p class="mg-b-10">
@@ -370,18 +386,18 @@
                                             </p>
                                             <input class="form-control" placeholder="HoldingTime" type="number">
                                         </div>
-                                   </div>
-                                   </div>
+                                    </div>
+                                </div>
 
                                 <div class="modal-footer d-flex justify-content-start">
-                                    <button type="button" class="btn btn-indigo">Save</button>
-                                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
-                                </div>
+                                    <button type="button" class="btn btn-indigo">Save changes</button>
+                                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-               
+
 
 
                     <button class="btn btn-success btn-block rounded-2">
@@ -392,16 +408,14 @@
                         <i class="fa fas fa-bolt"></i>
                         Reload
                     </button>
-                </div>
+                </div> *@
             </div>
             <div class="py-5">
                 <div class="card bd-0">
                     <div class="card-header bg-gray-400 bd-b-0-f pd-b-0">
                         <nav class="nav nav-tabs">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#tabCont1">Samples</a>
-                            @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont2">Qc Samples</a> *@
-                            @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont3">Samples Types</a> *@
-                            <a asp-controller="LabManagement" asp-action="Qcsample" class="nav-link">Qc Sample</a>
+                            <a asp-controller="LabManagement" asp-action="Samples" class="nav-link">Samples</a>
+                            <a asp-controller="LabManagement" asp-action="Qcsample" class="nav-link active">Qc Sample</a>
                             <a asp-controller="LabManagement" asp-action="sampletypes" class="nav-link">Sample Types</a>
                             <a asp-controller="LabManagement" asp-action="SampleTypeMatrices" class="nav-link">Sample Type Matrices</a>
                         </nav>
@@ -409,118 +423,44 @@
                     <div class="card-body bd bd-t-0 tab-content">
                         <div id="tabCont1" class="tab-pane active show">
                             <div class="row">
-                                <div class="col-12 col-lg-2">
-                                    <p class="mg-b-10">Code</p>
-                                    <input class="form-control" placeholder="Code" type="text">
-                                </div>
-
-                                <div class="col-12 col-lg-4">
-                                    <p class="mg-b-10">Customers</p>
-                                    <select class="form-control select2">
-                                        <option label="Ahmed"></option>
-                                        <option>Mahmoud</option>
-                                        <option>Adel</option>
-                                        <option>Ali</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-12 col-lg-4">
-                                    <p class="mg-b-10">Sales Orders</p>
-                                    <select class="form-control select2">
-                                        <option label="Ahmed"></option>
-                                        <option>Mahmoud</option>
-                                        <option>Adel</option>
-                                        <option>Ali</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-12 col-lg-2 d-flex align-items-end">
-                                    <button class="btn btn-info btn-block rounded-2">
-                                        <i class="fas fa-search"></i> Search
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                @*         <div class="col-lg-2 col-12">
-                                            <p class="mg-b-10">
-                                                Code
-                                            </p>
-                                            <input class="form-control" placeholder="Code" type="text">
-                                        </div>
-                                        <div class="col-lg-4 col-12">
-                                            <p class="mg-b-10">
-                                                Customers
-                                            </p>
-                                            <select class="form-control select2">
-                                                <option label="Ahmed"></option>
-                                                <option>Mahmoud</option>
-                                                <option>Adel</option>
-                                                <option>Ali</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-lg-4 col-12">
-                                            <p class="mg-b-10">
-                                                Sales Orders
-                                            </p>
-                                            <select class="form-control select2">
-                                                <option label="Ahmed"></option>
-                                                <option>Mahmoud</option>
-                                                <option>Adel</option>
-                                                <option>Ali</option>
-                                            </select>
-                                        </div>
-                                <div class="col-lg-2 col-12 d-flex align-items-end">
-                                    <button class="btn btn-info btn-block rounded-2"><i class="fas fa-search"></i> Search</button>
-                                </div> *@
                                 <div class="col-12">
-                                <div class="card my-3">
-                                    <div class="p-3">
-                                        <div class="table-responsive">
+                                    <div class="card my-3">
+                                        <div class="p-3">
+                                            <div class="table-responsive">
                                                 <table id="example2" class="text-center table table-bordered table-hover">
                                                     <thead>
                                                         <tr>
-                                                            <th><input type="checkbox" id="selectAll"></th>
                                                             <th>#</th>
                                                             <th>Code</th>
                                                             <th>Name</th>
                                                             <th>Type</th>
-                                                            <th>Client</th>
-                                                            <th>Sales Order</th>
-                                                            <th>Status</th>
-                                                            <th>Sup Work Orders Count</th>
-                                                            <th>Received By</th>
+                                                            <th>Added By</th>
                                                             <th>Received Date</th>
                                                             <th>Notes</th>
+                                                            <th>&nbsp;</th>
+                                                            <th>&nbsp;</th>
                                                         </tr>
                                                     </thead>
 
                                                     <tbody>
                                                         <tr>
-                                                            <td><input type="checkbox"></td>
                                                             <td>1</td>
-                                                            <td>WO-115</td>
-                                                            <td>Maintenance Request</td>
-                                                            <td>Technical</td>
-                                                            <td>Ahmed Ali</td>
-                                                            <td>SO-2025</td>
-                                                            <td><span class="badge badge-danger">Pending</span></td>
-                                                            <td>3</td>
-                                                            <td>Mohamed</td>
-                                                            <td>2025-11-10</td>
-                                                            <td>Waiting for approval</td>
+                                                            <td>WO-420</td>                
+                                                            <td>Ahmed Adel</td>    
+                                                            <td>Lab</td>                   
+                                                            <td>Eng. Ahmed Hassan</td>    
+                                                            <td>2025-11-22</td>           
+                                                            <td><span class="badge badge-warning">Processing</span></td>
+                                                            <td></td>  
+                                                            <td></td>  
                                                         </tr>
-
-                                                       
-
-                                                       
                                                     </tbody>
                                                 </table>
 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                             </div>
                         </div><!-- tab-pane -->
                         <div id="tabCont2" class="tab-pane">
@@ -560,43 +500,47 @@
                                 </div>
                             </div>
                         </div>
-                      
-                      
+
+
                     </div><!-- card-body -->
                 </div><!-- card -->
             </div>
-           
+
 
         </div>
     </div>
 </div>
- @section Scripts {
-     <script>
-                 // Global init
-        $('.select2').select2({
-            placeholder: 'Choose one'
-        });
-            $('#dateMask').mask('99/99/9999');
+@section Scripts {
+    <script>
 
-        // Modal 1
-        $('#newSampleModal').on('shown.bs.modal', function () {
-            $(this).find('.select2').select2({
-            placeholder: 'Choose one',
-
+               $('#newSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
                 dropdownParent: $('#newSampleModal')
             });
+
+            // Fix input mask
+            $('#dateMask').mask('99/99/9999');
         });
 
-        // Modal 2
-        $('#secondSampleModal').on('shown.bs.modal', function () {
-            $(this).find('.select2').select2({
-            placeholder: 'Choose one',
-
+         $('#secondSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
                 dropdownParent: $('#secondSampleModal')
             });
-        });
 
-              
-            
+             // Fix input mask
+
+
+             });
+
+
+
+
+
     </script>
- }                     
+}

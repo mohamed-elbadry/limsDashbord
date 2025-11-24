@@ -1,23 +1,20 @@
-﻿
-
-
-        <div class="p-3">
+﻿        <div class="p-3">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex flex-column">
-                    <h2 class="m-0 p-0">
+                    <h2>
                         Add WO Batch
                     </h2>
-                    <div class="d-flex gap-1">
-                        <p>Home</p>
-                        <p>/</p>
-                        <p>
-                            Lab Management
-                        </p>
-                        <p>/</p>
-                        <p>
-                    Add WO Batch
-                        </p>
-                    </div>
+            <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                <li class="text-black">/</li>
+                <li class="text-black">
+                    Lab Management
+                </li>
+                <li class="text-black">/</li>
+                <li class="text-black">Add WO Batch</li>
+
+            </ul>
+                   
                 </div>
             </div>
            
@@ -30,9 +27,8 @@
                     Code <sapn class="text-danger">*</sapn>
                 </p>
                 <div class="input-group">
-                    <div class="input-group-prepend">
-                    </div>
-                    <input id="dateMask" type="text" class="form-control" placeholder="MM/DD/YYYY">
+                    
+                    <input type="text" class="form-control" placeholder="Code" value="WOB-2025-0001">
                 </div>
             </div>
             <div class="col-lg-3 col-12">
@@ -40,9 +36,8 @@
                     Name <sapn class="text-danger">*</sapn>
                 </p>
                 <div class="input-group">
-                    <div class="input-group-prepend">
-                    </div>
-                    <input id="dateMask" type="text" class="form-control" placeholder="MM/DD/YYYY">
+                    
+                    <input id="dateMask" type="text" class="form-control" placeholder="Name" value="WOB-2025-0001">
                 </div>
             </div>
             <div class="col-lg-3 col-12">
@@ -116,27 +111,21 @@
         </div>
         <div class="row py-2">
             <div class="col-lg-3 col-12">
-                <p class="mg-b-10">Delivery Date <sapn class="text-danger">*</sapn></p>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
-                        </div>
-                    </div>
-                    <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="MM/DD/YYYY" id="dp1763637359790">
-                </div>
+                <p class="mg-b-10">
+                    Received Date
+                    <sapn class="text-danger">*</sapn>
+                </p>
+                <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
             </div>
 
             <div class="col-lg-3 col-12">
-                <p class="mg-b-10">Start Date <sapn class="text-danger">*</sapn></p>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
-                        </div>
-                    </div>
-                    <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="MM/DD/YYYY" id="dp1763637359791">
-                </div>
+                <p class="mg-b-10">
+                    Start Date
+                    <sapn class="text-danger">*</sapn>
+                </p>
+                <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
             </div>
 
             <div class="col-lg-3 col-12">

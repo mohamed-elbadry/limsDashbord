@@ -6,17 +6,13 @@
                     <h2 class="m-0 p-0">
                         Result Reports
                     </h2>
-                    <div class="d-flex gap-1">
-                        <p>Home</p>
-                        <p>/</p>
-                        <p>
-                            Lab Management
-                        </p>
-                        <p>/</p>
-                        <p>
-                            Result Reports
-                        </p>
-                    </div>
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">Lab Management</li>
+                        <li class="text-black">/</li>
+                        <li class="text-black"> Result Reports</li>
+                    </ul>
                 </div>
                 <div class="d-flex gap-2">
                     <button class="btn btn-primary btn-block rounded-2" data-bs-toggle="modal" data-bs-target="#newSampleModal">
@@ -85,7 +81,7 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer justify-content-start">
-                                    <button type="button" class="btn btn-indigo">Save</button>
+                                    <button type="button" class="btn btn-indigo"><i class="fa fa-save"></i> Save</button>
                                     <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
                                 </div>
                             </div>
@@ -96,16 +92,25 @@
                         <i class="fa fas fa-bolt"></i>
                         Reload
                     </button>
-                    <li class="nav-sub-item btn btn-success btn-block rounded-2">
-                        <a asp-controller="LabManagement" asp-action="AdvancedFilter" class="nav-sub-link text-black">
-                            <i class="fa fas fa-filter"></i>
-                            Advanced Filter
-                        </a>
-                    </li>
+                    <button id="advancedFilterBtn" class="btn btn-success btn-block rounded-2 text-white">
+                        <i class="fa fas fa-filter"></i>
+                        Advanced Filter
+                    </button>
                 </div>
             </div>
             <div class="col-12">
                 <div class="card my-3">
+                    <div id="filterRow" class="row p-3 d-none">
+                        <div class="col-lg-4 col-12">
+                            <p class="mg-b-10">Code</p>
+                            <input class="form-control" placeholder="Code" type="text">
+                        </div>
+                        <div class="col-lg-8 col-12 d-flex align-items-end">
+                            <button class="btn btn-info btn-block rounded-2">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
                     <div class="p-3">
                         <div class="table-responsive">
                             <table id="example2" class="text-center table table-bordered table-hover">
@@ -118,9 +123,9 @@
                                         <th>Project</th>
                                         <th>Created By</th>
                                         <th>Created On</th>
-                                        <th>Notes</th>
-                                        <th>Progress</th>
-                                        <th>Team</th>
+                                        <th>&nbsp;</th>
+                                        <th>&nbsp;</th>
+                                        <th>&nbsp;</th>
                                     </tr>
                                 </thead>
 
@@ -133,9 +138,9 @@
                                         <td>High</td> <!-- Project -->
                                         <td>Ahmed Ali</td> <!-- Created By -->
                                         <td>2025-11-25</td> <!-- Created On -->
-                                        <td>Sample collected from main reservoir</td> <!-- Notes -->
-                                        <td>50%</td> <!-- Progress -->
-                                        <td>Lab Team A</td> <!-- Team -->
+                                        <td></td> <!-- Notes -->
+                                        <td></td> <!-- Progress -->
+                                        <td></td> <!-- Team -->
                                     </tr>
                                 </tbody>
                             </table>
@@ -176,7 +181,12 @@
 
 
              });
+             const btn = document.getElementById('advancedFilterBtn');
+        const filterRow = document.getElementById('filterRow');
 
+        btn.addEventListener('click', function () {
+            filterRow.classList.toggle('d-none');
+        });
 
 
 

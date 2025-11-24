@@ -1,5 +1,122 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Customers Management
+                    </h2>
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">Sales</li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Customers Management
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="d-flex gap-2">
+                    @* <button class="btn btn-primary btn-block rounded-2" data-bs-toggle="modal" data-bs-target="#newSampleModal">
+                        <i class="fas fa-plus px-1"></i>
+                        Add New Control Chart
+                    </button> *@
+                    <li class="nav-sub-item btn btn-primary btn-block rounded-2">
+                        <a asp-controller="Sales" asp-action="AddCustomers" class="nav-sub-link text-black">
+                            <i class="fas fa-plus px-1"></i>
+                            Add Customers
+                        </a>
+                    </li>
+                    <li class="nav-sub-item btn btn-success btn-block rounded-2">
+                        <a asp-controller="LabManagement" asp-action="AdvancedFilter" class="nav-sub-link text-black">
+                            <i class="fa fas fa-filter"></i>
+                            Advanced Filter
+                        </a>
+                    </li>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card my-3">
+                    <div class="p-3">
+                        <div class="table-responsive">
+                            <table id="example2" class="text-center table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Phone Number</th>
+                                        <th>Address</th>
+                                        <th>Code</th>
+                                        <th>Opening Balance</th>
+                                        <th>Email</th>
+                                        <th>&nbsp;</th>
+                                        <th>&nbsp;</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mohamed Hassan</td>
+                                        <td>01024567890</td>
+                                        <td>Cairo, Nasr City</td>
+                                        <td>CUST-554</td>
+                                        <td>12,500 EGP</td>
+                                        <td>m.hassan@example.com</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+               $('#newSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#newSampleModal')
+            });
+
+            // Fix input mask
+            $('#dateMask').mask('99/99/9999');
+        });
+
+         $('#secondSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#secondSampleModal')
+            });
+
+             // Fix input mask
+
+
+             });
+
+
+
+
+
+    </script>
 }
+
+
+

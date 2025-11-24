@@ -28,5 +28,26 @@ namespace limsDashbord.Controllers
         {
             return View();
         }
+        public IActionResult AddRequests()
+        {
+            return View();
+        }
+        public IActionResult AddROrders()
+        {
+            return View();
+        }
+        public IActionResult AddCustomers()
+        {
+            return View();
+        }
+        public IActionResult AddProjects()
+        {
+            return View();
+        }
+        public IActionResult AdvancedCustomerFilter()
+        {
+            return View();
+        }
+
     }
 }

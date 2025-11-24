@@ -20,5 +20,29 @@ namespace limsDashbord.Controllers
         {
             return View();
         }
+        public IActionResult addedit()
+        {
+            return View();
+        }
+        public IActionResult AdvancedInventoryFilter()
+        {
+            return View();
+        }
+        public IActionResult AddWarehouses()
+        {
+            return View();
+        }
+        public IActionResult AddRequisitions()
+        {
+            return View();
+        }
+        public IActionResult Brands()
+        {
+            return View();
+        }
+        public IActionResult UnitTemplates()
+        {
+            return View();
+        }
     }
 }

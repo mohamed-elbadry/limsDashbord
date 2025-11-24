@@ -4,25 +4,25 @@
 
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex flex-column">
-                    <h2 class="m-0 p-0">
-                        Samples
+                    <h2>
+                        Matrices
                     </h2>
-                    <div class="d-flex gap-1">
-                        <p>Home</p>
-                        <p>/</p>
-                        <p>
+                   
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
                             Lab Management
-                        </p>
-                        <p>/</p>
-                        <p>
-                            Samples
-                        </p>
-                    </div>
+                        </li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">Matrices</li>
+                        
+                    </ul>
                 </div>
                 <div class="d-flex gap-2">
                     <button class="btn btn-primary btn-block rounded-2" data-bs-toggle="modal" data-bs-target="#newSampleModal">
                         <i class="fas fa-plus px-1"></i>
-                        AddNewSampleType
+                        AddNewMatrix
                     </button>
 
                     <div class="modal fade" id="newSampleModal" tabindex="-1" role="dialog">
@@ -30,7 +30,7 @@
                             <div class="modal-content modal-content-demo">
                                 <div class="modal-header">
                                     <h6 class="modal-title">
-                                        Add New Sample
+                                        AddNewMatrix
                                     </h6>
 
                                 </div>
@@ -43,7 +43,7 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                 </div>
-                                                <input class="form-control" placeholder="SMPT-2025-0002" type="text">
+                                                <input class="form-control" placeholder="MTRX-2025-0001" type="text">
                                             </div>
                                             <p class="mg-b-10 py-2">
                                                 Name <sapn class="text-danger">*</sapn>
@@ -53,11 +53,25 @@
                                                 </div>
                                                 <input class="form-control" placeholder="Name" type="text">
                                             </div>
-                                            <div class="py-2">
-                                                <label for="notes">Description <sapn class="text-danger">*</sapn></label>
-                                                <textarea id="notes" rows="3" class="form-control" placeholder="Textarea" style="height: 90px;"></textarea>
+                                           
+                                            <div class="py-4">
+                                                <label class="ckbox">
+                                                    <input type="checkbox" id="isParent">
+                                                    <span>IsParent</span>
+                                                </label>
                                             </div>
 
+                                            <div id="sampleTypeWrapper">
+                                                <p class="mg-b-10 py-2">
+                                                    Sample Type <span class="text-danger">*</span>
+                                                </p>
+                                                <select class="form-control select2">
+                                                    <option label="Ahmed"></option>
+                                                    <option>Mahmoud</option>
+                                                    <option>Adel</option>
+                                                    <option>Ali</option>
+                                                </select>
+                                            </div>
 
                                         </div>
 
@@ -76,12 +90,11 @@
                         <i class="fa fas fa-bolt"></i>
                         Reload
                     </button>
-                    <li class="nav-sub-item btn btn-success btn-block rounded-2">
-                        <a asp-controller="LabManagement" asp-action="AdvancedFilter" class="nav-sub-link text-black">
-                            <i class="fa fas fa-filter"></i>
-                            Advanced Filter
-                        </a>
-                    </li>
+                    <button id="advancedFilterBtn" class="btn btn-success btn-block rounded-2 text-white">
+                        <i class="fa fas fa-filter"></i>
+                        Advanced Filter
+                    </button>
+                    
                 </div>
             </div>
 
@@ -91,9 +104,9 @@
                         <nav class="nav nav-tabs">
                             <a asp-controller="LabManagement" asp-action="Samples" class="nav-link">Samples</a>
                             @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont1">Samples</a> *@
-                            <a class="nav-link" data-bs-toggle="tab" href="#tabCont2">Qc Samples</a>
+                            @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont2">Qc Samples</a> *@
                             @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont3">Samples Types</a> *@
-
+                            <a asp-controller="LabManagement" asp-action="Qcsample" class="nav-link">Qc Sample</a>
                             <a asp-controller="LabManagement" asp-action="sampletypes" class="nav-link">Sample Types</a>
                             <a asp-controller="LabManagement" asp-action="SampleTypeMatrices" class="nav-link active">Sample Type Matrices</a>
                             @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont4">Sample Type Matrices</a> *@
@@ -105,6 +118,17 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card my-3">
+                                    <div id="filterRow" class="row p-3 d-none">
+                                        <div class="col-lg-4 col-12">
+                                            <p class="mg-b-10">Code</p>
+                                            <input class="form-control" placeholder="Code" type="text">
+                                        </div>
+                                        <div class="col-lg-8 col-12 d-flex align-items-end">
+                                            <button class="btn btn-info btn-block rounded-2">
+                                                <i class="fas fa-search"></i> Search
+                                            </button>
+                                        </div>
+                                    </div>
                                         <div class="p-3">
                                             <div class="table-responsive">
                                             <table id="example2" class="text-center table table-bordered table-hover">
@@ -118,6 +142,9 @@
                                                         <th>Created By</th>
                                                         <th>Created On</th>
                                                         <th>Notes</th>
+                                                        <th>&nbsp;</th>
+                                                        <th>&nbsp;</th>
+                                                        <th>&nbsp;</th>
                                                     </tr>
                                                 </thead>
 
@@ -131,6 +158,9 @@
                                                         <td>Ahmed Ali</td>
                                                         <td>2025-01-10</td>
                                                         <td><span class="badge bg-danger">Pending</span> - Waiting for approval</td>
+                                                        <td></td>  <!-- Empty as requested -->
+                                                        <td></td>
+                                                        <td></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -149,5 +179,48 @@
         </div>
     </div>
 </div>
+@section Scripts {
+    <script>
 
+               $('#newSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#newSampleModal')
+            });
+
+            // Fix input mask
+            $('#dateMask').mask('99/99/9999');
+        });
+
+         $('#secondSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#secondSampleModal')
+            });
+
+             // Fix input mask
+             });
+
+                 const isParent = document.getElementById('isParent');
+        const sampleTypeWrapper = document.getElementById('sampleTypeWrapper');
+
+        isParent.addEventListener('change', function () {
+            if (this.checked) {
+                sampleTypeWrapper.style.display = 'none'; // اخفاء
+            } else {
+                sampleTypeWrapper.style.display = 'block'; // اظهار
+            }
+        });
+            const btn = document.getElementById('advancedFilterBtn');
+        const filterRow = document.getElementById('filterRow');
+
+        btn.addEventListener('click', function () {
+            filterRow.classList.toggle('d-none');
+        });
+    </script>
+}
 

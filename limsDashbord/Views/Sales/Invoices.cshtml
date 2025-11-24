@@ -1,5 +1,115 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Invoices Management
+                    </h2>
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">Sales</li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Invoices Management
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="d-flex gap-2">
+                    <li class="nav-sub-item btn btn-success btn-block rounded-2">
+                        <a asp-controller="LabManagement" asp-action="AdvancedFilter" class="nav-sub-link text-black">
+                            <i class="fa fas fa-filter"></i>
+                            Advanced Filter
+                        </a>
+                    </li>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card my-3">
+                    <div class="p-3">
+                        <div class="table-responsive">
+                            <table id="example2" class="text-center table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Invoice Number</th>
+                                        <th>Code</th>
+                                        <th>Client</th>
+                                        <th>WorkOrder</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Total</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td> <!-- # -->
+                                        <td>INV-2025-001</td> <!-- Invoice Number -->
+                                        <td>WO-221</td> <!-- Code -->
+                                        <td>Delta Water Co.</td> <!-- Client -->
+                                        <td>CA-455</td> <!-- WorkOrder -->
+                                        <td>2025-11-25</td> <!-- Date -->
+                                        <td>Pending</td> <!-- Status -->
+                                        <td>$750</td> <!-- Total -->
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm">View</button>
+                                            <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                        </td> <!-- Actions -->
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+               $('#newSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#newSampleModal')
+            });
+
+            // Fix input mask
+            $('#dateMask').mask('99/99/9999');
+        });
+
+         $('#secondSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#secondSampleModal')
+            });
+
+             // Fix input mask
+
+
+             });
+
+
+
+
+
+    </script>
 }
+
+
+
+

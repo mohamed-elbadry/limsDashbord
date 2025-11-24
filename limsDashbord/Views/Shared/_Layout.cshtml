@@ -17,6 +17,7 @@
     <link href="~/web/lib/pickerjs/picker.min.css" rel="stylesheet">
     <link href="~/web/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="~/web/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.css" rel="stylesheet">
     <link href="~/web/lib/select2/css/select2.min.css" rel="stylesheet">
     <!-- azia CSS -->
     <link rel="stylesheet" href="~/web/css/azia.css">
@@ -332,6 +333,7 @@
     </div><!-- az-footer -->
     </div><!-- az-content -->
     <script src="~/web/lib/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="~/web/lib/bootstrap/js/bootstrap.min.js"></script>
     @* <script src="~/web/lib/ionicons/ionicons.js"></script> *@
     <script src="~/web/lib/jquery-sparkline/jquery.sparkline.min.js"></script>
@@ -351,6 +353,9 @@
     <script src="~/web/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
     <script src="~/web/lib/jquery.maskedinput/jquery.maskedinput.js"></script>
     <script src="~/web/lib/select2/js/select2.min.js"></script>
+    <script type="text/javascript" src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.js"></script>
     <script src="~/web/js/azia.js"></script>
    
    
@@ -365,9 +370,13 @@
             selectOtherMonths: true
         });
 
-               
+                  $(document).ready(function() {
+          $('#summernote').summernote({
+              height:200,
+          });
+        });
 
-        $('.select2').select2({
+                $('.select2').select2({
                 placeholder: 'Choose one',
                 searchInputPlaceholder: 'Search',
             });

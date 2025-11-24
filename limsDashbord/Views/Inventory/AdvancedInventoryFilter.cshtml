@@ -1,0 +1,169 @@
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2 class="m-0 p-0">
+                        Work Orders
+                    </h2>
+                    <div class="d-flex gap-1">
+                        <p>Home</p>
+                        <p>/</p>
+                        <p>
+                            Lab Management
+                        </p>
+                        <p>/</p>
+                        <p>
+                            Work Orders
+                        </p>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="col-12">
+                <div class="card my-3">
+                    <div class="row p-3">
+                        <div class="col">
+                            <p class="mg-b-10">
+                                Name
+                            </p>
+                            <input class="form-control" placeholder="Name" type="text">
+                        </div>
+                        <div class="col">
+                            <p class="mg-b-10">
+                                Category
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Ahmed"></option>
+                                <option>Mahmoud</option>
+                                <option>Adel</option>
+                                <option>Ali</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <p class="mg-b-10">
+                                Brand
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Ahmed"></option>
+                                <option>Mahmoud</option>
+                                <option>Adel</option>
+                                <option>Ali</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <p class="mg-b-10">
+                                Status
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Ahmed"></option>
+                                <option>Mahmoud</option>
+                                <option>Adel</option>
+                                <option>Ali</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <p class="mg-b-10">
+                                Barcode
+                            </p>
+                            <input class="form-control" placeholder="Barcode" type="number">
+                        </div>
+                        <div class="col-lg-2 col-12 d-flex align-items-end">
+                            <button class="btn btn-info btn-block rounded-2"><i class="fas fa-search"></i> Search</button>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card my-3">
+                            <div class="p-3">
+                                <div class="table-responsive">
+                                    <table id="example2" class="text-center table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                                <th>Code</th>
+                                                <th>Image</th>
+                                                <th>Category</th>
+                                                <th>Brand</th>
+                                                <th>QuantityInStock</th>
+                                                <th>Price</th>
+                                                <th>Price After Discount</th>
+                                                <th>&nbsp;</th>
+                                                <th>&nbsp;</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Glass Ampoule 100ml	</td>
+                                                <td>Glass Ampoule 100ml	</td>
+                                                <td>NoImage</td>
+                                                <td>Containers</td>
+                                                <td>NoParentBrand</td>
+                                                <td>NoQuantityInStock</td>
+                                                <td>250 EGP</td>
+                                                <td>
+                                                    NoDiscount
+                                                </td>
+                                                <td><button class="btn btn-az-primary btn-block rounded-2"><i class="fas fa-edit "></i> Edit</button></td>
+                                                <td>
+                                                    <button class="btn btn-danger btn-block rounded-2"> <i class="fas fa-trash-alt"></i> Delete</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Plastic Ampoule 50ml</td>
+                                                <td>Plastic Ampoule 50ml</td>
+                                                <td>NoImage	</td>
+                                                <td>Containers</td>
+                                                <td>NoParentBrand	</td>
+                                                <td>NoQuantityInStock</td>
+                                                <td>250 EGP</td>
+                                                <td>NoDiscount</td>
+                                                <td><button class="btn btn-az-primary btn-block rounded-2"><i class="fas fa-edit "></i> Edit</button></td>
+                                                <td>
+                                                    <button class="btn btn-danger btn-block rounded-2"> <i class="fas fa-trash-alt"></i> Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+                   $('#newSampleModal').on('shown.bs.modal', function () {
+        // Fix select2 with modal
+        $('.select2').select2({
+            placeholder: 'Choose one',
+            searchInputPlaceholder: 'Search',
+            dropdownParent: $('#newSampleModal')
+        });
+
+         $(function () {
+            $('.fc-datepicker').datepicker({
+                dateFormat: "mm/dd/yy",
+                showOtherMonths: true,
+                selectOtherMonths: true
+            });
+        });
+
+         // Fix input mask
+         });
+
+
+    </script>
+}
+
