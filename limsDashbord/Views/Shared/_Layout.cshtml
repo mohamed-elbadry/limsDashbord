@@ -150,7 +150,7 @@
                             <a asp-controller="Finance" asp-action="TreasuriesBankAccounts" class="nav-sub-link">Treasuries - Bank Accounts</a>
                         </li>
                         <li class="nav-sub-item">
-                            <a asp-controller="Finance" asp-action="Finance Settings" class="nav-sub-link">Finance Settings</a>
+                            <a asp-controller="Finance" asp-action="FinanceSettings" class="nav-sub-link">Finance Settings</a>
                         </li>
                     </ul>
                 </li><!-- nav-item -->
@@ -379,9 +379,10 @@
                 $('.select2').select2({
                 placeholder: 'Choose one',
                 searchInputPlaceholder: 'Search',
+                width: '100%',
+            dropdownParent: $(document.body)
             });
             $('#dateMask').mask('99/99/9999');
-
 
 
 
@@ -446,6 +447,10 @@
               $('body').toggleClass('az-sidebar-show');
             }
           })
+                  @{
+                var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+                var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+        }
 
           /* ----------------------------------- */
           /* Dashboard content */

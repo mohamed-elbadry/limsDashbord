@@ -12,5 +12,9 @@ namespace limsDashbord.Controllers
         {
             return View();
         }
+        public IActionResult Addedite()
+        {
+            return View();
+        }
     }
 }

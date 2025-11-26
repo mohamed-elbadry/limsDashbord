@@ -16,5 +16,13 @@ namespace limsDashbord.Controllers
         {
             return View();
         }
+        public IActionResult AddPurchase()
+        {
+            return View();
+        }
+        public IActionResult AddSuppliers()
+        {
+            return View();
+        }
     }
 }

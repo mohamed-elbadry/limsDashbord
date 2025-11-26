@@ -25,5 +25,13 @@ namespace limsDashbord.Controllers
         {
             return View();
         }
+        public IActionResult FinancelPeriods()
+        {
+            return View();
+        }
+        public IActionResult ClosedPeriods()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,288 @@
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        General Ledger Settings
+                    </h2>
+
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            General Ledger
+                        </li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Closed Periods
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex gap-2">
+                    <button id="advancedFilterBtn" class="btn btn-success btn-sm btn-block rounded-2 text-white" data-toggle="modal"
+                            data-target="#addAccountModal">
+                        <i class="fas fa-plus px-1"></i>
+                        Add
+                    </button>
+                    <!--modal-->
+                    <div class="modal fade" id="addAccountModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">
+                                        Add Closed Period
+                                    </h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row py-2">
+                                        <div class="col-12">
+                                            <p class="mg-b-10">
+                                                Start Date
+                                                <sapn class="text-danger">*</sapn>
+                                            </p>
+                                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row py-2">
+                                        <div class="col-12">
+                                            <label for="notes">Notes</label>
+                                            <textarea id="notes" rows="3" class="form-control" placeholder="" style="height:120px;"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer justify-content-end">
+                                    <button type="button" class="btn btn-primary">Save</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--modal-->
+                </div>
+            </div>
+            <div class="py-5">
+                <div class="card bd-0">
+                    <div class="card-header bg-gray-400 bd-b-0-f pd-b-0">
+                        <nav class="nav nav-tabs">
+                            @* <a class="nav-link " data-bs-toggle="tab" href="#tabCont1">General Setting</a> *@
+                            @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont2">Maintenance Requests</a> *@
+                            <a asp-controller="GeneralLedger" asp-action="GeneralLedgerSettings" class="nav-link">General Setting</a>
+                            <a asp-controller="GeneralLedger" asp-action="FinancelPeriods" class="nav-link ">Financel Periods</a>
+                            <a asp-controller="GeneralLedger" asp-action="ClosedPeriods" class="nav-link active">Closed Periods</a>
+                            @* <a asp-controller="GeneralLedger" asp-action="BankAccounts" class="nav-link">Bank Accounts</a> *@
+                        </nav>
+                    </div><!-- card-header -->
+                    <div class="card-body bd bd-t-0 tab-content">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card my-3">
+                                    <div id="filterRow" class="row p-3">
+                                        <div class="col">
+                                            <p class="mg-b-10">
+                                                Received Date
+                                                <sapn class="text-danger">*</sapn>
+                                            </p>
+                                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="col">
+                                            <p class="mg-b-10">
+                                                Received Date
+                                                <sapn class="text-danger">*</sapn>
+                                            </p>
+                                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="col">
+                                            <p class="mg-b-10">
+                                                Account
+                                            </p>
+
+                                            <select class="form-control select2">
+                                                <option value="" disabled selected>Select Account</option>
+                                                <option value="cash">Cash</option>
+                                                <option value="bank">Bank</option>
+                                                <option value="accounts-receivable">Accounts Receivable</option>
+                                                <option value="accounts-payable">Accounts Payable</option>
+                                                <option value="inventory">Inventory</option>
+                                                <option value="sales-revenue">Sales Revenue</option>
+                                                <option value="cogs">Cost of Goods Sold</option>
+                                                <option value="operating-expenses">Operating Expenses</option>
+                                                <option value="fixed-assets">Fixed Assets</option>
+                                                <option value="equity">Equity</option>
+                                            </select>
+                                        </div>
+
+                                       
+                                        <div class="col d-flex align-items-end">
+                                            <button class="btn btn-info btn-block rounded-2">
+                                                <i class="fas fa-search"></i> Search
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="p-3">
+                                        <div class="table-responsive">
+                                            <table id="example2" class="text-center table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Date</th>
+                                                        <th>Description</th>
+                                                        <th>Status</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>2025-01-15</td>
+                                                        <td>Purchase of Lab Equipment</td>
+                                                        <td><span class="badge badge-success">Completed</span></td>
+                                                        <td>
+                                                            <button class="btn btn-az-primary btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                            <button class="btn btn-danger btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>2025-04-10</td>
+                                                        <td>Calibration of Water Quality Devices</td>
+                                                        <td><span class="badge badge-warning">In Progress</span></td>
+                                                        <td>
+                                                            <button class="btn btn-az-primary btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                            <button class="btn btn-danger btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>2025-07-05</td>
+                                                        <td>Inventory Audit</td>
+                                                        <td><span class="badge badge-secondary">Pending</span></td>
+                                                        <td>
+                                                            <button class="btn btn-az-primary btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                            <button class="btn btn-danger btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>2025-10-30</td>
+                                                        <td>Year-End Financial Review</td>
+                                                        <td><span class="badge badge-danger">Overdue</span></td>
+                                                        <td>
+                                                            <button class="btn btn-az-primary btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                            <button class="btn btn-danger btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>2025-05-20</td>
+                                                        <td>Supplier Payment Processing</td>
+                                                        <td><span class="badge badge-success">Completed</span></td>
+                                                        <td>
+                                                            <button class="btn btn-az-primary btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                            <button class="btn btn-danger btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>2025-02-12</td>
+                                                        <td>Office Supplies Purchase</td>
+                                                        <td><span class="badge badge-success">Completed</span></td>
+                                                        <td>
+                                                            <button class="btn btn-az-primary btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                            <button class="btn btn-danger btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>2025-03-18</td>
+                                                        <td>Equipment Maintenance</td>
+                                                        <td><span class="badge badge-warning">In Progress</span></td>
+                                                        <td>
+                                                            <button class="btn btn-az-primary btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                            <button class="btn btn-danger btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>2025-06-22</td>
+                                                        <td>Monthly Utility Payments</td>
+                                                        <td><span class="badge badge-success">Completed</span></td>
+                                                        <td>
+                                                            <button class="btn btn-az-primary btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                            <button class="btn btn-danger btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>2025-08-15</td>
+                                                        <td>Staff Training Session</td>
+                                                        <td><span class="badge badge-secondary">Pending</span></td>
+                                                        <td>
+                                                            <button class="btn btn-az-primary btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                            <button class="btn btn-danger btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>2025-09-10</td>
+                                                        <td>Annual Tax Filing</td>
+                                                        <td><span class="badge badge-danger">Overdue</span></td>
+                                                        <td>
+                                                            <button class="btn btn-az-primary btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                            <button class="btn btn-danger btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div><!-- card-body -->
+                </div><!-- card -->
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+
+               $('#addAccountModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#addAccountModal')
+            });
+
+            // Fix input mask
+            $('#dateMask').mask('99/99/9999');
+        });
+
+
+              const btn = document.getElementById('advancedFilterBtn');
+        const filterRow = document.getElementById('filterRow');
+
+        btn.addEventListener('click', function () {
+            filterRow.classList.toggle('d-none');
+        });
+    </script>
+}
+
+

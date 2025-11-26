@@ -1,5 +1,209 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Users List
+                    </h2>
+
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black"><i class="fa fa-home"></i></a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Users List
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="d-flex gap-2">
+                    <a asp-controller="UsersSettings" asp-action="Addedite" class="btn btn-success btn-sm btn-block rounded-2 text-white"> <i class="fas fa-plus px-1"></i> Add</a>
+                </div>
+            </div>
+            <div class="py-5">
+                
+                    <div class="card-body bd bd-t-0 tab-content">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card my-3">
+                                    <div id="filterRow" class="row p-3">
+                                    <div class="col">
+                                        <p class="mg-b-10">
+                                            Name, Email Address
+                                        </p>
+                                        <input class="form-control" placeholder="Name, Email Address" type="text">
+                                    </div>
+                                    <div class="col">
+                                        <p class="mg-b-10">
+                                            User Type
+                                        </p>
+                                        <select class="form-control select2">
+                                            <option value="" disabled selected>Select Account</option>
+                                            <option value="super-admin">Super Admin</option>
+                                            <option value="admin">Admin</option>
+                                            <option value="basic">Basic</option>
+                                            <option value="employee">Employee</option>
+                                        </select>
+                                    </div>
+
+                                        <div class="col">
+                                            <p class="mg-b-10">
+                                            Start Date
+                                            </p>
+                                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="col">
+                                            <p class="mg-b-10">
+                                            End Date
+                                            </p>
+                                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                                        </div>
+
+                                        <div class="col d-flex align-items-end">
+                                            <button class="btn btn-info btn-block rounded-2">
+                                                <i class="fas fa-search"></i> Search
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="p-3">
+                                    <div class="table-responsive">
+                                        <table id="example2" class="text-center table table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>User</th>
+                                                    <th>Type</th>
+                                                    <th>Email</th>
+                                                    <th>Status</th>
+                                                    <th>Roles</th>
+                                                    <th>Registration Date</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex gap-3 align-items-center">
+                                                            
+                                                            <img class="rounded-circle" src="/web/img/faces/face1.jpg" alt="">
+                                                            <div class="d-flex flex-column gap-1">
+                                                                <span>(Nouf emco)Nouf@emco.sa</span>
+                                                                <p class="mb-0 small text-muted">ID: 3c3d2e45-abcd-9876-xyz987654</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>Employee</td>
+                                                    <td>
+                                                        Sara@labs.com
+                                                        <span class="badge bg-warning">Email Pending</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-secondary">Inactive</span>
+                                                    </td>
+                                                    <td>
+                                                        <ul class="mb-0">
+                                                            <li>Lab Technician</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Sep 22 2025</td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Actions
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                                <li><a class="dropdown-item" href="#">View Profile</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <!-- User 4 -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex gap-3 align-items-center">
+                                                            <img class="rounded-circle" src="/web/img/faces/face4.jpg" alt="">
+                                                            <div class="d-flex flex-column gap-1">
+                                                                <span>(Khalid Co) Khalid@co.com</span>
+                                                                <p class="mb-0 small text-muted">ID: 4d4e5f56-abcd-5678-xyz567890</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>Super Admin</td>
+                                                    <td>
+                                                        Khalid@co.com
+                                                        <span class="badge bg-success">Email Confirmed</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-success">Active</span>
+                                                    </td>
+                                                    <td>
+                                                        <ul class="mb-0">
+                                                            <li>CEO</li>
+                                                            <li>HR Manager</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Aug 05 2025</td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Actions
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                                <li><a class="dropdown-item" href="#">View Profile</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div><!-- card-body -->
+               
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+
+               $('#addAccountModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#addAccountModal')
+            });
+
+            // Fix input mask
+            $('#dateMask').mask('99/99/9999');
+        });
+
+
+              const btn = document.getElementById('advancedFilterBtn');
+        const filterRow = document.getElementById('filterRow');
+
+        btn.addEventListener('click', function () {
+            filterRow.classList.toggle('d-none');
+        });
+    </script>
 }
+
+

@@ -1,0 +1,103 @@
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Product Categories
+                    </h2>
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Product Settings
+                        </li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Product Categories
+                        </li>
+                    </ul>
+                </div>
+            </div>
+           <div class="py-3">
+                <div class="card">
+                    <div class="card-header">
+                        <p>
+                            Category Information
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row py-2">
+                            <div class="col-lg-6 col-12">
+                                <p class="mg-b-10">
+                                    Name
+                                </p>
+                                <input class="form-control" placeholder="Name" type="text">
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <p class="mg-b-10">
+                                    Code
+                                </p>
+                                <input class="form-control" placeholder="Code" type="text" value="Procat-2025-0002">
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-lg-6 col-12">
+                                <label for="notes">Description</label>
+                                <textarea id="notes" rows="3" class="form-control" placeholder="Textarea" style="height: 150px;"></textarea>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <p class="mg-b-10">
+                                    Parent Category
+                                </p>
+                                <select class="form-control select2">
+                                    <option label="Ahmed"></option>
+                                    <option>Mahmoud</option>
+                                    <option>Adel</option>
+                                    <option>Ali</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="az-content-label py-3">
+                                Category Image
+                            </div>
+                            <p>
+                                Upload a file from your computer
+                                <span>Or</span>
+                                Browse the server
+
+                            </p>
+                            <div class="col-sm-7 col-md-6 col-lg-4">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFile">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+
+                        <button class="btn btn-sm btn-success">
+                            <i class="fas fa-save"></i> <span class="px-1">Save</span>
+                        </button>
+
+                        <a class="btn btn-sm btn-outline-danger mx-2" href="/sales/customers">
+                            <i class="fas fa-ban"></i> <span class="px-1">Cancel</span>
+                        </a>
+
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

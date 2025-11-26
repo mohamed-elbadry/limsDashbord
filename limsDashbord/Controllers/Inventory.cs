@@ -44,5 +44,9 @@ namespace limsDashbord.Controllers
         {
             return View();
         }
+        public IActionResult AddCategories()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,207 @@
+﻿<div class="card-header py-3">
+    <div class="card border-0 py-3">
+        <div class="p-3">
+            <div class="d-flex flex-column">
+                <h2>
+                    Expenses
+                </h2>
+                <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                    <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">
+                        Expenses
+                    </li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">
+                        Add or Edit
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row py-3">
+        <div class="col-lg-6 col-12 px-4">
+            <div class="card">
+                <div class="card-header">
+                    Expenses Information
+                </div>
+                <div class="card-body">
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Amount <sapn class="text-danger">*</sapn>
+                            </p>
+                            <input class="form-control" placeholder="Commercial Name" type="text">
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Code <sapn class="text-danger">*</sapn>
+                            </p>
+                            <input class="form-control" placeholder="Code" value="EXP-2025-0001" type="text">
+                        </div>
+                       
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Date
+                                <sapn class="text-danger">*</sapn>
+                            </p>
+                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Category <span class="text-danger">*</span>
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Choose Category"></option>
+                                <option>Chemicals</option>
+                                <option>Lab Equipment</option>
+                                <option>Glassware</option>
+                                <option>Plasticware</option>
+                                <option>Containers</option>
+                                <option>Safety Tools</option>
+                                <option>Testing Kits</option>
+                                <option>Electronics</option>
+                                <option>Maintenance Supplies</option>
+                                <option>General Supplies</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Journal Account <span class="text-danger">*</span>
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Choose Account"></option>
+                                <option>Cash</option>
+                                <option>Bank</option>
+                                <option>Accounts Receivable</option>
+                                <option>Accounts Payable</option>
+                                <option>Sales Revenue</option>
+                                <option>Purchase Expense</option>
+                                <option>Inventory</option>
+                                <option>Salary Expense</option>
+                                <option>Rent Expense</option>
+                                <option>Miscellaneous Expense</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Supplier
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Choose Supplier"></option>
+                                <option>Delta Chemicals</option>
+                                <option>Global Lab Equipment</option>
+                                <option>SafeGlass Co.</option>
+                                <option>Plastic Solutions</option>
+                                <option>Container World</option>
+                                <option>Lab Supplies Ltd.</option>
+                                <option>Health & Safety Tools</option>
+                                <option>Testing Kits Inc.</option>
+                                <option>ElectroLab Supplies</option>
+                                <option>Maintenance & General Supplies</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <label class="ckbox">
+                                <input type="checkbox" id="recurringCheckbox"><span>Recurring</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row py-2 d-none" id="recurringPeriodRow">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Recurring Period
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Choose Recurring Period"></option>
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Bi-Weekly</option>
+                                <option>Monthly</option>
+                                <option>Quarterly</option>
+                                <option>Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12 px-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p>
+                            Attachment Management
+                        </p>
+                    </div>
+                </div>
+                <div class="card-body">
+                   
+                        <label for="notes">Description <sapn class="text-danger">*</sapn></label>
+                        <textarea id="notes" rows="3" class="form-control" placeholder="Textarea" style="height: 120px;"></textarea>
+                   
+                </div>
+                <div class="row p-3">
+                    <div class="az-content-label">
+                        Attachments
+                    </div>
+                    <p class="mg-b-20">
+                        Upload a file from your computer
+                        <span>Or</span>
+                        Browse the server
+                    </p>
+                    <div class="col-sm-7 col-md-6 col-lg-4">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-2">
+        <div class="card">
+            <div class="card-footer">
+                <button type="submit" class="btn btn-sm btn-success text-white">
+                    <i class="fas fa-save"></i> <span class="px-1">Save</span>
+                </button>
+                <button class="btn btn-sm btn-outline-danger mx-2 ">
+                    <i class="fas fa-ban"></i> <span class="px-1">Cancel</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+               document.addEventListener('DOMContentLoaded', function() {
+            const checkbox = document.getElementById('recurringCheckbox');
+            const recurringRow = document.getElementById('recurringPeriodRow');
+
+            checkbox.addEventListener('change', function () {
+                if (checkbox.checked) {
+                    recurringRow.classList.remove('d-none');
+                } else {
+                    recurringRow.classList.add('d-none');
+                }
+            });
+        });
+
+    </script>
+}
+
+
+
+
+
+
+

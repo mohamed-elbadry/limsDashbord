@@ -1,0 +1,222 @@
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Add or Edit User
+                    </h2>
+                </div>
+                <div class="d-flex gap-2">
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black"><i class="fa fa-home"></i></a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Users
+                        </li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Add or Edit
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          
+
+        </div>
+    </div>
+    <div class="py-3">
+        <div class="row">
+            <div class="col-lg-9 col-12">
+               <div class="card">
+                    <div class="card-header gap-2">
+                        Add or Edit User
+                        <a asp-controller="UsersSettings" asp-action="Users" class="btn btn-success btn-sm btn-block rounded-2 text-white">Back to list</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-3 col-12">
+                                <label for="firstName" class="mg-b-10">
+                                    First Name
+                                </label>
+                            </div>
+                            <div class="col-lg-9 col-12">
+                                <input id="firstName" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-lg-3 col-12">
+                                <label for="LasttName" class="mg-b-10">
+                                    Last Name
+                                </label>
+                            </div>
+                            <div class="col-lg-9 col-12">
+                                <input id="LasttName" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-lg-3 col-12">
+                                <label for="PhoneNumber" class="mg-b-10">
+                                    PhoneNumber
+                                </label>
+                            </div>
+                            <div class="col-lg-9 col-12">
+                                <input id="PhoneNumber" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-lg-3 col-12">
+                                <label for="JobTitle" class="mg-b-10">
+                                    JobTitle
+                                </label>
+                            </div>
+                            <div class="col-lg-9 col-12">
+                                <input id="JobTitle" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-lg-3 col-12">
+                                <label for="Gender" class="mg-b-10">
+                                    Gender
+                                </label>
+                            </div>
+                            <div class="col-lg-9 col-12">
+                                <select id="Gender" name="Gender" class="form-control select2">
+                                    <option value="" disabled selected>Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-lg-3 col-12">
+                                <label for="User" class="mg-b-10">
+                                    User Type
+                                </label>
+                            </div>
+                            <div class="col-lg-9 col-12">
+                                <select id="User" name="Gender" class="form-control select2">
+                                    <option value="" disabled selected>Select Gender</option>
+                                    <option value="Super">Super Admin</option>
+                                    <option value="Admin">Admin</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-lg-3 col-12">
+                                <label for="Email" class="mg-b-10">
+                                    Email / User Name
+                                </label>
+                            </div>
+                            <div class="col-lg-9 col-12">
+                                <input id="Email" class="form-control" type="email">
+                            </div>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-lg-3 col-12">
+                                <label for="RolesAndPermissions" class="mg-b-10">
+                                    Roles & Permissions
+                                </label>
+                            </div>
+
+                            <div class="col-lg-9 col-12 d-flex flex-column flex-wrap gap-3">
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Super Admin</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Admin</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Basic User</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>HR Manager</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Finance Manager</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Project Manager</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Technician</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Customer</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Consultant</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Support Agent</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Super Admin</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Admin</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Basic User</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>HR Manager</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Finance Manager</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Project Manager</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Technician</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Customer</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Consultant</span>
+                                </label>
+
+                                <label class="ckbox">
+                                    <input type="checkbox"><span>Support Agent</span>
+                                </label>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-footer d-flex justify-content-start py-3 gap-2">
+                        <button type="button" class="btn btn-indigo rounded-2">Save</button>
+                        <button type="button" class="btn btn-outline-light rounded-2" data-bs-dismiss="modal">Close</button>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

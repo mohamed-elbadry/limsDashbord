@@ -1,5 +1,157 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Assets
+                    </h2>
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Assets
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="d-flex gap-2">
+                    <li class="nav-sub-item btn btn-primary btn-block btn-sm rounded-2">
+                        <a asp-controller="Inventory" asp-action="addedit" class="nav-sub-link text-white">
+                            <i class="fas fa-plus px-1"></i>
+                            Add Assets
+                        </a>
+                    </li>
+                    @* <button class="btn btn-gray-700 btn-block btn-sm rounded-2">
+                        <i class="fa fas fa-bolt"></i>
+                        Reload
+                    </button> *@
+                    @* <button id="advancedFilterBtn" class="btn btn-success btn-block btn-sm rounded-2 text-white">
+                        <i class="fa fas fa-filter"></i>
+                        Advanced Filter
+                    </button> *@
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card my-3">
+                    <div id="filterRow" class="row p-3">
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">Name</p>
+                            <input class="form-control" placeholder="" type="text">
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">Code</p>
+                            <input class="form-control" placeholder="" type="text">
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">Email</p>
+                            <input class="form-control" placeholder="" type="email">
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">
+                                Status
+                            </p>
+                            <select class="form-control select2">
+                                <option value="" disabled selected>Select Account</option>
+                                <option value="cash">Cash</option>
+                                <option value="bank">Bank</option>
+                                <option value="accounts-receivable">Accounts Receivable</option>
+                                <option value="accounts-payable">Accounts Payable</option>
+                                <option value="inventory">Inventory</option>
+                                <option value="sales-revenue">Sales Revenue</option>
+                                <option value="cogs">Cost of Goods Sold</option>
+                                <option value="operating-expenses">Operating Expenses</option>
+                                <option value="fixed-assets">Fixed Assets</option>
+                                <option value="equity">Equity</option>
+                            </select>
+                        </div>
+
+                       
+                       
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">
+                                Depreciation Date
+                            </p>
+                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                        </div>
+                     
+                        <div class="col-lg-2 col-12 d-flex align-items-end">
+                            <button class="btn btn-info btn-block btn-sm rounded-2">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <div class="table-responsive">
+                            <table id="example2" class="text-center table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Code</th>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Purchase Date</th>
+                                        <th>Main Account</th>
+                                        <th>Purchase Amount</th>
+                                        <th>Amployess</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>125689</td>
+                                        <td>فاتورة كهرباء</td>
+                                        <td>فاتورة اغسطس</td>
+                                        <td>11/8/2025</td>
+                                        <td>Main Treasur</td>
+                                        <td>123456 EGP</td>
+                                        <td>أحمد علي</td>
+                                        <td>
+                                            <button class="btn btn-az-primary btn-block rounded-2 btn-sm">
+                                                <i class="fas fa-edit"></i> Edit
+                                            </button>
+                                            <button class="btn btn-danger btn-block rounded-2 btn-sm">
+                                                <i class="fas fa-trash-alt"></i> Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+
+
+         $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                 width: '100%'
+            });
+            $('#dateMask').mask('99/99/9999');
+
+        const btn = document.getElementById('advancedFilterBtn');
+        const filterRow = document.getElementById('filterRow');
+
+        btn.addEventListener('click', function () {
+            filterRow.classList.toggle('d-none');
+        });
+
+    </script>
+
+
 }
+
+
+
+

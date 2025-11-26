@@ -1,5 +1,161 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2 class="m-0 p-0">
+                        Supplier Payments
+                    </h2>
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Supplier Payments
+                        </li>
+                       
+                    </ul>
+
+                </div>
+               
+            </div>
+            <div class="py-5">
+                <div class="card bd-0">
+
+                    <div class="card-body bd bd-t-0 tab-content">
+                        <div id="tabCont1" class="tab-pane active show">
+
+                            <div class="row">
+                                <div id="filterContainer" class="row">
+                                    <div class="col-lg-10 col-12">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-12">
+                                                <p class="mg-b-10">
+                                                    Invoice Number
+                                                </p>
+                                                <input class="form-control" placeholder="Invoice Number" type="number">
+                                            </div>
+                                            <div class="col-lg-3 col-12">
+                                                <p class="mg-b-10">
+                                                    Payment Number
+                                                </p>
+                                                <input class="form-control" placeholder="Payment Number" type="number">
+                                            </div>
+                                            <div class="col-lg-3 col-12">
+                                                <p class="mg-b-10">
+                                                    Supplier
+                                                </p>
+                                                <select class="form-control select2">
+                                                    <option label="Choose Supplier"></option>
+                                                    <option>Nagwa Medical Supplies</option>
+                                                    <option>El Ezaby Pharma</option>
+                                                    <option>Global Lab Solutions</option>
+                                                    <option>Delta Chemicals</option>
+                                                    <option>MedTech Egypt</option>
+                                                    <option>Al Andalus Trading</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-3 col-12">
+                                                <p class="mg-b-10">
+                                                    Payment Method
+                                                </p>
+                                                <select class="form-control select2">
+                                                    <option label="Choose Payment Method"></option>
+                                                    <option>Cash</option>
+                                                    <option>Credit Card</option>
+                                                    <option>Bank Transfer</option>
+                                                    <option>Cheque</option>
+                                                    <option>Vodafone Cash</option>
+                                                    <option>PayPal</option>
+                                                    <option>Installments</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-12 d-flex align-items-end">
+                                        <button class="btn btn-info btn-block btn-sm rounded-2"><i class="fas fa-search"></i> Search</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="card my-3">
+                                        <div class="p-3">
+                                            <div class="table-responsive">
+                                                <table id="example2" class="text-center table table-bordered table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Supplier</th>
+                                                            <th>PhoneNumber</th>
+                                                            <th>Invoice Number</th>
+                                                            <th>Payment Method</th>
+                                                            <th>Date</th>
+                                                            <th>Status</th>
+                                                            <th>Amount</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><input type="checkbox"></td>
+                                                            <td>شركة التوريد الأولي</td>
+                                                            <td>01113323852</td>
+                                                            <td>000001</td>
+                                                            <td>نقدي</td>
+                                                            <td>04/08/2025</td>
+                                                            <td>
+                                                                <span class="badge badge-success">
+                                                                    مكتمل
+                                                                </span>
+                                                            </td>
+                                                            <td>34,200 </td>
+                                                           
+                                                            <td>
+                                                                <button class="btn btn-sm btn-primary"><i class="fas fa-edit "></i> Edit</button>
+                                                                <button class="btn btn-sm btn-danger"><i class="fas fa-trash-alt mx-1"></i> Delete</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- tab-pane -->
+                    </div><!-- card-body -->
+                </div><!-- card -->
+            </div>
+
+
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+
+               $('#newSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#newSampleModal')
+            });
+
+            // Fix input mask
+            $('#dateMask').mask('99/99/9999');
+        });
+
+         $('#secondSampleModal').on('shown.bs.modal', function () {
+            // Fix select2 with modal
+            $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                dropdownParent: $('#secondSampleModal')
+            });
+             // Fix input mask
+             });
+    </script>
 }

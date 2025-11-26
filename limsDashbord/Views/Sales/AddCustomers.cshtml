@@ -144,13 +144,13 @@
                         </div>
                     </div>
                     <div class="row py-2">
-                        <div class="col-lg-6-12">
+                        <div class="col-lg-6 col-12">
                             <p class="mg-b-10">
                                 Credit Limit (SAR)
                             </p>
                             <input class="form-control" placeholder="" type="text">
                         </div>
-                        <div class="col-lg-6-12">
+                        <div class="col-lg-6 col-12">
                             <p class="mg-b-10">
                                 Credit Period (Days)
                             </p>
@@ -201,22 +201,19 @@
                     </div>
                     
                     <div class="row py-2">
-                            <div class="col-lg-6 col-12">
-                            <p class="mg-b-10">Opening Balance Date</p>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
-                                        </div>
-                                    </div>
-                                    <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="MM/DD/YYYY" id="dp1763637359790">
-                                </div>
-                            </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Opening Balance Date
+                                
+                            </p>
+                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                        </div>
                     </div>
                     <div class="row py-2">
                         <div class="col-12">
                             <label for="notes">Notes </label>
-                            <textarea id="notes" rows="3" class="form-control" placeholder="Notes" style="height: 80px;"></textarea>
+                            <textarea id="notes" rows="3" class="form-control" placeholder="Notes" style="height: 150px;"></textarea>
                         </div>
                     </div>
                 </div>

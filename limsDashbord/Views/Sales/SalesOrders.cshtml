@@ -19,21 +19,30 @@
                         Add New Control Chart
                     </button> *@
                     <li class="nav-sub-item btn btn-primary btn-block rounded-2">
-                        <a asp-controller="Sales" asp-action="AddROrders" class="nav-sub-link text-black">
+                        <a asp-controller="Sales" asp-action="AddROrders" class="nav-sub-link text-white">
                             <i class="fas fa-plus px-1"></i>
                             AddROrders
                         </a>
                     </li>
-                    <li class="nav-sub-item btn btn-success btn-block rounded-2">
-                        <a asp-controller="LabManagement" asp-action="AdvancedFilter" class="nav-sub-link text-black">
-                            <i class="fa fas fa-filter"></i>
-                            Advanced Filter
-                        </a>
-                    </li>
+                    <button id="advancedFilterBtn" class="btn btn-success btn-block rounded-2 text-white">
+                        <i class="fa fas fa-filter"></i>
+                        Advanced Filter
+                    </button>
                 </div>
             </div>
             <div class="col-12">
                 <div class="card my-3">
+                    <div id="filterRow" class="row p-3 d-none">
+                        <div class="col-lg-4 col-12">
+                            <p class="mg-b-10">Code</p>
+                            <input class="form-control" placeholder="Code" type="text">
+                        </div>
+                        <div class="col-lg-8 col-12 d-flex align-items-end">
+                            <button class="btn btn-info btn-block rounded-2">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
                     <div class="p-3">
                         <div class="table-responsive">
                             <table id="example2" class="text-center table table-bordered table-hover">
@@ -110,11 +119,14 @@
 
 
              });
+                       document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('advancedFilterBtn');
+            const filterRow = document.getElementById('filterRow');
 
-
-
-
-
+            btn.addEventListener('click', function () {
+                filterRow.classList.toggle('d-none');
+            });
+        });
     </script>
 }
 

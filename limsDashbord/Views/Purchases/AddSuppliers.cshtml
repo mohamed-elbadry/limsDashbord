@@ -1,0 +1,208 @@
+﻿<div class="card-header py-3">
+    <div class="card border-0 py-3">
+        <div class="p-3">
+            <div class="d-flex flex-column">
+                <h2>
+                    Purchase Invoices
+                </h2>
+                <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                    <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">
+                        Purchase Invoices
+                    </li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">
+                        Add or Edit
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row py-3">
+        <div class="col-lg-6 col-12 px-4">
+            <div class="card">
+                <div class="card-header">
+                    Supplier Data
+                </div>
+                <div class="card-body">
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Code
+                            </p>
+                            <input class="form-control" placeholder="Code" value="Cstmr-2025-0001" type="text">
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Commercial Name
+                            </p>
+                            <input class="form-control" placeholder="Commercial Name" type="text">
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                PhoneNumber
+                            </p>
+                            <input class="form-control" placeholder=""  type="text">
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Email
+                            </p>
+                            <input class="form-control" placeholder="" type="email">
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                ContactPrersonFirstName
+                            </p>
+                            <input class="form-control" placeholder="First Name"type="text">
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                ContactPersonLastName
+                            </p>
+                            <input class="form-control" placeholder="LastName" type="text">
+                        </div>
+                        <div class="col-lg-6 col-12 py-2">
+                            <p class="mg-b-10">
+                                ContactPersonPhoneNumber
+                            </p>
+                            <input class="form-control" placeholder="" type="text">
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-lg-4 col-12">
+                            <p class="mg-b-10">
+                                Country
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Choose Country"></option>
+                                <option>Egypt</option>
+                                <option>Saudi Arabia</option>
+                                <option>United Arab Emirates</option>
+                                <option>Kuwait</option>
+                                <option>Qatar</option>
+                                <option>Bahrain</option>
+                                <option>Oman</option>
+                                <option>Jordan</option>
+                                <option>Lebanon</option>
+                                <option>Morocco</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <p class="mg-b-10">
+                                City
+                            </p>
+                            <input class="form-control" placeholder="" type="text">
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <p class="mg-b-10">
+                                Neighborhood
+                            </p>
+                            <input class="form-control" placeholder="" type="text">
+                        </div>
+                    </div>
+                    <div class="rpw py-2">
+                        <div class="col-12">
+                            <p class="mg-b-10">
+                                Street Name
+                            </p>
+                            <input class="form-control" placeholder="" type="text">
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                C.R (Optional)
+                            </p>
+                            <input class="form-control" placeholder="" type="text">
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Tax ID (Optional)
+                            </p>
+                            <input class="form-control" placeholder="" type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <div class="col-lg-6 col-12 px-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p>
+                            MoreData
+                        </p>
+                        @* <button class="btn btn-info btn-block rounded-2"><i class="fas fa-plus"></i> Add</button> *@
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>
+                       Notes
+                    </p>
+                    <textarea id="summernote" name="editordata"></textarea>
+                </div>
+                <div class="row p-3">
+                    <div class="az-content-label">
+                        Attachments
+                    </div>
+                    <p class="mg-b-20">
+                        Upload a file from your computer
+                        <span>Or</span>
+                        Browse the server
+                    </p>
+                    <div class="col-sm-7 col-md-6 col-lg-4">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-2">
+        <div class="card">
+            <div class="card-footer">
+                <button type="submit" class="btn btn-sm btn-success text-white">
+                    <i class="fas fa-save"></i> <span class="px-1">Save</span>
+                </button>
+                <button class="btn btn-sm btn-outline-danger mx-2 ">
+                    <i class="fas fa-ban"></i> <span class="px-1">Cancel</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById("trackStock").addEventListener("change", function () {
+            const lowStock = document.getElementById("lowStockRow");
+
+            if (this.checked) {
+                lowStock.classList.remove("d-none");
+            } else {
+                lowStock.classList.add("d-none");
+            }
+        });
+
+
+    </script>
+}
+
+
+
+
+
+
+

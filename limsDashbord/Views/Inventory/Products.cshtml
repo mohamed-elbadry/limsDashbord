@@ -16,26 +16,72 @@
 
                 </div>
                 <div class="d-flex gap-2">
-                    <li class="nav-sub-item btn btn-primary btn-block rounded-2">
+                    <li class="nav-sub-item btn btn-primary btn-block btn-sm rounded-2">
                         <a asp-controller="Inventory" asp-action="addedit" class="nav-sub-link text-white">
                             <i class="fas fa-plus px-1"></i>
                             Add Products
                         </a>
                     </li>
-                    <button class="btn btn-gray-700 btn-block rounded-2">
+                    <button class="btn btn-gray-700 btn-block btn-sm rounded-2">
                         <i class="fa fas fa-bolt"></i>
                         Reload
                     </button>
-                    <li class="nav-sub-item btn btn-success btn-block rounded-2">
-                        <a asp-controller="Inventory" asp-action="AdvancedInventoryFilter" class="nav-sub-link text-black">
-                            <i class="fa fas fa-filter"></i>
-                            Advanced Filter
-                        </a>
-                    </li>
+                    <button id="advancedFilterBtn" class="btn btn-success btn-block btn-sm rounded-2 text-white">
+                        <i class="fa fas fa-filter"></i>
+                        Advanced Filter
+                    </button>
                 </div>
             </div>
             <div class="col-12">
                 <div class="card my-3">
+                    <div id="filterRow" class="row p-3 d-none">
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">Name</p>
+                            <input class="form-control" placeholder="Name" type="text">
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">
+                                Category
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Ahmed"></option>
+                                <option>Mahmoud</option>
+                                <option>Adel</option>
+                                <option>Ali</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">
+                                Brand
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Ahmed"></option>
+                                <option>Mahmoud</option>
+                                <option>Adel</option>
+                                <option>Ali</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">
+                                Status
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Ahmed"></option>
+                                <option>Mahmoud</option>
+                                <option>Adel</option>
+                                <option>Ali</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">Barcode</p>
+                            <input class="form-control" placeholder="Barcode" type="number">
+                        </div>
+                        <div class="col d-flex align-items-end">
+                            <button class="btn btn-info btn-block btn-sm rounded-2">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
                     <div class="p-3">
                         <div class="table-responsive">
                             <table id="example2" class="text-center table table-bordered table-hover">
@@ -105,36 +151,25 @@
 @section Scripts {
     <script>
 
-               $('#newSampleModal').on('shown.bs.modal', function () {
-            // Fix select2 with modal
-            $('.select2').select2({
+        
+
+         $('.select2').select2({
                 placeholder: 'Choose one',
                 searchInputPlaceholder: 'Search',
-                dropdownParent: $('#newSampleModal')
+                 width: '100%'
             });
-
-            // Fix input mask
             $('#dateMask').mask('99/99/9999');
+
+        const btn = document.getElementById('advancedFilterBtn');
+        const filterRow = document.getElementById('filterRow');
+
+        btn.addEventListener('click', function () {
+            filterRow.classList.toggle('d-none');
         });
 
-         $('#secondSampleModal').on('shown.bs.modal', function () {
-            // Fix select2 with modal
-            $('.select2').select2({
-                placeholder: 'Choose one',
-                searchInputPlaceholder: 'Search',
-                dropdownParent: $('#secondSampleModal')
-            });
-
-             // Fix input mask
-
-
-             });
-
-
-
-
-
     </script>
+
+
 }
 
 

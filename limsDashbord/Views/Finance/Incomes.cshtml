@@ -1,5 +1,155 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Incomes
+                    </h2>
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Incomes
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="d-flex gap-2">
+                    <li class="nav-sub-item btn btn-primary btn-block btn-sm rounded-2">
+                        <a asp-controller="Finance" asp-action="AddIncomes" class="nav-sub-link text-white">
+                            <i class="fas fa-plus px-1"></i>
+                            Add Incomes
+                        </a>
+                    </li>
+                    <button class="btn btn-gray-700 btn-block btn-sm rounded-2">
+                        <i class="fa fas fa-bolt"></i>
+                        Reload
+                    </button>
+                    <button id="advancedFilterBtn" class="btn btn-success btn-block btn-sm rounded-2 text-white">
+                        <i class="fa fas fa-filter"></i>
+                        Advanced Filter
+                    </button>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card my-3">
+                    <div id="filterRow" class="row p-3 d-none">
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">Code</p>
+                            <input class="form-control" placeholder="Name" type="text">
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">
+                                Date From
+
+                            </p>
+                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                        </div>
+
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">
+                                Date To
+
+                            </p>
+                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                        </div>
+
+                        <div class="col-lg-2 col-12">
+                            <p class="mg-b-10">
+                                Status
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Ahmed"></option>
+                                <option>Mahmoud</option>
+                                <option>Adel</option>
+                                <option>Ali</option>
+                            </select>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button class="btn btn-info btn-block btn-sm rounded-2">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <div class="table-responsive">
+                            <table id="example2" class="text-center table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Code</th>
+                                        <th>Description</th>
+                                        <th>Date</th>
+                                        <th>Journal Account</th>
+                                        <th>Amount</th>
+                                        <th>Recurring Period</th>
+                                        <th>Created On</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>JV-2025-001</td>
+                                        <td>Purchase of Lab Equipment</td>
+                                        <td>2025-11-24</td>
+                                        <td>Expenses → Lab Equipment</td>
+                                        <td>12,500 EGP</td>
+                                        <td>Monthly</td>
+                                        <td>2025-11-24 10:35 AM</td>
+                                        <td>
+                                            <button class="btn btn-az-primary btn-block rounded-2">
+                                                <i class="fas fa-edit"></i> Edit
+                                            </button>
+                                            <button class="btn btn-danger btn-block rounded-2">
+                                                <i class="fas fa-trash-alt"></i> Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+
+
+         $('.select2').select2({
+                placeholder: 'Choose one',
+                searchInputPlaceholder: 'Search',
+                 width: '100%'
+            });
+            $('#dateMask').mask('99/99/9999');
+
+        const btn = document.getElementById('advancedFilterBtn');
+        const filterRow = document.getElementById('filterRow');
+
+        btn.addEventListener('click', function () {
+            filterRow.classList.toggle('d-none');
+        });
+
+    </script>
+
+
 }
+
+
+
+
+

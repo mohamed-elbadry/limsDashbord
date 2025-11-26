@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="p-3">
-    <div class="card py-3">
+    <div class="card">
         <div class="card-header">
             <h3>
                 Basic Data
@@ -204,15 +204,12 @@
                    
                 </div>
                 <div class="col">
-                    <p class="mg-b-10">Received Date <sapn class="text-danger">*</sapn></p>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
-                            </div>
-                        </div>
-                        <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="MM/DD/YYYY" id="dp1763637359790">
-                    </div>
+                    <p class="mg-b-10">
+                        Order Received Date
+                        <sapn class="text-danger">*</sapn>
+                    </p>
+                    <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                    <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
                 </div>
             </div>
         </div>
@@ -220,7 +217,7 @@
 </div>
 
 <div class="p-3">
-    <div class="card py-3">
+    <div class="card">
         <div class="card-header">
             <div class="d-flex justify-content-between align-items-center">
                 <h3>
@@ -302,96 +299,29 @@
 
     </div>
 
-    <div class="card-footer d-flex justify-content-start py-3 gap-2">
-        <button type="button" class="btn btn-indigo rounded-2">Save</button>
-        <button type="button" class="btn btn-outline-light rounded-2" data-bs-dismiss="modal">Close</button>
-    </div>
+    
 </div>
 
 <div class="p-3">
-    <div class="card py-3">
+    <div class="card">
         <div class="card-header">
             <div class="d-flex justify-content-between align-items-center">
                 <h3>
                     Notes / Conditions
                 </h3>
-                @* <button class="btn btn-info btn-block rounded-2"><i class="fas fa-plus"></i> Add</button> *@
             </div>
 
         </div>
         <div class="card-body">
-            <div class="row">
-                <div class="p-3">
-                    <div class="table-responsive">
-                        <table id="example2" class="text-center table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Number of Samples</th>
-                                    <th>Sample Type / Quantity</th>
-                                    <th>Test Types</th>
-                                    <th>Actions</th>
-                                    <th>Discount</th>
-                                    <th>Total After Discount</th>
-                                    <th>&nbsp;</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <input class="form-control" value="10" type="number"> <!-- عدد العينات -->
-                                    </td>
-                                    <td>
-                                        <select class="form-control select2">
-                                            <option selected>Water – 5L</option>
-                                            <option>Soil – 3kg</option>
-                                            <option>Air – 2 samples</option>
-                                            <option>Food – 4 units</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select class="form-control select2">
-                                            <option selected>Chemical Analysis</option>
-                                            <option>Microbiological Test</option>
-                                            <option>Physical Test</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">Delete</button>
-                                    </td>
-                                    <td>
-                                        <input class="form-control" value="10%" type="text"> <!-- الخصم -->
-                                    </td>
-                                    <td>
-                                        <input class="form-control" value="$450" type="text"> <!-- المجموع بعد الخصم -->
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-info">Edit</button> <!-- عمود فاضي سابقًا -->
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-
-                </div>
-               
-            </div>
+            <textarea id="summernote" name="editordata"></textarea>
         </div>
-
-
     </div>
 
-    <div class="card-footer d-flex justify-content-start py-3 gap-2">
-        <button type="button" class="btn btn-indigo rounded-2">Save</button>
-        <button type="button" class="btn btn-outline-light rounded-2" data-bs-dismiss="modal">Close</button>
-    </div>
+    
 </div>
 
 <div class="p-3">
-    <div class="card py-3">
+    <div class="card">
         <div class="card-header">
             <div class="d-flex justify-content-between align-items-center">
                 <h3>

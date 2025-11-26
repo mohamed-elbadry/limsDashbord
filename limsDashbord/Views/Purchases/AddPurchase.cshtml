@@ -1,0 +1,354 @@
+﻿<div class="card-header py-3">
+    <div class="card border-0 py-3">
+        <div class="p-3">
+            <div class="d-flex flex-column">
+                <h2>
+                    Purchase Invoices
+                </h2>
+                <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                    <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">
+                        Purchase Invoices
+                    </li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">
+                        Add or Edit
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row py-3">
+        <div class="col-lg-6 col-12 px-4">
+            <div class="card">
+                <div class="card-header">
+                    Purchase Invoice
+                </div>
+                <div class="card-body">
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Code
+                            </p>
+                            <input class="form-control" placeholder="Code" value="Cstmr-2025-0001" type="text">
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Description
+                            </p>
+                            <input class="form-control" placeholder=""  type="text">
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Supplier
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Ahmed"></option>
+                                <option>Mahmoud</option>
+                                <option>Adel</option>
+                                <option>Ali</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Invoice Number
+                            </p>
+                            <input class="form-control" placeholder="" type="text">
+                        </div>
+                        <div class="col-lg-6 col-12 py-2">
+                            <p class="mg-b-10">
+                                Date
+                               
+                            </p>
+                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+              
+            </div>
+            
+        </div>
+        <div class="col-lg-6 col-12 px-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="col-lg-6 col-12">
+                        <label class="ckbox">
+                            <input type="checkbox"><span>Already Paid</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Payment Method
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Choose Payment Method"></option>
+                                <option>Cash</option>
+                                <option>Credit Card</option>
+                                <option>Bank Transfer</option>
+                                <option>Cheque</option>
+                                <option>Vodafone Cash</option>
+                                <option>PayPal</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Treasury
+                            </p>
+                            <select class="form-control select2">
+                                <option label="Choose Treasury"></option>
+                                <option>Main Treasury</option>
+                                <option>Branch Treasury</option>
+                                <option>Bank Account - CIB</option>
+                                <option>Bank Account - QNB</option>
+                                <option>Petty Cash</option>
+                                <option>Safe Treasury</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Reference No
+                            </p>
+                            <input class="form-control" placeholder="" type="text">
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Payment Terms
+                            </p>
+                            <input class="form-control" placeholder="" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-2">
+        <div class="col-12 px-4">
+            <div class="card">
+                <div class="card-header">
+                    InvoiceItems
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered mg-b-0">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Description</th>
+                                    <th>Product Unit</th>
+                                    <th>Unit Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th>Discount</th>
+                                    <th>Total After Discount</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!-- Product -->
+                                    <td>
+                                        <select class="form-control select2">
+                                            <option>Glass Ampoul 100ml</option>
+                                            <option selected>Glass Ampoul 100ml</option>
+                                            <option>Glass Ampoul 100ml</option>
+                                        </select>
+                                    </td>
+
+                                    <!-- Description -->
+                                    <td>
+                                        <input type="text" class="form-control" value="">
+                                    </td>
+
+                                    <!-- Product Unit -->
+                                    <td>
+                                        <select class="form-control select2">
+                                            <option>Piece</option>
+                                            <option selected>Box</option>
+                                            <option>Pack</option>
+                                        </select>
+                                    </td>
+
+                                    <!-- Unit Price -->
+                                    <td>
+                                        <input type="number" class="form-control" value="250">
+                                    </td>
+
+                                    <!-- Quantity -->
+                                    <td>
+                                        <input type="number" class="form-control" value="3">
+                                    </td>
+
+                                    <!-- Total -->
+                                    <td>
+                                        <input type="number" class="form-control" value="750">
+                                    </td>
+
+                                    <!-- Discount -->
+                                    <td>
+                                        <div class="input-group">
+                                            <input max="100" class="form-control discount-input" type="text" data-val="true" data-val-number="The field DiscountPercentage must be a number." id="Items_0__DiscountPercentage" name="Items[0].DiscountPercentage" value="">
+                                            <span class="text-danger field-validation-valid" data-valmsg-for="Items[0].DiscountPercentage" data-valmsg-replace="true"></span>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <!-- After Discount -->
+                                    <td>
+                                        <input type="number" class="form-control" value="700">
+                                    </td>
+
+                                    <!-- Delete button -->
+                                    <td>
+                                        <button class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot id="items-footer">
+                                <tr>
+                                    <td colspan="6" class="text-left border-0">
+                                    </td>
+
+                                    <td>
+                                        <lable>SubTotal:</lable>
+                                    </td>
+                                    <td>
+                                        <span id="invoice-subTotal">0.00</span>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="6" class="text-left border-0">
+                                    </td>
+                                    <td>
+                                        <lable>Discount:</lable>
+                                    </td>
+                                    <td>
+                                        <span id="invoice-discount">0.00</span>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="6" class="text-left border-0">
+                                    </td>
+                                    <td>
+                                        <lable>Total:</lable>
+                                    </td>
+                                    <td>
+                                        <span id="invoice-total">0.00</span>
+
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <input type="hidden" value="" data-val="true" data-val-number="The field SubTotal must be a number." id="SubTotal" name="SubTotal">
+                                <input type="hidden" value="" data-val="true" data-val-number="The field Discount must be a number." id="Discount" name="Discount">
+                                <input type="hidden" value="" data-val="true" data-val-number="The field FinalTotal must be a number." id="FinalTotal" name="FinalTotal">
+                            </tfoot>
+                        </table>
+
+                    </div>
+                   <div class="py-3">
+                        <button type="button" class="btn btn-success btn-sm text-white"><i class="fas fa-plus"></i> Add</button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-3">
+        <div class="col-lg-6 col-12 px-4">
+            <div class="card">
+                <div class="card-header">
+                    InvoiceAttachments
+                </div>
+                <div class="card-body">
+                    <div class="row py-2">
+                        <div class="az-content-label">
+                            Attachments
+                        </div>
+                        <p class="mg-b-20">
+                            Upload a file from your computer
+                            <span>Or</span>
+                            Browse the server
+                        </p>
+                        <div class="col-sm-7 col-md-6 col-lg-4">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-6 col-12 px-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3>
+                            Notes / Conditions
+                        </h3>
+                        @* <button class="btn btn-info btn-block rounded-2"><i class="fas fa-plus"></i> Add</button> *@
+                    </div>
+                </div>
+                <div class="card-body">
+                    <textarea id="summernote" name="editordata"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="card">
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-success">
+                <i class="fas fa-save"></i> <span class="px-1">Save</span>
+            </button>
+            <button class="btn btn-sm btn-outline-danger mx-2 ">
+                <i class="fas fa-ban"></i> <span class="px-1">Cancel</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById("trackStock").addEventListener("change", function () {
+            const lowStock = document.getElementById("lowStockRow");
+
+            if (this.checked) {
+                lowStock.classList.remove("d-none");
+            } else {
+                lowStock.classList.add("d-none");
+            }
+        });
+
+
+    </script>
+}
+
+
+
+
+
+

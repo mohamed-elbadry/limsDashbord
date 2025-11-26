@@ -11,19 +11,61 @@
                         <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
                         <li class="text-black">/</li>
                         <li class="text-black">
-                            Finance Settings
+                            Expenses Categories
                         </li>
                     </ul>
                 </div>
-               
+                <div class="d-flex gap-2">
+
+                    <button type="button" class="btn btn-primary btn-block btn-sm rounded-2" data-bs-toggle="modal" data-bs-target="#addFinanceModal">
+                        <i class="fas fa-plus px-1"></i> Add Finance
+                    </button>
+
+                    <!--modal-->
+                    <div class="modal fade" id="addFinanceModal" tabindex="-1" aria-labelledby="addFinanceModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addFinanceModalLabel">
+                                        AddExpenseCategory
+                                    </h5>
+                                    
+                                </div>
+                                <div class="modal-body">
+                                    
+                                    
+                                        <div class="mb-3">
+                                        <label for="financeName" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="financeName" placeholder="">
+                                        </div>
+                                        <div class="mb-3">
+                                        <div class="col-12">
+                                            <label for="notes">Notes <sapn class="text-danger">*</sapn></label>
+                                            <textarea id="notes" rows="3" class="form-control" placeholder="Notes" style="height: 80px;"></textarea>
+                                        </div>
+                                        </div>
+                                       
+                                </div>
+                                <div class="modal-footer justify-content-start">
+                                    <button type="button" class="btn btn-primary">Save</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--modal-->
+
+                </div>
             </div>
             <div class="py-5">
                 <div class="card bd-0">
                     <div class="card-header bg-gray-400 bd-b-0-f pd-b-0">
                         <nav class="nav nav-tabs">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#tabCont1">General Settings</a>
+                          
                             @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont2">Maintenance Requests</a> *@
-                            <a asp-controller="Finance" asp-action="ExpensesCategories" class="nav-link">Expenses Categories</a>
+                            <a asp-controller="Finance" asp-action="FinanceSettings" class="nav-link">General Settings</a>
+                            <a asp-controller="Finance" asp-action="ExpensesCategories" class="nav-link active">Expenses Categories</a>
                             <a asp-controller="Finance" asp-action="IncomeCategories" class="nav-link">Income Categories</a>
                         </nav>
                     </div><!-- card-header -->
@@ -39,21 +81,18 @@
                                                     <thead>
                                                         <tr>
                                                             <th>#</th>
-                                                            <th>Name</th>
+                                                            <th>Name / Code</th>
                                                             <th>Description</th>
-                                                            <th>Status</th>
-                                                            <th>Created On</th>
-                                                            <th>Actions</th>
+                                                            <th>&nbsp;</th>
+                                                            <th>&nbsp;</th>
                                                         </tr>
                                                     </thead>
-
                                                     <tbody>
                                                         <tr>
-                                                            <td><input type="checkbox"></td> <!-- # -->
-                                                            <td>WO-342</td> <!-- Name / Code -->
-                                                            <td>Water Quality Analysis Device</td> <!-- Description -->
-                                                            <td><span class="badge badge-warning">In Progress</span></td> <!-- Status -->
-                                                            <td>2025-11-25</td> <!-- Created On -->
+                                                            <td><input type="checkbox"></td>
+                                                            <td>WO-342</td>
+                                                            <td>Water Quality Analysis Device - pH, TDS, Turbidity</td>
+                                                            
                                                             <td>
                                                                 <button class="btn btn-az-primary btn-sm rounded-2">
                                                                     <i class="fas fa-edit"></i> Edit
@@ -62,9 +101,12 @@
                                                                     <i class="fas fa-trash-alt"></i> Delete
                                                                 </button>
                                                             </td>
+                                                            <td></td>
                                                         </tr>
+                                                       
                                                     </tbody>
                                                 </table>
+
 
                                             </div>
                                         </div>
@@ -72,49 +114,7 @@
                                 </div>
                             </div>
                         </div><!-- tab-pane -->
-                        <div id="tabCont2" class="tab-pane">
-                            <div class="col-12">
-                                <div class="card my-3">
-                                    <div class="p-3">
-                                        <div class="table-responsive">
-                                            <table id="example2" class="text-center table table-bordered table-hover">
-                                                <thead>
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>Description</th>
-                                                        <th>Device Name</th>
-                                                        <th>Model</th>
-                                                        <th>Brand</th>
-                                                        <th>Status</th>
-                                                        <th>Added By</th>
-                                                        <th>Added Date</th>
-                                                        <th>Price</th>
-                                                        <th>Notes</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td> <!-- # -->
-                                                        <td>TP-204</td> <!-- Description -->
-                                                        <td>pH Level</td> <!-- Device Name -->
-                                                        <td>Chemical</td> <!-- Model -->
-                                                        <td>pH</td> <!-- Brand -->
-                                                        <td>APHA 4500-H+</td> <!-- Status -->
-                                                        <td>Mohamed Ali</td> <!-- Added By -->
-                                                        <td>2025-11-20</td> <!-- Added Date -->
-                                                        <td>150 EGP</td> <!-- Price -->
-                                                        <td>Routine water quality test</td> <!-- Notes -->
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                      
                     </div><!-- card-body -->
                 </div><!-- card -->
             </div>
@@ -158,5 +158,6 @@
         });
     </script>
 }
+
 
 
