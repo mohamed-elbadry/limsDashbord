@@ -1,5 +1,131 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        List Custom Forms
+                    </h2>
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Custom Forms
+                        </li>
+                        @* <li class="text-black">/</li>
+                        <li class="text-black">
+                            Lookup Values List
+                        </li> *@
+                    </ul>
+                </div>
+                <a asp-action="Addlookup" asp-controller="GeneralSettings" class="btn btn-primary btn-sm rounded-2"><i class="fas fa-plus "></i>Add lookup</a>
+            </div>
+
+            <div class="card bd-0 pt-3">
+               
+                <div class="card-body bd bd-t-0 tab-content">
+                    <div id="tabCont1" class="tab-pane active show">
+                        <div id="filterRow" class="row p-3">
+                            <div class="col-lg-4 col-12">
+                                <p class="mg-b-10">Name</p>
+                                <input class="form-control" placeholder="Name" type="text">
+                            </div>
+                            @* <div class="col-lg-4 col-12">
+                                <p class="mg-b-10">
+                                    Account
+                                </p>
+
+                                <select class="form-control select2">
+                                    <option value="" disabled selected>Select Account</option>
+                                    <option value="cash">Cash</option>
+                                    <option value="bank">Bank</option>
+                                    <option value="accounts-receivable">Accounts Receivable</option>
+                                    <option value="accounts-payable">Accounts Payable</option>
+                                    <option value="inventory">Inventory</option>
+                                    <option value="sales-revenue">Sales Revenue</option>
+                                    <option value="cogs">Cost of Goods Sold</option>
+                                    <option value="operating-expenses">Operating Expenses</option>
+                                    <option value="fixed-assets">Fixed Assets</option>
+                                    <option value="equity">Equity</option>
+                                </select>
+                            </div> *@
+                            <div class="col d-flex align-items-end">
+                                <button class="btn btn-info btn-block btn-sm rounded-2">
+                                    <i class="fas fa-search"></i> Filter
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <div class="table-responsive">
+                                <table id="example2" class="text-center table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Title</th>
+                                            <th>Opportunities</th>
+                                            <th>CreatedOn</th>
+                                            <th>CreatedBy</th>
+                                            <th>Url</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>فواتير المشتريات</td>
+                                            <td>Purchase Invoices</td>
+                                            <td>2025-01-10</td>
+                                            <td>Admin</td>
+                                            <td>https://example.com/purchase-invoices</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>2</td>
+                                            <td>فواتير المبيعات</td>
+                                            <td>Sales Invoices</td>
+                                            <td>2025-02-14</td>
+                                            <td>Super Admin</td>
+                                            <td>https://example.com/sales-invoices</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>3</td>
+                                            <td>أنواع العملاء</td>
+                                            <td>Customer Types</td>
+                                            <td>2025-03-01</td>
+                                            <td>Ahmed</td>
+                                            <td>https://example.com/customer-types</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>4</td>
+                                            <td>طرق الدفع</td>
+                                            <td>Payment Methods</td>
+                                            <td>2025-05-15</td>
+                                            <td>Marwan</td>
+                                            <td>https://example.com/payment-methods</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>5</td>
+                                            <td>طرق التواصل</td>
+                                            <td>Contact Methods</td>
+                                            <td>2025-06-15</td>
+                                            <td>Admin</td>
+                                            <td>https://example.com/contact-methods</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+                    </div><!-- tab-pane -->
+                  
+                </div><!-- card-body -->
+            </div><!-- card -->
+            
+
+        </div>
+    </div>
+</div>

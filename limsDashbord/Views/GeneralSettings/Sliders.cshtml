@@ -1,5 +1,130 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="card-header py-3">
+    <div class="card py-3 border-0">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Sliders
+                    </h2>
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        @* <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li> *@
+                       
+                        <li class="text-black">
+                            Dashboard
+                        </li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                           slider
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+          
+        </div>
+        <div class="py-3">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-search mr-1"></i>
+                    Search
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <label for="Name" class="mg-b-10">
+                                Name
+                                </label>
+                            <input id="Name" class="form-control" placeholder="" type="text">
+                        </div>
+                        <div class="col-lg-6 col-12 bp-2">
+                            <p class="mg-b-10">
+                                Is Selected
+                            </p>
+                            <select class="form-control select2">
+                                <option value="" disabled selected>Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="col d-flex justify-content-end mt-3">
+                            <button type="submit" class="btn btn-primary btn-sm rounded-2">
+                                <i class="fas fa-search "></i> Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-3">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        Slider List
+                        <a asp-action="Addslider" asp-controller="GeneralSettings" class="btn btn-primary btn-sm rounded-2"><i class="fas fa-plus "></i> Add slider</a>
+                    </div>
+                   
+                </div>
+                <div class="card-body">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="p-3">
+                                <div class="table-responsive">
+                                    <table id="example2" class="text-center table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name En</th>
+                                                <th>Name Ar</th>
+                                                <th>Slider Image In Web</th>
+                                                <th>Slider Image In Mobile</th>
+                                                <th>Is Selected</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>homepage_slider</td>
+                                                <td>سلايدر الصفحة الرئيسية</td>
+                                                <td><span class="text-primary">slider_web_01.jpg</span></td>
+                                                <td><span class="text-primary">slider_mobile_01.jpg</span></td>
+                                                <td><span class="badge badge-success">Yes</span></td>
+                                                <td>
+                                                    <button class="btn btn-az-primary btn-block rounded-2 btn-sm">
+                                                        <i class="fas fa-edit"></i> Edit
+                                                    </button>
+                                                    <button class="btn btn-danger btn-block rounded-2 btn-sm">
+                                                        <i class="fas fa-trash-alt"></i> Delete
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>2</td>
+                                                <td>offers_slider</td>
+                                                <td>سلايدر العروض</td>
+                                                <td><span class="text-primary">offers_web_01.jpg</span></td>
+                                                <td><span class="text-primary">offers_mobile_01.jpg</span></td>
+                                                <td><span class="badge badge-warning">No</span></td>
+                                                <td>
+                                                    <button class="btn btn-az-primary btn-block rounded-2 btn-sm">
+                                                        <i class="fas fa-edit"></i> Edit
+                                                    </button>
+                                                    <button class="btn btn-danger btn-block rounded-2 btn-sm">
+                                                        <i class="fas fa-trash-alt"></i> Delete
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

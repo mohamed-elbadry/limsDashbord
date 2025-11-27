@@ -1,0 +1,105 @@
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Notification Provider
+                    </h2>
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        @* <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li> *@
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Dashboard
+                        </li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Notification Provider
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="py-5">
+                <div class="card bd-0">
+                    <div class="card-header bg-gray-400 bd-b-0-f pd-b-0">
+                        <nav class="nav nav-tabs">
+                            @* <a class="nav-link " data-bs-toggle="tab" href="#tabCont1">Mail</a> *@
+                            <a asp-action="NotificationProvider" asp-controller="GeneralSettings" class="nav-link ">Mail</a>
+                            <a asp-action="sms" asp-controller="GeneralSettings" class="nav-link ">Sms</a>
+                            <a asp-action="Shipping" asp-controller="GeneralSettings" class="nav-link active">Shipping</a>
+                            <a asp-action="Captcha" asp-controller="GeneralSettings" class="nav-link">Captcha</a>
+                            @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont4">Captcha</a> *@
+                        </nav>
+                    </div><!-- card-header -->
+                    <div class="card-body bd bd-t-0 tab-content">
+
+                        <div class="card bd-0">
+                            <div class="card-header bg-gray-400 bd-b-0-f pd-b-0">
+                                <nav class="nav nav-tabs">
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#tabContent1">Thabit</a>
+                                </nav>
+                            </div><!-- card-header -->
+                            <div class="card-body bd bd-t-0 tab-content">
+                                <div id="tabContent1" class="tab-pane active show">
+                                    <div class="row pt-3">
+                                        <div class="col-12">
+                                            <label for="key" class="mg-b-10">
+                                                User Name
+                                            </label>
+                                            <input id="key" class="form-control" placeholder="User Name" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row pt-3">
+                                        <div class="col-12">
+                                            <label for="From" class="mg-b-10">
+                                                Auth Base Url
+                                            </label>
+                                            <input id="From" class="form-control" placeholder="Auth Base Url" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row pt-3">
+                                        <div class="col-12">
+                                            <label for="Host" class="mg-b-10">
+                                                Base Url
+                                            </label>
+                                            <input id="Host" class="form-control" placeholder="Base Url" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row pt-3">
+                                        <div class="col-12">
+                                            <label for="Password" class="mg-b-10">
+                                                Password
+                                            </label>
+                                            <input id="Password" class="form-control" placeholder="Password" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row pt-3">
+                                        <div class="col-12">
+                                            <label for="Port" class="mg-b-10">
+                                                Token
+                                            </label>
+                                            <input id="Port" class="form-control" placeholder="Token" type="text">
+                                        </div>
+                                    </div>
+
+                                </div><!-- tab-pane -->
+
+                            </div><!-- card-body -->
+                        </div><!-- card -->
+
+
+                        <div class="card-footer d-flex justify-content-start py-3 gap-2">
+                            <button type="button" class="btn btn-indigo rounded-2">Supmit</button>
+                            @* <button type="button" class="btn btn-indigo rounded-2" data-bs-dismiss="modal">Test</button> *@
+                        </div>
+                    </div><!-- card-body -->
+
+                </div><!-- card -->
+            </div>
+
+
+        </div>
+    </div>
+</div>
+

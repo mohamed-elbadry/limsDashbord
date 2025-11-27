@@ -4,7 +4,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex flex-column">
                     <h2>
-                        Lookup Types List
+                        Lookup Values List
                     </h2>
                     <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
                         <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
@@ -14,7 +14,7 @@
                         </li>
                         <li class="text-black">/</li>
                         <li class="text-black">
-                            Lookup Types List
+                            Lookup Values List
                         </li>
                     </ul>
                 </div>
@@ -24,20 +24,38 @@
             <div class="card bd-0 pt-3">
                 <div class="card-header bg-gray-400 bd-b-0-f pd-b-0">
                     <nav class="nav nav-tabs">
-                        <a class="nav-link active" data-bs-toggle="tab" href="#tabCont1">Lookup Types</a>
+                        <a class="nav-link " data-bs-toggle="tab" href="#tabCont1">Lookup Types</a>
                         @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont2">Lookup Values</a> *@
-                        <a asp-action="LookupValues" asp-controller="GeneralSettings" class="nav-link">Lookup Values</a>
+                        <a asp-action="LookupValues" asp-controller="GeneralSettings" class="nav-link active">Lookup Values</a>
                        
                     </nav>
                 </div><!-- card-header -->
                 <div class="card-body bd bd-t-0 tab-content">
                     <div id="tabCont1" class="tab-pane active show">
                         <div id="filterRow" class="row p-3">
-                            <div class="col-lg-6 col-12">
+                            <div class="col-lg-4 col-12">
                                 <p class="mg-b-10">Name</p>
                                 <input class="form-control" placeholder="Name" type="text">
                             </div>
-                           
+                            <div class="col-lg-4 col-12">
+                                <p class="mg-b-10">
+                                    Account
+                                </p>
+
+                                <select class="form-control select2">
+                                    <option value="" disabled selected>Select Account</option>
+                                    <option value="cash">Cash</option>
+                                    <option value="bank">Bank</option>
+                                    <option value="accounts-receivable">Accounts Receivable</option>
+                                    <option value="accounts-payable">Accounts Payable</option>
+                                    <option value="inventory">Inventory</option>
+                                    <option value="sales-revenue">Sales Revenue</option>
+                                    <option value="cogs">Cost of Goods Sold</option>
+                                    <option value="operating-expenses">Operating Expenses</option>
+                                    <option value="fixed-assets">Fixed Assets</option>
+                                    <option value="equity">Equity</option>
+                                </select>
+                            </div>
                             <div class="col d-flex align-items-end">
                                 <button class="btn btn-info btn-block btn-sm rounded-2">
                                     <i class="fas fa-search"></i> Filter
@@ -52,7 +70,9 @@
                                             <th>#</th>
                                             <th>Name Ar</th>
                                             <th>Name En</th>
-                                            <th>Lookup Values Count</th>
+                                            <th>Description Ar</th>
+                                            <th>Description En</th>
+                                            <th>Lookup Type</th>
                                             <th>Created On</th>
                                             <th>Created By</th>
                                             <th>&nbsp;</th>
@@ -64,12 +84,14 @@
                                             <td>1</td>
                                             <td>فواتير المشتريات</td>
                                             <td>Purchase Invoices</td>
-                                            <td>12</td>
+                                            <td>فواتير شراء المنتجات</td>
+                                            <td>Invoices for product purchases</td>
+                                            <td>Finance</td>
                                             <td>2025-01-10</td>
                                             <td>Admin</td>
                                             <td>
-                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
-                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                <button class="btn btn-az-primary btn-block btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
                                             </td>
                                         </tr>
 
@@ -77,12 +99,14 @@
                                             <td>2</td>
                                             <td>فواتير المبيعات</td>
                                             <td>Sales Invoices</td>
-                                            <td>8</td>
+                                            <td>فواتير بيع المنتجات</td>
+                                            <td>Invoices for product sales</td>
+                                            <td>Finance</td>
                                             <td>2025-02-14</td>
                                             <td>Super Admin</td>
                                             <td>
-                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
-                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                <button class="btn btn-az-primary btn-block btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
                                             </td>
                                         </tr>
 
@@ -90,12 +114,14 @@
                                             <td>3</td>
                                             <td>أنواع العملاء</td>
                                             <td>Customer Types</td>
-                                            <td>5</td>
+                                            <td>تصنيفات مختلفة لأنواع العملاء</td>
+                                            <td>Different classifications of customers</td>
+                                            <td>General</td>
                                             <td>2025-03-01</td>
                                             <td>Ahmed</td>
                                             <td>
-                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
-                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                <button class="btn btn-az-primary btn-block btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
                                             </td>
                                         </tr>
 
@@ -103,12 +129,14 @@
                                             <td>4</td>
                                             <td>حالات الدفع</td>
                                             <td>Payment Status</td>
-                                            <td>9</td>
+                                            <td>مراحل وإجراءات الدفع</td>
+                                            <td>Stages and payment statuses</td>
+                                            <td>Payments</td>
                                             <td>2025-03-11</td>
                                             <td>Mona</td>
                                             <td>
-                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
-                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                <button class="btn btn-az-primary btn-block btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
                                             </td>
                                         </tr>
 
@@ -116,12 +144,14 @@
                                             <td>5</td>
                                             <td>طرق الشحن</td>
                                             <td>Shipping Methods</td>
-                                            <td>6</td>
+                                            <td>طرق توصيل وشحن الطلبات</td>
+                                            <td>Order shipping methods</td>
+                                            <td>Logistics</td>
                                             <td>2025-04-05</td>
                                             <td>Admin</td>
                                             <td>
-                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
-                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                <button class="btn btn-az-primary btn-block btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
                                             </td>
                                         </tr>
 
@@ -129,12 +159,14 @@
                                             <td>6</td>
                                             <td>المدن</td>
                                             <td>Cities</td>
-                                            <td>20</td>
+                                            <td>قائمة المدن المتاحة</td>
+                                            <td>List of supported cities</td>
+                                            <td>Location</td>
                                             <td>2025-04-20</td>
                                             <td>System</td>
                                             <td>
-                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
-                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                <button class="btn btn-az-primary btn-block btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
                                             </td>
                                         </tr>
 
@@ -142,12 +174,14 @@
                                             <td>7</td>
                                             <td>العملات</td>
                                             <td>Currencies</td>
-                                            <td>4</td>
+                                            <td>العملات المتاحة داخل النظام</td>
+                                            <td>Available system currencies</td>
+                                            <td>Finance</td>
                                             <td>2025-05-01</td>
                                             <td>Finance Team</td>
                                             <td>
-                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
-                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                <button class="btn btn-az-primary btn-block btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
                                             </td>
                                         </tr>
 
@@ -155,12 +189,14 @@
                                             <td>8</td>
                                             <td>طرق الدفع</td>
                                             <td>Payment Methods</td>
-                                            <td>7</td>
+                                            <td>خيارات الدفع المتاحة</td>
+                                            <td>Available payment methods</td>
+                                            <td>Payments</td>
                                             <td>2025-05-15</td>
                                             <td>Marwan</td>
                                             <td>
-                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
-                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                <button class="btn btn-az-primary btn-block btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
                                             </td>
                                         </tr>
 
@@ -168,12 +204,14 @@
                                             <td>9</td>
                                             <td>حالات الأوردر</td>
                                             <td>Order Status</td>
-                                            <td>10</td>
+                                            <td>مراحل معالجة الطلب</td>
+                                            <td>Order processing stages</td>
+                                            <td>Orders</td>
                                             <td>2025-06-01</td>
                                             <td>Super Admin</td>
                                             <td>
-                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
-                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                <button class="btn btn-az-primary btn-block btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
                                             </td>
                                         </tr>
 
@@ -181,12 +219,14 @@
                                             <td>10</td>
                                             <td>طرق التواصل</td>
                                             <td>Contact Methods</td>
-                                            <td>3</td>
+                                            <td>وسائل التواصل مع العملاء</td>
+                                            <td>Customer contact methods</td>
+                                            <td>General</td>
                                             <td>2025-06-15</td>
                                             <td>Admin</td>
                                             <td>
-                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
-                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                                <button class="btn btn-az-primary btn-block btn-sm rounded-2"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block btn-sm rounded-2"><i class="fas fa-trash-alt"></i> Delete</button>
                                             </td>
                                         </tr>
                                     </tbody>

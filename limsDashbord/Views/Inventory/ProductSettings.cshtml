@@ -52,10 +52,22 @@
                             <div class="card my-3">
                                 <div id="filterRow" class="row p-3 d-none">
                                     <div class="col-lg-4 col-12">
-                                        <p class="mg-b-10">Code</p>
-                                        <input class="form-control" placeholder="Code" type="text">
+                                        <p class="mg-b-10">Name</p>
+                                        <input class="form-control" placeholder="Name" type="text">
                                     </div>
-                                    <div class="col-lg-8 col-12 d-flex align-items-end">
+                                    <div class="col-lg-4 col-12">
+                                        <p class="mg-b-10">Parent Category</p>
+                                        <select class="form-control select2">
+                                            <option value="" disabled selected>Select Parent Category</option>
+                                            <option value="electronics">Electronics</option>
+                                            <option value="furniture">Furniture</option>
+                                            <option value="appliances">Appliances</option>
+                                            <option value="stationery">Stationery</option>
+                                            <option value="software">Software</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-4 col-12 d-flex align-items-end">
                                         <button class="btn btn-info btn-block btn-sm rounded-2">
                                             <i class="fas fa-search"></i> Search
                                         </button>

@@ -113,15 +113,19 @@
                     <div class="row py-2">
                         <div class="col-lg-4 col-12">
                             <p class="mg-b-10">
-                                Country <sapn class="text-danger">*</sapn>
+                                Country <span class="text-danger">*</span>
                             </p>
-                            <select class="form-control select2">
-                                <option label="Ahmed"></option>
-                                <option>Mahmoud</option>
-                                <option>Adel</option>
-                                <option>Ali</option>
+
+                            <select id="Country" class="form-control select2">
+                                <option value="" disabled selected>Select Country</option>
+                                <option value="sa">Saudi Arabia</option>
+                                <option value="eg">Egypt</option>
+                                <option value="uae">United Arab Emirates</option>
+                                <option value="kw">Kuwait</option>
+                                <option value="qa">Qatar</option>
                             </select>
                         </div>
+
                         <div class="col-lg-4 col-12">
                             <p class="mg-b-10">
                                 City <sapn class="text-danger">*</sapn>
@@ -177,21 +181,22 @@
                     Account Data
                 </div>
                 <div class="card-body">
-                    
-                  
-                   
                     <div class="row py-2">
                         <div class="col-lg-6 col-12">
                             <p class="mg-b-10">
                                 Invoicing Method
                             </p>
+
                             <select class="form-control select2">
-                                <option label="Ahmed"></option>
-                                <option>Mahmoud</option>
-                                <option>Adel</option>
-                                <option>Ali</option>
+                                <option value="" disabled selected>Select Invoicing Method</option>
+                                <option value="per_hour">Per Hour</option>
+                                <option value="per_project">Per Project</option>
+                                <option value="per_task">Per Task</option>
+                                <option value="subscription">Subscription / Monthly</option>
+                                <option value="milestones">By Milestones</option>
                             </select>
                         </div>
+
                         <div class="col-lg-6 col-12">
                             <p class="mg-b-10">
                                 Opening Balance 

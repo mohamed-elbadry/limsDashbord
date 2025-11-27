@@ -40,10 +40,12 @@
                                 Requisition Type
                             </p>
                             <select class="form-control select2">
-                                <option label="Ahmed"></option>
-                                <option>Mahmoud</option>
-                                <option>Adel</option>
-                                <option>Ali</option>
+                                <option value="" disabled selected>Select Type</option>
+                                <option value="purchase">Purchase Requisition</option>
+                                <option value="service">Service Request</option>
+                                <option value="maintenance">Maintenance Requisition</option>
+                                <option value="stock">Stock Request</option>
+                                <option value="emergency">Emergency Purchase</option>
                             </select>
                         </div>
                         <div class="col-lg-6 col-12">
@@ -65,13 +67,17 @@
                                 <p class="mg-b-10">
                                     Journal Account
                                 </p>
+
                                 <select class="form-control select2">
-                                    <option label="Ahmed"></option>
-                                    <option>Mahmoud</option>
-                                    <option>Adel</option>
-                                    <option>Ali</option>
+                                    <option value="" disabled selected>Select Journal Account</option>
+                                    <option value="general-journal">General Journal</option>
+                                    <option value="purchase-journal">Purchase Journal</option>
+                                    <option value="sales-journal">Sales Journal</option>
+                                    <option value="cash-receipts">Cash Receipts Journal</option>
+                                    <option value="cash-payments">Cash Payments Journal</option>
                                 </select>
                             </div>
+
                             <div class="col-lg-6 col-12">
                                 <p class="mg-b-10">Number</p>
                                 <input class="form-control" placeholder="" type="number">
@@ -86,13 +92,17 @@
                                 <p class="mg-b-10">
                                     Supplier
                                 </p>
+
                                 <select class="form-control select2">
-                                    <option label="Ahmed"></option>
-                                    <option>Mahmoud</option>
-                                    <option>Adel</option>
-                                    <option>Ali</option>
+                                    <option value="" disabled selected>Select Supplier</option>
+                                    <option value="emco-trading">EMCO Trading Co.</option>
+                                    <option value="global-tech">Global Tech Supplies</option>
+                                    <option value="lab-solutions">Lab Solutions Co.</option>
+                                    <option value="alpha-industries">Alpha Industries</option>
+                                    <option value="prime-equipment">Prime Equipment Suppliers</option>
                                 </select>
                             </div>
+
                         </div>
                         <div class="row py-2">
                             <div class="col-md-12">
@@ -123,18 +133,17 @@
                                 From
                             </p>
                             <select class="form-control select2">
-                                <option label="Ahmed"></option>
-                                <option>Mahmoud</option>
-                                <option>Adel</option>
-                                <option>Ali</option>
+                                <option value="" disabled selected>Select Source</option>
+                                <option value="procurement">Procurement Department</option>
+                                <option value="warehouse">Warehouse</option>
+                                <option value="finance">Finance Department</option>
+                                <option value="lab">Laboratory</option>
+                                <option value="hr">Human Resources</option>
                             </select>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-           
         </div>
     </div>
     <div class="row py-3">

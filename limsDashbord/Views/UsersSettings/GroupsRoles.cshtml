@@ -1,5 +1,267 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Role
+                    </h2>
+                    <div class="d-flex gap-2 pt-3">
+                        <button class="btn btn-primary btn-block btn-sm rounded-2" data-toggle="modal" data-target="#addRoleModal">
+                            <i class="fas fa-plus px-1"></i>
+                            Add Role
+                        </button>
+                        <!-- Add Role Modal -->
+                        <div class="modal fade" id="addRoleModal" tabindex="-1" role="dialog" aria-labelledby="addRoleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="addRoleModalLabel">Create Role</h5>
+                                        
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-12">
+                                                    <label for="fName" class="mg-b-10">
+                                                        Name
+                                                    </label>
+                                                </div>
+                                                <div class="col-lg-9 col-12">
+                                                    <input id="fName" class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer justify-content-start">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Role Modal -->
+                        <button class="btn btn-gray-700 btn-block btn-sm rounded-2">
+                            <i class="fa fas fa-bolt"></i>
+                            Reload
+                        </button>
+                    </div>
+                </div>
+                <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                    <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black"><i class="fa fa-home"></i></a></li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">
+                        Role
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12">
+                <div class="card my-3">
+                    <div class="p-3">
+                        <div class="table-responsive">
+                            <table id="example2" class="text-center table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                       
+                                        <th>Role</th>
+                                        <th>id</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>Admin</td>
+                                        <td>5c16c772-a6ba-4355-9c09-ec3a6eee4201</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle rounded-2" data-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                                    <a class="dropdown-item "href="#"><i class="fas fa-wrench"></i> Manage Permissions</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Basic</td>
+                                        <td>2f19e5c5-e793-4596-9203-5f4b506c5243</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle rounded-2" data-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                                    <a class="dropdown-item " href="#"><i class="fas fa-wrench"></i> Manage Permissions</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Consultant</td>
+                                        <td>4049682d-9e3f-48ab-a9a6-52591fa1d4a6</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle rounded-2" data-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                                    <a class="dropdown-item " href="#"><i class="fas fa-wrench"></i> Manage Permissions</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Customer</td>
+                                        <td>30a27fff-aa6d-4553-9dd5-33755c0bb7a7</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle rounded-2" data-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                                    <a class="dropdown-item " href="#"><i class="fas fa-wrench"></i> Manage Permissions</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>FinanceManager</td>
+                                        <td>df9cd664-f640-4136-b939-205bc1918a85</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle rounded-2" data-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                                    <a class="dropdown-item " href="#"><i class="fas fa-wrench"></i> Manage Permissions</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>HRManager</td>
+                                        <td>7e90914d-30bd-47ae-8f52-2fa5bfe66320</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle rounded-2" data-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                                    <a class="dropdown-item " href="#"><i class="fas fa-wrench"></i> Manage Permissions</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>LabManager</td>
+                                        <td>c4d4dac4-9e6b-4d71-845a-085638b62018</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle rounded-2" data-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                                    <a class="dropdown-item " href="#"><i class="fas fa-wrench"></i> Manage Permissions</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>LabTechnician</td>
+                                        <td>71214acd-bca3-47b4-b8e9-c6aa617ba480</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle rounded-2" data-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                                    <a class="dropdown-item " href="#"><i class="fas fa-wrench"></i> Manage Permissions</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>LabTechnician</td>
+                                        <td>71214acd-bca3-47b4-b8e9-c6aa617ba480</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle rounded-2" data-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                                    <a class="dropdown-item " href="#"><i class="fas fa-wrench"></i> Manage Permissions</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>QualityControl</td>
+                                        <td>feb37497-daf8-4e4a-8dcf-5ec56e348efe</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle rounded-2" data-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                                    <a class="dropdown-item " href="#"><i class="fas fa-wrench"></i> Manage Permissions</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Receptionist</td>
+                                        <td>76537b0c-2f60-4db1-86e5-03e2e28824cc</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle rounded-2" data-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                                    <a class="dropdown-item " href="#"><i class="fas fa-wrench"></i> Manage Permissions</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

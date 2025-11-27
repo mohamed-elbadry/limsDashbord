@@ -36,10 +36,22 @@
                 <div class="card my-3">
                     <div id="filterRow" class="row p-3 d-none">
                         <div class="col-lg-4 col-12">
-                            <p class="mg-b-10">Code</p>
-                            <input class="form-control" placeholder="Code" type="text">
+                            <p class="mg-b-10">Name</p>
+                            <input class="form-control" placeholder="Name" type="text">
                         </div>
-                        <div class="col-lg-8 col-12 d-flex align-items-end">
+                        <div class="col-lg-4 col-12">
+                            <p class="mg-b-10">Status</p>
+                            <select class="form-control select2">
+                                <option value="" disabled selected>Select Status</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                                <option value="pending">Pending</option>
+                                <option value="disabled">Disabled</option>
+                                <option value="archived">Archived</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-4 col-12 d-flex align-items-end">
                             <button class="btn btn-info btn-block btn-sm rounded-2">
                                 <i class="fas fa-search"></i> Search
                             </button>

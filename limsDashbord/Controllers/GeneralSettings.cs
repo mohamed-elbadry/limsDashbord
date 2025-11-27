@@ -40,5 +40,41 @@ namespace limsDashbord.Controllers
         {
             return View();
         }
+        public IActionResult Notfound()
+        {
+            return View();
+        }
+        public IActionResult Addresources()
+        {
+            return View();
+        }
+        public IActionResult Sms()
+        {
+            return View();
+        }
+        public IActionResult Shipping()
+        {
+            return View();
+        }
+        public IActionResult Captcha()
+        {
+            return View();
+        }
+        public IActionResult Addslider()
+        {
+            return View();
+        }
+        public IActionResult AddSettings()
+        {
+            return View();
+        }
+        public IActionResult Addlookup()
+        {
+            return View();
+        }
+        public IActionResult LookupValues()
+        {
+            return View();
+        }
     }
 }

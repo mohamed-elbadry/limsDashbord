@@ -1,5 +1,103 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Admin List
+                    </h2>
+                    <div class="d-flex gap-2 pt-3">
+                        @* <button class="btn btn-primary btn-block btn-sm rounded-2" data-toggle="modal" data-target="#addRoleModal">
+                            <i class="fas fa-plus px-1"></i>
+                            Add List
+                        </button> *@
+                        <li class="nav-sub-item"><a asp-action="Notfound" asp-controller="GeneralSettings" class="btn btn-primary btn-block btn-sm rounded-2"> <i class="fas fa-plus px-1"></i> Notfound</a></li>
+                    </div>
+                </div>
+                <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                    <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black"><i class="fa fa-home"></i></a></li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">
+                        Admin Data
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12">
+                <div class="card my-5">
+                    <div class="p-3">
+                        <div class="table-responsive">
+                            <table class="table table-striped mg-b-0 text-center">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Email Address</th>
+                                        <th>Phone Number</th>
+                                        <th>Notify Method</th>
+                                        <th>Is Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>Ahmed Mohamed</td>
+                                        <td>ahmed.mohamed@example.com</td>
+                                        <td>+966 512 345 678</td>
+                                        <td>Email</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>2</th>
+                                        <td>Sarah Ali</td>
+                                        <td>sarah.ali@example.com</td>
+                                        <td>+966 590 112 233</td>
+                                        <td>SMS</td>
+                                        <td><span class="badge badge-danger">Inactive</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>3</th>
+                                        <td>Mohamed Tarek</td>
+                                        <td>m.tarek@example.com</td>
+                                        <td>+966 501 778 901</td>
+                                        <td>Email</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>4</th>
+                                        <td>Lama Hassan</td>
+                                        <td>lama.hassan@example.com</td>
+                                        <td>+966 540 887 432</td>
+                                        <td>SMS</td>
+                                        <td><span class="badge badge-warning">Pending</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>5</th>
+                                        <td>Omar Youssef</td>
+                                        <td>omar.youssef@example.com</td>
+                                        <td>+966 522 998 441</td>
+                                        <td>Push</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

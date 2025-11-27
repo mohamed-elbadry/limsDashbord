@@ -1,5 +1,279 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="card-header py-3">
+    <div class="card py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Nationalities List
+                    </h2>
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Nationalities List
+                        </li>
+                        @* <li class="text-black">/</li>
+                        <li class="text-black">
+                            WorkFlows
+                        </li> *@
+                    </ul>
+                </div>
+                <a asp-action="Addlookup" asp-controller="GeneralSettings" class="btn btn-primary btn-sm rounded-2"><i class="fas fa-plus "></i>Add lookup</a>
+            </div>
+
+          
+            <div class="card bd-0 pt-4">
+                <div class="card-header bg-gray-400 bd-b-0-f pd-b-0">
+                    <nav class="nav nav-tabs">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#tabCont1">Countries</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#tabCont2">City</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#tabCont3">Nighborhoods</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#tabCont4">Location</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#tabCont5">Nationalities</a>
+                    </nav>
+                </div><!-- card-header -->
+                <div class="card-body bd bd-t-0 tab-content">
+                    <div id="tabCont1" class="tab-pane active show">
+                        <div class="p-3">
+                            <div class="table-responsive">
+                                <table id="example2" class="text-center table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name Ar</th>
+                                            <th>Name En</th>
+                                            <th>Created On</th>
+                                            <th>Created By</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>المملكة العربية السعودية</td>
+                                            <td>Saudi Arabia</td>
+                                            <td>Jan 01/0001</td>
+                                            <td>Admin</td>
+                                            <td>
+                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>2</td>
+                                            <td>جمهورية مصر العربية</td>
+                                            <td>Egypt</td>
+                                            <td>Jan 01/0001</td>
+                                            <td>Admin</td>
+                                            <td>
+                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>3</td>
+                                            <td>الإمارات العربية المتحدة</td>
+                                            <td>United Arab Emirates</td>
+                                            <td>Jan 01/0001</td>
+                                            <td>Admin</td>
+                                            <td>
+                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>4</td>
+                                            <td>دولة الكويت</td>
+                                            <td>Kuwait</td>
+                                            <td>Jan 01/0001</td>
+                                            <td>Admin</td>
+                                            <td>
+                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>5</td>
+                                            <td>دولة قطر</td>
+                                            <td>Qatar</td>
+                                            <td>Jan 01/0001</td>
+                                            <td>Admin</td>
+                                            <td>
+                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div><!-- tab-pane -->
+                    <div id="tabCont2" class="tab-pane">
+                        <div class="p-3">
+                            <div class="table-responsive">
+                                <table id="example3" class="text-center table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name Ar</th>
+                                            <th>Name En</th>
+                                            <th>Country</th>
+                                            <th>Created On</th>
+                                            <th>Created By</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>الرياض</td>
+                                            <td>Riyadh</td>
+                                            <td>Saudi Arabia</td>
+                                            <td>Jan 01/0001</td>
+                                            <td>Admin</td>
+                                            <td>
+                                                <button class="btn btn-az-primary btn-block rounded-2 btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-block rounded-2 btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                                            </td>
+                                        </tr>
+
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div><!-- tab-pane -->
+                    <div id="tabCont3" class="tab-pane">
+                        <div class="p-3">
+                            <div class="table-responsive">
+                                <table id="example4" class="text-center table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name Ar</th>
+                                            <th>Name En</th>
+                                            <th>City</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>الرياض</td>
+                                            <td>Riyadh</td>
+                                            <td>الرياض</td>
+                                            <td>السعودية</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>2</td>
+                                            <td>جدة</td>
+                                            <td>Jeddah</td>
+                                            <td>جدة</td>
+                                            <td>السعودية</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>3</td>
+                                            <td>القاهرة</td>
+                                            <td>Cairo</td>
+                                            <td>القاهرة</td>
+                                            <td>مصر</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>4</td>
+                                            <td>دبي</td>
+                                            <td>Dubai</td>
+                                            <td>دبي</td>
+                                            <td>الإمارات</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>5</td>
+                                            <td>الدوحة</td>
+                                            <td>Doha</td>
+                                            <td>الدوحة</td>
+                                            <td>قطر</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="tabCont4" class="tab-pane">This is tab content 4...</div>
+                    <div id="tabCont5" class="tab-pane">
+                        <div class="table-responsive">
+                            <table id="example6" class="text-center table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name Ar</th>
+                                        <th>Name En</th>
+                                        <th>Created On</th>
+                                        <th>Created By</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>سعودي</td>
+                                        <td>Saudi</td>
+                                        <td>Jan 01/0001</td>
+                                        <td>الرياض</td>
+                                        <td>السعودية</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>جدة</td>
+                                        <td>Jeddah</td>
+                                        <td>جدة</td>
+                                        <td>السعودية</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>القاهرة</td>
+                                        <td>Cairo</td>
+                                        <td>القاهرة</td>
+                                        <td>مصر</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4</td>
+                                        <td>دبي</td>
+                                        <td>Dubai</td>
+                                        <td>دبي</td>
+                                        <td>الإمارات</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>5</td>
+                                        <td>الدوحة</td>
+                                        <td>Doha</td>
+                                        <td>الدوحة</td>
+                                        <td>قطر</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div><!-- card-body -->
+            </div><!-- card -->
+
+
+        </div>
+    </div>
+</div>
