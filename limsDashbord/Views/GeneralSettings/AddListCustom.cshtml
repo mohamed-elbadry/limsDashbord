@@ -119,22 +119,36 @@
                             </div>
                         </div>
                         <div id="tabCont3" class="tab-pane">
-                            <div class="row">
+                            <div class="row mt-4">
+                                <!-- Select Section -->
+                                <div class="col-lg-6 mb-3">
+                                    <label class="form-label">Select Section</label>
+                                    <select class="form-control" id="sectionSelect">
+                                        <option value="">Select</option>
+                                        <option value="1">Section 1</option>
+                                        <option value="2">Section 2</option>
+                                    </select>
+                                </div>
 
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Select Section</label>
-                                        <select class="form-control form-control-sm" id="drpSection" onchange="LoadSectionControls(value);">
-                                            <option value="0">Select</option>
-                                        </select>
+                                <!-- Toolbox + Canvas -->
+                                <div class="col-lg-12">
+                                    <div class="row">
+
+                                       
+                                        <div class="col-lg-12">
+                                            <div id="fb-editor"></div>
+                                        </div>
+
                                     </div>
                                 </div>
 
-                                <div class="col-md-12">
-                                    <div id="fb-editor"><div id="frmb-1764455000460-form-wrap" class="form-wrap form-builder formbuilder-embedded-bootstrap  controls-left"><div class="snackbar"></div><ul id="frmb-1764455000460" class="frmb stage-wrap ui-sortable empty" data-content="Drag a field from the right to this area" style="min-height: 0px;"></ul><div id="frmb-1764455000460-cb-wrap" class="cb-wrap sticky-controls" style="top: 5px"><ul id="frmb-1764455000460-control-box" class="frmb-control ui-sortable"><li class="formbuilder-icon-autocomplete input-control input-control-0 ui-sortable-handle" data-type="autocomplete"><span>Autocomplete</span></li><li class="formbuilder-icon-button input-control input-control-1 ui-sortable-handle" data-type="button"><span>Button</span></li><li class="formbuilder-icon-checkbox-group input-control input-control-6 ui-sortable-handle" data-type="checkbox-group"><span>Checkbox Group</span></li><li class="formbuilder-icon-date input-control input-control-11 ui-sortable-handle" data-type="date"><span>Date Field</span></li><li class="formbuilder-icon-file input-control input-control-10 ui-sortable-handle" data-type="file"><span>File Upload</span></li><li class="formbuilder-icon-header input-control input-control-4 ui-sortable-handle" data-type="header"><span>Header</span></li><li class="formbuilder-icon-hidden input-control input-control-2 ui-sortable-handle" data-type="hidden"><span>Hidden Input</span></li><li class="formbuilder-icon-number input-control input-control-12 ui-sortable-handle" data-type="number"><span>Number</span></li><li class="formbuilder-icon-paragraph input-control input-control-3 ui-sortable-handle" data-type="paragraph"><span>Paragraph</span></li><li class="formbuilder-icon-radio-group input-control input-control-7 ui-sortable-handle" data-type="radio-group"><span>Radio Group</span></li><li class="formbuilder-icon-select input-control input-control-5 ui-sortable-handle" data-type="select"><span>Select</span></li><li class="formbuilder-icon-text input-control input-control-9 ui-sortable-handle" data-type="text"><span>Text Field</span></li><li class="formbuilder-icon-textarea input-control input-control-13 ui-sortable-handle" data-type="textarea"><span>Text Area</span></li></ul><div class="form-actions btn-group"><button type="button" id="frmb-1764455000460-clear-action" class="clear-all btn btn-danger">Clear</button><button type="button" id="frmb-1764455000460-data-action" class="btn btn-default get-data">[{…}]</button><button type="button" id="frmb-1764455000460-save-action" class="btn btn-primary save-template">Save</button></div><div id="frmb-1764455000460-gridModeHelp" class="grid-mode-help"></div></div></div></div>
+                                <!-- Buttons -->
+                                <div class="col-lg-12 mt-4 d-flex gap-2">
+                                    <button id="clearBtn" class="btn btn-danger">Clear</button>
+                                    <button id="saveBtn" class="btn btn-success">Save</button>
                                 </div>
                             </div>
-                        </div>
+
                     </div><!-- card-body -->
                 </div><!-- card -->
                 </div>
@@ -142,3 +156,10 @@
          
         </div>
     </div>
+    </div>
+@section Scripts {
+        <script>
+           
+        </script>
+
+}
