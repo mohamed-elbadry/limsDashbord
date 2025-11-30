@@ -1,0 +1,144 @@
+﻿
+    <div class="card w-100 border-0 py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                        <li class="text-black">/</li>
+                        <li class="text-black">
+                            Custom Forms
+                        </li>
+                       
+                    </ul>
+                <p class="py-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> Lorem Ipsum has been the industry's standard dummy text ever since the<br /> 1500s,</p>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-12">
+                <div class="card bd-0">
+                    <div class="card-header bg-gray-400 bd-b-0-f pd-b-0">
+                        <nav class="nav nav-tabs">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#tabCont1">BasicData</a>
+                            <a class="nav-link" data-bs-toggle="tab" href="#tabCont2">Sections</a>
+                            <a class="nav-link" data-bs-toggle="tab" href="#tabCont3">Form Content</a>
+                        </nav>
+                    </div><!-- card-header -->
+                    <div class="card-body bd bd-t-0 tab-content">
+                        <div id="tabCont1" class="tab-pane active show">
+                            <div class="row p-3">
+                                <div class="col-lg-6 col-12">
+                                    <p class="mg-b-10">Form Title</p>
+                                    <input class="form-control" placeholder="Name" type="text">
+                                </div>
+                            </div>
+                            <div class="row p-3">
+                                <div class="col-lg-8 col-12">
+                                    <label for="notes" class="mg-b-10">Short Description</label>
+                                    <textarea id="notes" rows="3" class="form-control" placeholder="" style="height: 100px;"></textarea>
+                                </div>
+                            </div>
+                            <div class="row p-3">
+                                <div class="col-lg-6 col-12">
+                                    <p class="mg-b-10">Form Type</p>
+                                    <select class="form-control select2">
+                                        <option value="" disabled selected>Select Account</option>
+                                        <option value="cash">Cash on Hand</option>
+                                        <option value="bank">Bank Account</option>
+                                        <option value="accounts-receivable">Accounts Receivable</option>
+                                        <option value="accounts-payable">Accounts Payable</option>
+                                        <option value="sales-revenue">Sales Revenue</option>
+                                    </select>
+                                </div>
+                               
+                            </div>
+                           
+                        </div><!-- tab-pane -->
+                        <div id="tabCont2" class="tab-pane">
+                            <div class="row p-3">
+                                <div class="col-lg-6 col-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Add Section Data
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row p-3">
+                                                <div class="col-12">
+                                                    <p class="mg-b-10">Section Name</p>
+                                                    <input class="form-control" placeholder="Section Name" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="row p-3">
+                                                <div class="col-12">
+                                                    <p class="mg-b-10">Section Weight</p>
+                                                    <input class="form-control" placeholder="" type="number">
+                                                </div>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-start bg-transparent gap-2">
+                                                <button type="button" class="btn btn-indigo"><i class="fa fa-save"></i> Save </button>
+                                                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal"><i class="fa fa-window-close"></i> Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <i class="fa fa-list"></i>
+                                            Sections List
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row p-3">
+                                                <div class="col-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table mg-b-0">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>#</th>
+                                                                    <th>Section Name</th>
+                                                                    <th>Weight</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>1</th>
+                                                                    <td>Human Resources</td>
+                                                                    <td>25%</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tabCont3" class="tab-pane">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Select Section</label>
+                                        <select class="form-control form-control-sm" id="drpSection" onchange="LoadSectionControls(value);">
+                                            <option value="0">Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div id="fb-editor"><div id="frmb-1764455000460-form-wrap" class="form-wrap form-builder formbuilder-embedded-bootstrap  controls-left"><div class="snackbar"></div><ul id="frmb-1764455000460" class="frmb stage-wrap ui-sortable empty" data-content="Drag a field from the right to this area" style="min-height: 0px;"></ul><div id="frmb-1764455000460-cb-wrap" class="cb-wrap sticky-controls" style="top: 5px"><ul id="frmb-1764455000460-control-box" class="frmb-control ui-sortable"><li class="formbuilder-icon-autocomplete input-control input-control-0 ui-sortable-handle" data-type="autocomplete"><span>Autocomplete</span></li><li class="formbuilder-icon-button input-control input-control-1 ui-sortable-handle" data-type="button"><span>Button</span></li><li class="formbuilder-icon-checkbox-group input-control input-control-6 ui-sortable-handle" data-type="checkbox-group"><span>Checkbox Group</span></li><li class="formbuilder-icon-date input-control input-control-11 ui-sortable-handle" data-type="date"><span>Date Field</span></li><li class="formbuilder-icon-file input-control input-control-10 ui-sortable-handle" data-type="file"><span>File Upload</span></li><li class="formbuilder-icon-header input-control input-control-4 ui-sortable-handle" data-type="header"><span>Header</span></li><li class="formbuilder-icon-hidden input-control input-control-2 ui-sortable-handle" data-type="hidden"><span>Hidden Input</span></li><li class="formbuilder-icon-number input-control input-control-12 ui-sortable-handle" data-type="number"><span>Number</span></li><li class="formbuilder-icon-paragraph input-control input-control-3 ui-sortable-handle" data-type="paragraph"><span>Paragraph</span></li><li class="formbuilder-icon-radio-group input-control input-control-7 ui-sortable-handle" data-type="radio-group"><span>Radio Group</span></li><li class="formbuilder-icon-select input-control input-control-5 ui-sortable-handle" data-type="select"><span>Select</span></li><li class="formbuilder-icon-text input-control input-control-9 ui-sortable-handle" data-type="text"><span>Text Field</span></li><li class="formbuilder-icon-textarea input-control input-control-13 ui-sortable-handle" data-type="textarea"><span>Text Area</span></li></ul><div class="form-actions btn-group"><button type="button" id="frmb-1764455000460-clear-action" class="clear-all btn btn-danger">Clear</button><button type="button" id="frmb-1764455000460-data-action" class="btn btn-default get-data">[{…}]</button><button type="button" id="frmb-1764455000460-save-action" class="btn btn-primary save-template">Save</button></div><div id="frmb-1764455000460-gridModeHelp" class="grid-mode-help"></div></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- card-body -->
+                </div><!-- card -->
+                </div>
+            </div>
+         
+        </div>
+    </div>

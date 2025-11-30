@@ -76,5 +76,45 @@ namespace limsDashbord.Controllers
         {
             return View();
         }
+        public IActionResult AddListCustom()
+        {
+            return View();
+        }
+        public IActionResult AddWorkFlows()
+        {
+            return View();
+        }
+        public IActionResult City()
+        {
+            return View();
+        }
+        public IActionResult Nighborhoods()
+        {
+            return View();
+        }
+        public IActionResult Location()
+        {
+            return View();
+        }
+        public IActionResult Nationalities()
+        {
+            return View();
+        }
+        public IActionResult AddNationalities()
+        {
+            return View();
+        }
+        public IActionResult AddLocation()
+        {
+            return View();
+        }
+        public IActionResult AddorEditCity()
+        {
+            return View();
+        }
+        public IActionResult AddorEditCountry()
+        {
+            return View();
+        }
     }
 }

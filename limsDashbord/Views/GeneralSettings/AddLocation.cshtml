@@ -1,0 +1,84 @@
+﻿<div class="card py-3 w-100 border-0">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Location
+                    </h2>
+                    <div class="d-flex gap-2 pt-3">
+                        <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                            <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Dashboard</a></li>
+                            <li class="text-black">/</li>
+                            <li class="text-black">
+                                Location
+                            </li>
+                            <li class="text-black">/</li>
+                            <li class="text-black">
+                                Add Or Edit
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row py-3">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header gap-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                               <p>
+                                    <i class="fas fa-plus mr-1"></i>
+                                    Add Location
+                               </p>
+                                <a asp-controller="GeneralSettings" asp-action="Location" class="btn btn-success btn-sm btn-block rounded-2 text-white"><i class="fas fa-undo "></i> Back to list</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <label for="Name Ar" class="mg-b-10">
+                                        Name Ar
+                                    </label>
+                                    <input id="Name Ar" class="form-control" placeholder="" type="text">
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <label for="Name En" class="mg-b-10">
+                                        Name En
+                                    </label>
+                                    <input id="Name En" class="form-control" placeholder="" type="text">
+                                </div>
+                            </div>
+                            <div class="row pt-3">
+                                <div class="col-lg-6 col-12">
+                                    <p class="mg-b-10">
+                                        City
+                                    </p>
+                                    <select class="form-control select2">
+                                        <option value="" disabled selected>Select City</option>
+
+                                        <option value="riyadh">Riyadh</option>
+                                        <option value="jeddah">Jeddah</option>
+                                        <option value="dubai">Dubai</option>
+                                        <option value="cairo">Cairo</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-start py-3 gap-2">
+                            <button type="button" class="btn btn-indigo rounded-2">Save</button>
+                            <button type="button" class="btn btn-outline-light rounded-2" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+

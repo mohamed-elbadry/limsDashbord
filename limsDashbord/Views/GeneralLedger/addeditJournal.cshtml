@@ -1,0 +1,223 @@
+﻿<div class="card-header w-100 py-3">
+    <div class="card w-100 border-0 py-3">
+        <div class="p-3">
+            <div class="d-flex flex-column">
+                <h2>
+                    Journal Entries
+                </h2>
+                <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                    <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">
+                        Journal Entries
+                    </li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">
+                        Add or Edit
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row py-3">
+        <div class="col-lg-6 col-12">
+            <div class="card">
+                <div class="card-header">
+                    Journal Entries Details
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Reference Number <sapn class="text-danger">*</sapn>
+                            </p>
+                            <input class="form-control" placeholder="Cstmr-2025-0001" type="text">
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p class="mg-b-10">
+                                Date
+                                <sapn class="text-danger">*</sapn>
+                            </p>
+                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group">
+                                <label class="mg-b-10">
+                                    Financial Period <span class="text-danger">*</span>
+                                </label>
+
+                                <select class="form-control select2 ">
+                                    <option value="" selected disabled>Choose Recurring Period</option>
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Bi-Weekly</option>
+                                    <option>Monthly</option>
+                                    <option>Quarterly</option>
+                                    <option>Yearly</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group">
+                                <label class="mg-b-10">
+                                    Journal Entry Type <span class="text-danger">*</span>
+                                </label>
+                                <select class="form-control select2 ">
+                                    <option value="" selected disabled>Choose Journal Entry Type</option>
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Bi-Weekly</option>
+                                    <option>Monthly</option>
+                                    <option>Quarterly</option>
+                                    <option>Yearly</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12">
+            <div class="card">
+                <div class="card-header">
+                    Attachment Management
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="notes">Description</label>
+                            <textarea id="notes" rows="3" class="form-control" placeholder="" style="height: 130px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row py-3">
+        <div class=" col-12">
+            <div class="card">
+                <div class="card-header">
+                    Purchase Order Terms<sapn class="text-danger">*</sapn>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-responsive">
+                                <table class="table table-bordered mg-b-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Account <span class="text-danger">*</span></th>
+                                            <th>Description</th>
+                                            <th>Debit <span class="text-danger">*</span></th>
+                                            <th>Credit <span class="text-danger">*</span></th>
+                                            <th>&nbsp;</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <!-- Account Select2 -->
+                                            <td>
+                                                <select class="form-control select2">
+                                                    <option value="" disabled selected>Select Account</option>
+                                                    <option value="1001">Cash</option>
+                                                    <option value="1002">Bank Account</option>
+                                                    <option value="2001">Accounts Receivable</option>
+                                                    <option value="3001">Sales Revenue</option>
+                                                    <option value="4001">Expenses</option>
+                                                </select>
+                                            </td>
+
+                                            <!-- Description -->
+                                            <td>
+                                                <input type="text" class="form-control" placeholder="Description">
+                                            </td>
+
+                                            <!-- Debit -->
+                                            <td>
+                                                <input type="number" class="form-control" placeholder="0.00">
+                                            </td>
+
+                                            <!-- Credit -->
+                                            <td>
+                                                <input type="number" class="form-control" placeholder="0.00">
+                                            </td>
+
+                                            <!-- Empty -->
+                                            <!-- Actions -->
+                                            <td>
+                                                <button class="btn btn-danger btn-sm">
+                                                    <i class="fas fa-trash"></i>
+
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Add new row button -->
+                                        <tr>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary btn-block rounded-2">
+                                                    <i class="fas fa-plus px-1"></i>
+                                                    Add
+                                                </button>
+                                            </td>
+                                            <td>total</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row py-3">
+        <div class=" col-12">
+            <div class="card">
+                <div class="card-header">
+                    Purchase Order Terms<sapn class="text-danger">*</sapn>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>
+                                    Attachments
+
+                                    <img src="/web/img/loader.gif" style="height:80px;width:80px;display:none;" id="file-upload-loader-multi">
+                                </label>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" id="inputFile" onchange="MultiUploadAsync(this)" multiple="">
+                                </div>
+                            </div>
+
+
+                            <table class="table " id="list-files-table">
+                                <tbody>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-start py-3 gap-2">
+                    <button type="button" class="btn btn-indigo rounded-2">Save</button>
+                    <button type="button" class="btn btn-outline-light rounded-2" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

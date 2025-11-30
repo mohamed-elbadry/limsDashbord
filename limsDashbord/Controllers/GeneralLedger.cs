@@ -33,5 +33,9 @@ namespace limsDashbord.Controllers
         {
             return View();
         }
+        public IActionResult addeditJournal()
+        {
+            return View();
+        }
     }
 }

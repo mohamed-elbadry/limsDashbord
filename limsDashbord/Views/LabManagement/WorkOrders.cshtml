@@ -1,243 +1,244 @@
-﻿<div class="card-header py-3">
-    <div class="card py-3">
-        <div class="p-3">
-            <div class="d-flex justify-content-between align-items-center">
-               <div class="d-flex flex-column">
-                    <h2>
-                        Work Orders
-                    </h2>
-                    <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
-                        <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
-                        <li class="text-black">/</li>
-                        <li class="text-black">
-                            Lab Management
-                        </li>
-                        <li class="text-black">/</li>
-                        <li class="text-black">Work Orders</li>
+﻿
+  
+        <div class="card w-100 border-0 py-3">
+            <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex flex-column">
+                        <h2>
+                            Work Orders
+                        </h2>
+                        <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                            <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black">Home</a></li>
+                            <li class="text-black">/</li>
+                            <li class="text-black">
+                                Lab Management
+                            </li>
+                            <li class="text-black">/</li>
+                            <li class="text-black">Work Orders</li>
 
-                    </ul>
-               </div>
-                <div class="d-flex gap-2">
-                    <button class="btn btn-primary btn-block btn-sm rounded-2" data-bs-toggle="modal" data-bs-target="#newSampleModal">
-                        <i class="fas fa-plus px-1"></i>
-                        Add Work Order
-                    </button>
+                        </ul>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary btn-block btn-sm rounded-2" data-bs-toggle="modal" data-bs-target="#newSampleModal">
+                            <i class="fas fa-plus px-1"></i>
+                            Add Work Order
+                        </button>
 
-                    <div class="modal fade" id="newSampleModal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog modal-xl" role="document">
-                            <div class="modal-content modal-content-demo">
-                                <div class="modal-header">
-                                    <h6 class="modal-title">
-                                        Add Work Order
-                                    </h6>
+                        <div class="modal fade" id="newSampleModal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-xl" role="document">
+                                <div class="modal-content modal-content-demo">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title">
+                                            Add Work Order
+                                        </h6>
 
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row py-2">
-                                        <div class="col-lg-4 col-12">
-                                            <p class="mg-b-10">
-                                                Code <sapn class="text-danger">*</sapn>
-                                            </p>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row py-2">
+                                            <div class="col-lg-4 col-12">
+                                                <p class="mg-b-10">
+                                                    Code <sapn class="text-danger">*</sapn>
+                                                </p>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="WO-2025-0001">
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="WO-2025-0001">
+                                            </div>
+                                            <div class="col-lg-4 col-12">
+                                                <p class="mg-b-10">
+                                                    Sample <sapn class="text-danger">*</sapn>
+                                                </p>
+                                                <select class="form-control select2">
+                                                    <option label="Ahmed"></option>
+                                                    <option>Mahmoud</option>
+                                                    <option>Adel</option>
+                                                    <option>Ali</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-12">
-                                            <p class="mg-b-10">
-                                                Sample <sapn class="text-danger">*</sapn>
-                                            </p>
-                                            <select class="form-control select2">
-                                                <option label="Ahmed"></option>
-                                                <option>Mahmoud</option>
-                                                <option>Adel</option>
-                                                <option>Ali</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6 col-12">
-                                            <p class="mg-b-10">
-                                                Title  <sapn class="text-danger">*</sapn>
-                                            </p>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-12">
+                                                <p class="mg-b-10">
+                                                    Title  <sapn class="text-danger">*</sapn>
+                                                </p>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Title" value="Wo-2025-0001">
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="Title" value="Wo-2025-0001">
+                                            </div>
+                                            <div class="col-lg-6 col-12">
+                                                <p class="mg-b-10">
+                                                    Priority  <sapn class="text-danger">*</sapn>
+                                                </p>
+                                                <select class="form-control select2">
+                                                    <option label="Ahmed"></option>
+                                                    <option>Lew</option>
+                                                    <option>Medium</option>
+                                                    <option>High</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 col-12">
-                                            <p class="mg-b-10">
-                                                Priority  <sapn class="text-danger">*</sapn>
-                                            </p>
-                                            <select class="form-control select2">
-                                                <option label="Ahmed"></option>
-                                                <option>Lew</option>
-                                                <option>Medium</option>
-                                                <option>High</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row py-2">
-                                        <div class="col-lg-4 col-12">
-                                            <p class="mg-b-10">
-                                                Received Date
-                                                <sapn class="text-danger">*</sapn>
-                                            </p>
-                                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
-                                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
-                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-lg-4 col-12">
+                                                <p class="mg-b-10">
+                                                    Received Date
+                                                    <sapn class="text-danger">*</sapn>
+                                                </p>
+                                                <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                                                <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                                            </div>
 
-                                        <div class="col-lg-4 col-12">
-                                            <p class="mg-b-10">
-                                                Start Date
-                                                <sapn class="text-danger">*</sapn>
-                                            </p>
-                                            <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
-                                            <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
-                                        </div>
+                                            <div class="col-lg-4 col-12">
+                                                <p class="mg-b-10">
+                                                    Start Date
+                                                    <sapn class="text-danger">*</sapn>
+                                                </p>
+                                                <input type="date" class="form-control valid" id="ReceiveDate" name="ReceiveDate" value="2025-11-24" aria-describedby="ReceiveDate-error" aria-invalid="false"><input name="__Invariant" type="hidden" value="ReceiveDate">
+                                                <span class="text-danger field-validation-valid" data-valmsg-for="ReceiveDate" data-valmsg-replace="true"></span>
+                                            </div>
 
-                                        <div class="col-lg-4 col-12">
-                                            <p class="mg-b-10">End Date <sapn class="text-danger">*</sapn></p>
-                                            <input class="form-control" placeholder="MM/DD/YYYY" disabled="" type="text">
+                                            <div class="col-lg-4 col-12">
+                                                <p class="mg-b-10">End Date <sapn class="text-danger">*</sapn></p>
+                                                <input class="form-control" placeholder="MM/DD/YYYY" disabled="" type="text">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row py-2">
-                                        <div class="col-12">
-                                            <label for="notes">Notes <sapn class="text-danger">*</sapn></label>
-                                            <textarea id="notes" rows="3" class="form-control" placeholder="Notes" style="height: 80px;"></textarea>
+                                        <div class="row py-2">
+                                            <div class="col-12">
+                                                <label for="notes">Notes <sapn class="text-danger">*</sapn></label>
+                                                <textarea id="notes" rows="3" class="form-control" placeholder="Notes" style="height: 80px;"></textarea>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row py-3">
-                                        <div class="col-12">
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered mg-b-0">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>SubWotkOrder</th>
-                                                            <th>Parameters</th>
-                                                            <th>Actions</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>Tiger Nixon</td>
-                                                            <td>System Architect</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>
-                                                                <button class="btn btn-primary btn-block btn-sm rounded-2">
-                                                                    <i class="fas fa-plus px-1"></i>
-                                                                    Add New Sub Work Order
-                                                                </button>
-                                                            </th>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                        <div class="row py-3">
+                                            <div class="col-12">
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered mg-b-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>SubWotkOrder</th>
+                                                                <th>Parameters</th>
+                                                                <th>Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">1</th>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    <button class="btn btn-primary btn-block btn-sm rounded-2">
+                                                                        <i class="fas fa-plus px-1"></i>
+                                                                        Add New Sub Work Order
+                                                                    </button>
+                                                                </th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="modal-footer d-flex justify-content-start">
-                                    <button type="button" class="btn btn-indigo rounded-2">Save</button>
-                                    <button type="button" class="btn btn-outline-light rounded-2" data-bs-dismiss="modal">Close</button>
+                                    <div class="modal-footer d-flex justify-content-start">
+                                        <button type="button" class="btn btn-indigo rounded-2">Save</button>
+                                        <button type="button" class="btn btn-outline-light rounded-2" data-bs-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                   
+
                         <li class="nav-sub-item btn btn-secondary btn-sm rounded-2">
-                        <a asp-controller="LabManagement" asp-action="AddWOBatch" class="nav-sub-link text-white"> <i class="fas fa-plus px-1"></i> AddWorkOrderBatch</a>
+                            <a asp-controller="LabManagement" asp-action="AddWOBatch" class="nav-sub-link text-white"> <i class="fas fa-plus px-1"></i> AddWorkOrderBatch</a>
                         </li>
 
 
-                    <button class="btn btn-gray-700 btn-block btn-sm rounded-2">
-                        <i class="fa fas fa-bolt"></i>
-                        Reload
-                    </button>
-                    @* <button class="btn btn-success btn-block rounded-2">
+                        <button class="btn btn-gray-700 btn-block btn-sm rounded-2">
+                            <i class="fa fas fa-bolt"></i>
+                            Reload
+                        </button>
+                        @* <button class="btn btn-success btn-block rounded-2">
                         <i class="fa fas fa-filter"></i>
                         Advanced Filter
                     </button> *@
 
-                    <button id="advancedFilterBtn" class="btn btn-success btn-block btn-sm rounded-2 text-white">
-                        <i class="fa fas fa-filter"></i>
-                        Advanced Filter
-                    </button>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="card my-3">
-                    <div id="filterRow" class="row p-3 d-none">
-                        <div class="col-lg-4 col-12">
-                            <p class="mg-b-10">Code</p>
-                            <input class="form-control" placeholder="Code" type="text">
-                        </div>
-                        <div class="col-lg-8 col-12 d-flex align-items-end">
-                            <button class="btn btn-info btn-block btn-sm rounded-2">
-                                <i class="fas fa-search"></i> Search
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-3">
-                        <div class="table-responsive">
-                            <table id="example2" class="text-center table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th><input type="checkbox" id="selectAll"></th>
-                                        <th>#</th>
-                                        <th>Code</th>
-                                        <th>Name</th>
-                                        <th>Sample</th>
-                                        <th>Priority</th>
-                                        <th>Status</th>
-                                        <th>Delivery Date</th>
-                                        <th>Added By</th>
-                                        <th>Added Date</th>
-                                        <th>Is Batch</th>
-                                        <th>Notes</th>
-                                        <th>Progress</th>
-                                        <th>Team</th>
-                                        <th>&nbsp;</th>
-                                        <th>&nbsp;</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>1</td>
-                                        <td>WO-221</td>
-                                        <td>Water Quality Analysis</td>
-                                        <td>Physical & Chemical</td>
-                                        <td>High</td>
-                                        <td><span class="badge badge-warning">In Progress</span></td>
-                                        <td>2025-11-25</td>
-                                        <td>Ahmed Ali</td>
-                                        <td>2025-11-20</td>
-                                        <td>No</td>
-                                        <td>Sample collected from main reservoir</td>
-                                        <td>50%</td>
-                                        <td>Lab Team A</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-
-                        </div>
+                        <button id="advancedFilterBtn" class="btn btn-success btn-block btn-sm rounded-2 text-white">
+                            <i class="fa fas fa-filter"></i>
+                            Advanced Filter
+                        </button>
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="card my-3">
+                        <div id="filterRow" class="row p-3 d-none">
+                            <div class="col-lg-4 col-12">
+                                <p class="mg-b-10">Code</p>
+                                <input class="form-control" placeholder="Code" type="text">
+                            </div>
+                            <div class="col-lg-8 col-12 d-flex align-items-end">
+                                <button class="btn btn-info btn-block btn-sm rounded-2">
+                                    <i class="fas fa-search"></i> Search
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <div class="table-responsive">
+                                <table id="example2" class="text-center table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" id="selectAll"></th>
+                                            <th>#</th>
+                                            <th>Code</th>
+                                            <th>Name</th>
+                                            <th>Sample</th>
+                                            <th>Priority</th>
+                                            <th>Status</th>
+                                            <th>Delivery Date</th>
+                                            <th>Added By</th>
+                                            <th>Added Date</th>
+                                            <th>Is Batch</th>
+                                            <th>Notes</th>
+                                            <th>Progress</th>
+                                            <th>Team</th>
+                                            <th>&nbsp;</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>1</td>
+                                            <td>WO-221</td>
+                                            <td>Water Quality Analysis</td>
+                                            <td>Physical & Chemical</td>
+                                            <td>High</td>
+                                            <td><span class="badge badge-warning">In Progress</span></td>
+                                            <td>2025-11-25</td>
+                                            <td>Ahmed Ali</td>
+                                            <td>2025-11-20</td>
+                                            <td>No</td>
+                                            <td>Sample collected from main reservoir</td>
+                                            <td>50%</td>
+                                            <td>Lab Team A</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
-
-
         </div>
-    </div>
-</div>
+  
 
 @section Scripts {
      <script>

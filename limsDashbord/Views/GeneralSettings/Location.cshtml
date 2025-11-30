@@ -1,0 +1,117 @@
+﻿ <div class="card w-100 border-0 border-0 py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Location
+                    </h2>
+                    
+                </div>
+                <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                    <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black"><i class="fa fa-home"></i></a></li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">
+                        Nationalities List
+                    </li>
+                    @* <li class="text-black">/</li>
+                        <li class="text-black">
+                            WorkFlows
+                        </li> *@
+                </ul>
+            </div>
+
+
+            <div class="card bd-0 pt-4">
+                <div class="card-header bg-gray-400 bd-b-0-f pd-b-0">
+                    <nav class="nav nav-tabs">
+                        @* <a class="nav-link " data-bs-toggle="tab" href="#tabCont1">Countries</a> *@
+                        @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont2">City</a> *@
+                        <a asp-action="Countries" asp-controller="GeneralSettings" class="nav-link btn btn-primary btn-sm rounded-2">Countries</a>
+                        <a asp-action="City" asp-controller="GeneralSettings" class="nav-link  btn btn-primary btn-sm rounded-2">City</a>
+                        <a asp-action="Nighborhoods" asp-controller="GeneralSettings" class="nav-link  btn btn-primary btn-sm rounded-2">Nighborhoods</a>
+                        <a asp-action="Location" asp-controller="GeneralSettings" class="nav-link btn active btn-primary btn-sm rounded-2">Location</a>
+                        <a asp-action="Nationalities" asp-controller="GeneralSettings" class="nav-link btn btn-primary btn-sm rounded-2">Nationalities</a>
+                        @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont3">Nighborhoods</a> *@
+                        @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont4">Location</a> *@
+                        @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont5">Nationalities</a> *@
+                    </nav>
+                </div><!-- card-header -->
+
+                <div class="row py-3">
+                    <div class="col-lg-4 col-12">
+                        <label for="key" class="mg-b-10">
+                            Name
+                        </label>
+                        <input id="key" class="form-control" placeholder="" type="text">
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <p class="mg-b-10">
+                            City
+                        </p>
+                        <select class="form-control select2">
+                            <option value="" disabled selected>Select City</option>
+                            <option value="riyadh">Riyadh</option>
+                            <option value="jeddah">Jeddah</option>
+                            <option value="dubai">Dubai</option>
+                            <option value="cairo">Cairo</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4 col-12 d-flex align-items-end gap-2">
+                        <button type="button" class="btn btn-indigo rounded-2">Save</button>
+                        <button type="button" class="btn btn-outline-light rounded-2" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+                <div class="card-body bd bd-t-0 tab-content">
+                    <div class="d-flex justify-content-between">
+                        <p>Locetion</p>
+                        <a asp-action="AddLocation" asp-controller="GeneralSettings" class="btn btn-primary btn-sm rounded-2"><i class="fas fa-plus "></i>Add Location</a>
+                    </div>
+                    <div class="p-3">
+                        <div class="table-responsive">
+                            <table id="example4" class="text-center table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name Ar</th>
+                                        <th>Name En</th>
+                                        <th>City</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>دبي</td>
+                                        <td>Dubai</td>
+                                        <td>الإمارات</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-info rounded-2 "><i class="fas fa-edit me-2"></i>Edit</button>
+                                            <button class="btn btn-sm btn-danger rounded-2"><i class="fas fa-trash me-2"></i>Delete</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>القاهرة</td>
+                                        <td>Cairo</td>
+                                        <td>مصر</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-info rounded-2 "><i class="fas fa-edit me-2"></i>Edit</button>
+                                            <button class="btn btn-sm btn-danger rounded-2"><i class="fas fa-trash me-2"></i>Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                </div><!-- card-body -->
+            </div><!-- card -->
+
+
+        </div>
+    </div>

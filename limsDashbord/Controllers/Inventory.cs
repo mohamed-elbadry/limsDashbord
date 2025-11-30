@@ -48,5 +48,13 @@ namespace limsDashbord.Controllers
         {
             return View();
         }
+        public IActionResult ProductBrands()
+        {
+            return View();
+        }
+        public IActionResult AddUnitTempiat()
+        {
+            return View();
+        }
     }
 }

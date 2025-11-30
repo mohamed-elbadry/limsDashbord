@@ -1,0 +1,108 @@
+﻿<div class="card w-100 border-0 border-0 py-3">
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h2>
+                        Nationalities List
+                    </h2>
+                    
+                </div>
+                <ul class="nav-sub d-flex align-items-center gap-2 m-0 p-0">
+                    <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link text-black"><i class="fa fa-home"></i></a></li>
+                    <li class="text-black">/</li>
+                    <li class="text-black">
+                        Nationalities List
+                    </li>
+                    @* <li class="text-black">/</li>
+                        <li class="text-black">
+                            WorkFlows
+                        </li> *@
+                </ul>
+            </div>
+
+
+            <div class="card bd-0 pt-4">
+                <div class="card-header bg-gray-400 bd-b-0-f pd-b-0">
+                    <nav class="nav nav-tabs">
+                        @* <a class="nav-link " data-bs-toggle="tab" href="#tabCont1">Countries</a> *@
+                        @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont2">City</a> *@
+                        <a asp-action="Countries" asp-controller="GeneralSettings" class="nav-link btn btn-primary btn-sm rounded-2">Countries</a>
+                        <a asp-action="City" asp-controller="GeneralSettings" class="nav-link  btn btn-primary btn-sm rounded-2">City</a>
+                        <a asp-action="Nighborhoods" asp-controller="GeneralSettings" class="nav-link active btn btn-primary btn-sm rounded-2">Nighborhoods</a>
+                        <a asp-action="Location" asp-controller="GeneralSettings" class="nav-link btn btn-primary btn-sm rounded-2">Location</a>
+                        <a asp-action="Nationalities" asp-controller="GeneralSettings" class="nav-link btn btn-primary btn-sm rounded-2">Nationalities</a>
+                        @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont3">Nighborhoods</a> *@
+                        @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont4">Location</a> *@
+                        @* <a class="nav-link" data-bs-toggle="tab" href="#tabCont5">Nationalities</a> *@
+                    </nav>
+                </div><!-- card-header -->
+                <div class="card-body bd bd-t-0 tab-content">
+
+
+                    <div class="p-3">
+                        <div class="table-responsive">
+                            <table id="example4" class="text-center table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name Ar</th>
+                                        <th>Name En</th>
+                                        <th>City</th>
+                                        <th>Country</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>الرياض</td>
+                                        <td>Riyadh</td>
+                                        <td>الرياض</td>
+                                        <td>السعودية</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>جدة</td>
+                                        <td>Jeddah</td>
+                                        <td>جدة</td>
+                                        <td>السعودية</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>القاهرة</td>
+                                        <td>Cairo</td>
+                                        <td>القاهرة</td>
+                                        <td>مصر</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4</td>
+                                        <td>دبي</td>
+                                        <td>Dubai</td>
+                                        <td>دبي</td>
+                                        <td>الإمارات</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>5</td>
+                                        <td>الدوحة</td>
+                                        <td>Doha</td>
+                                        <td>الدوحة</td>
+                                        <td>قطر</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                  
+                 
+                </div><!-- card-body -->
+            </div><!-- card -->
+
+
+        </div>
+    </div>
+
