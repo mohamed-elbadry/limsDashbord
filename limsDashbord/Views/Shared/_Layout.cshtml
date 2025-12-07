@@ -46,7 +46,7 @@
                         <li class="nav-sub-item"><a asp-action="index" asp-controller="home" class="nav-sub-link">Dashboard</a></li>
                         </ul>
                 </li><!-- nav-item -->
-                <li class="nav-item">
+                 <li class="nav-item">
                     <a href="#" class="nav-link with-sub"><i class="typcn typcn-document"></i>Lab Management</a>
                     <ul class="nav-sub">
                         <li class="nav-sub-item">
@@ -73,6 +73,8 @@
 
                     </ul>
                 </li><!-- nav-item -->
+
+              
                 <li class="nav-item">
                     <a href="#" class="nav-link with-sub"><i class="typcn typcn-book"></i>Quality</a>
                     <ul class="nav-sub">
@@ -368,6 +370,46 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
    
     <script>
+               $(document).ready(function () {
+
+            var currentUrl = window.location.pathname.toLowerCase();
+
+            $('.nav-sub a').each(function () {
+                var linkUrl = $(this).attr('href').toLowerCase();
+
+                // ⭐ Ignore "/" when checking startsWith
+                var isMatch =
+                    (currentUrl === linkUrl) ||
+                    (linkUrl !== "/" && currentUrl.startsWith(linkUrl));
+
+                if (isMatch) {
+                    $(this).addClass('active');
+
+                    $(this).closest('.nav-sub').addClass('show');
+
+                    $(this)
+                        .closest('.nav-item')
+                        .addClass('show')
+                        .find('> .nav-link.with-sub')
+                        .addClass('active');
+                }
+                else {
+                    // Special Dashboard Case → close when not on "/"
+                    if (linkUrl === "/") {
+                        $(this).removeClass('active');
+
+                        $(this).closest('.nav-sub').removeClass('show');
+
+                        $(this)
+                            .closest('.nav-item')
+                            .removeClass('show')
+                            .find('> .nav-link.with-sub')
+                            .removeClass('active');
+                    }
+                }
+            });
+        });
+
                        $(document).ready(function () {
 
             var options = {
@@ -464,7 +506,7 @@
             $(this).parent().toggleClass('show');
             $(this).parent().siblings().removeClass('show');
           })
-
+           
           $(document).on('click touchstart', function(e){
             e.stopPropagation();
 
@@ -611,6 +653,7 @@
           });
 
         });
+       
     </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

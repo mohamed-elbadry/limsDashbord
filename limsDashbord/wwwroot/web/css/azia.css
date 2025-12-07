@@ -12943,7 +12943,7 @@ textarea.form-check-input.parsley-error ~ .form-check-label {
   border-radius: 0;
   padding: 10px 15px;
   line-height: 1.428;
-  color: #596882;
+  color: #fff;
 }
 @media (min-width: 768px) {
   .nav-tabs .nav-link {
@@ -19011,9 +19011,23 @@ body {
   color: #074D31;
   font-size: 13px;
 }
-.az-sidebar-body .nav-sub-link:hover-focus() {
-  color: #074D31;
+.nav-item.show > .nav-link.with-sub.active {
+    background: #074d31;
+    color: #fff;
+    padding-inline: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
+
+    .az-sidebar-body .nav-sub-link.active {
+        background: #074d31;
+        color: #fff;
+        padding-inline-start: 10px;
+        border-radius: 5px;
+    }
+    .az-sidebar-body .nav-sub-link:hover-focus() {
+        color: #074D31;
+    }
 .az-sidebar-body .nav-sub-link.with-sub {
   justify-content: space-between;
 }
@@ -28746,7 +28760,7 @@ ul.list-ckeck-soft li::after {
   background-color: #cdd4e0;
 }
 
-.bg-gray-400 {
+.bg-indigo {
   background-color: #b4bdce;
 }
 
